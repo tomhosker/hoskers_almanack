@@ -1,0 +1,59 @@
+\documentclass{amsbook}
+\title{Hosker's Almanack (Third Draft)}
+
+\usepackage{microtype,verse,graphicx,multirow,caption,xfrac,multicol,marginnote,color,cfr-lm,subfiles,arabtex,pifont,textcomp}
+\usepackage[backend=bibtex,style=authortitle,citestyle=authortitle]{biblatex}
+\addbibresource{0sources.bib}
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{0}
+\titlespacing{\section}{0em}{1em}{0.5em}
+\titlespacing{\subsection}{0em}{1em}{0.5em}
+\titleformat{\section}[hang]{\bfseries\large}{}{1em}{\thesection.\enspace}[]
+\titleformat{name=\section,numberless}[hang]{\bfseries\large}{}{1em}{}[]
+\titleformat{\subsection}[hang]{\bfseries}{}{1em}{\thesubsection.\enspace}[]
+
+\usepackage[greek.ancient,english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage[hidelinks]{hyperref}
+
+\newfont{\hge}{0hge scaled 1000}
+
+\addto\captionsenglish{%
+\renewcommand{\figurename}{Rule}%
+\renewcommand{\listfigurename}{Table of Rules}%
+}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\tableofcontents
+\listoffigures
+
+\subfile{0frontmatter}
+
+\mainmatter
+\renewcommand\thesection{{\Roman{section}}}
+\renewcommand\thefootnote{{\thesubsection}}
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\renewcommand{\@makefnmark}{\hbox{{{{\@thefnmark}}}}\hbox{{{{ }}}}}
+\makeatother
+
+\subfile{0mainmatter}
+
+\renewcommand\thesection{{\arabic{section}}}
+\renewcommand\thefootnote{{\arabic{section}}}
+
+\subfile{0backmatter}
+
+\printbibliography[title={Sources}]
+
+\bigskip
+
+{\footnotesize N.B. I only give here the details of those texts which provided material for the \emph{Almanack} proper. Details of other texts, such as those quoted in the Introduction, are to be found in the relevant footnotes.}
+
+\end{document}
