@@ -5,7 +5,7 @@ import sqlite3, os, sys
 
 # Local imports.
 from hpml.hpml_compiler import HPML_compiler
-from hpml.encapsulator import Encapsulator
+from encapsulator import Encapsulator
 
 # The function in question.
 def compile_article(idno):

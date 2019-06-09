@@ -1,6 +1,9 @@
 # A class to handle the encapsulation of a LaTeX verse snippet into an
 # autonomous, compilable .tex file.
 
+# Imports.
+import sqlite3
+
 # Constants.
 max_width = 100
 slim = (
@@ -44,36 +47,46 @@ def remove_unpaired_braces(line):
     line = line[0:len(line)-2]
   return line
 
+# Gets the list of packages (and related) from the database.
+def get_loadout(loadout_name):
+  select = "SELECT latex FROM package_loadout WHERE name = ?;"
+  conn = sqlite3.connect("almanack.db")
+  c = conn.cursor()
+  c.execute(select, (loadout_name,))
+  extract = c.fetchone()
+  result = extract[0]
+  return result
+
+# Ronseal.
+def find_second_longest_line(snippet):
+  lines = snippet.split("\n")
+  longest_line = lines[0]
+  second_longest_line = lines[0]
+  for line in lines:
+    if len(line) > len(longest_line):
+      second_longest_line = longest_line
+      longest_line = line
+    elif len(line) > len(second_longest_line):
+      second_longest_line = line
+  second_longest_line = remove_line_endings(second_longest_line)
+  second_longest_line = remove_unpaired_braces(second_longest_line)
+  return second_longest_line
+
 ### The class in question.
 class Encapsulator:
   def __init__(self, snippet, loadout_name):
     documentclass = "\\documentclass{amsart}"
     title = "\\title{Current}"
-    loadout = slim
+    loadout = get_loadout(loadout_name)
     begin = "\\begin{document}\n\n\\begin{verse}"
     end = "\\end{verse}\n\n\\end{document}"
-    second_longest_line = self.find_second_longest_line(snippet)
+    second_longest_line = find_second_longest_line(snippet)
     if len(second_longest_line) < max_width:
       begin = begin.replace("\\begin{verse}",
                 "\\settowidth{\\versewidth}{"+second_longest_line+"}\n"+
                 "\\begin{verse}[\\versewidth]")
     self.doc = (documentclass+"\n\n"+title+"\n\n"+loadout+"\n\n"+begin+"\n"+
                 snippet+"\n"+end)
-
-  # Ronseal.
-  def find_second_longest_line(self, snippet):
-    lines = snippet.split("\n")
-    longest_line = lines[0]
-    second_longest_line = lines[0]
-    for line in lines:
-      if len(line) > len(longest_line):
-        second_longest_line = longest_line
-        longest_line = line
-      elif len(line) > len(second_longest_line):
-        second_longest_line = line
-    second_longest_line = remove_line_endings(second_longest_line)
-    second_longest_line = remove_unpaired_braces(second_longest_line)
-    return second_longest_line
 
   # Return the result as a string.
   def digest(self):

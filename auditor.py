@@ -6,7 +6,7 @@ import sqlite3, os, multiprocessing
 
 # Local imports.
 from hpml.hpml_compiler import HPML_compiler
-from hpml.encapsulator import Encapsulator
+from encapsulator import Encapsulator
 
 # The class in question.
 class Auditor:
