@@ -5,6 +5,7 @@ import sqlite3, os
 
 # Local imports.
 from month_builder import Month_builder
+from bib_builder import build_bib
 
 # Constants.
 version = " (Fourth Draft)"
@@ -114,9 +115,11 @@ def build_pdf():
     os.system("rm -rf main*")
   except:
     print("Run build.tex() first!")
+  os.system("rm sources.bib")
 
 # Run and wrap up.
 def run():
+  build_bib()
   build_tex()
   build_pdf()
 run()
