@@ -6,11 +6,6 @@ import sqlite3
 
 # Constants.
 max_width = 100
-slim = (
-  "\\usepackage{microtype,mathtools,verse,xcolor,xfrac,fourier-orns}\n"+
-  "\\usepackage{fontspec}\n"+
-  "\\newfontfamily\\hoskeroe{English Towne}\n"+
-  "\\usepackage[T1]{fontenc}")
 
 ### Helper functions.
 # Remove any line-ending syntax.
@@ -97,3 +92,20 @@ class Encapsulator:
     f = open("current.tex", "w")
     f.write(self.doc)
     f.close()
+
+### A class to add the "\begin{verse}..." and "\end{verse}" to the LaTeX for
+### a given article.
+class Mini_encapsulator:
+  def __init__(self, snippet):
+    second_longest_line = find_second_longest_line(snippet)
+    if len(second_longest_line) < max_width:
+      begin = ("\\settowidth{\\versewidth}{"+second_longest_line+"}\n"+
+               "\\begin{verse}[\\versewidth]")
+    else:
+      begin = "\\begin{verse}"
+    end = "\\end{verse}"
+    self.result = begin+"\n"+snippet+"\n"+end
+
+  # Return the result as a string.
+  def digest(self):
+    return self.result

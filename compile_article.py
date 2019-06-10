@@ -20,6 +20,8 @@ def compile_article(idno):
   encapsulator = Encapsulator(latex, "slim")
   encapsulator.save()
   os.system("xelatex current.tex")
+  os.system("cp current.pdf "+str(idno)+".pdf")
+  os.system("rm -rf current*")
 
 # Run and wrap up.
 if len(sys.argv) <= 1:
