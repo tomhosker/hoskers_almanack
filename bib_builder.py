@@ -9,7 +9,7 @@ import almanack_utils
 # Ronseal.
 def fetch_sources():
   select = "SELECT * FROM source ORDER BY code;"
-  sources = almanack_utils.fetch_to_dict("almanack.db", select)
+  sources = almanack_utils.fetch_to_dict("almanack.db", select, tuple())
   return sources
 
 # Ronseal.
@@ -56,4 +56,4 @@ def build_bib():
 # Run and wrap up.
 def run():
   build_bib()
-run()
+#run()

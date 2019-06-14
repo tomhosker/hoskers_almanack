@@ -5,11 +5,11 @@
 import sqlite3
 
 # Runs a "SELECT" query, and wraps the results into a dictionary.
-def fetch_to_dict(database_name, select):
+def fetch_to_dict(database_name, select, parameters):
   conn = sqlite3.connect(database_name)
   conn.row_factory = sqlite3.Row
   c = conn.cursor()
-  c.execute(select)
+  c.execute(select, parameters)
   extract = c.fetchall()
   conn.close()
   rows = []

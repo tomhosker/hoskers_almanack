@@ -5,24 +5,23 @@
 import sqlite3
 
 # Local imports.
-from hpml.hpml_compiler import HPML_compiler
-from encapsulator import Mini_encapsulator
+from article import Article
 
 # Constants.
 all_selects = dict()
-pri1 = ("SELECT content FROM article "+
+pri1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 30 "+
         "ORDER BY ranking;")
-pri2 = ("SELECT content FROM article "+
+pri2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 30 "+
         "ORDER BY ranking;")
-pri3 = ("SELECT content FROM article "+
+pri3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
@@ -30,19 +29,19 @@ pri3 = ("SELECT content FROM article "+
         "ORDER BY ranking;")
 pri = [pri1, pri2, pri3]
 all_selects["Primilis"] = pri
-sec1 = ("SELECT content FROM article "+
+sec1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 31 AND 59 "+
         "ORDER BY ranking;")
-sec2 = ("SELECT content FROM article "+
+sec2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 31 AND 59 "+
         "ORDER BY ranking;")
-sec3 = ("SELECT content FROM article "+
+sec3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
@@ -50,19 +49,19 @@ sec3 = ("SELECT content FROM article "+
         "ORDER BY ranking;")
 sec = [sec1, sec2, sec3]
 all_selects["Sectilis"] = sec
-ter1 = ("SELECT content FROM article "+
+ter1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 60 AND 89 "+
         "ORDER BY ranking;")
-ter2 = ("SELECT content FROM article "+
+ter2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 60 AND 89 "+
         "ORDER BY ranking;")
-ter3 = ("SELECT content FROM article "+
+ter3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"bile\" "+
           "AND aux_type = \"n\" "+
@@ -70,19 +69,19 @@ ter3 = ("SELECT content FROM article "+
         "ORDER BY ranking;")
 ter = [ter1, ter2, ter3]
 all_selects["Tertilis"] = ter
-qua1 = ("SELECT content FROM article "+
+qua1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"english folk\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
-qua2 = ("SELECT content FROM article "+
+qua2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 30 AND 58 "+
         "ORDER BY ranking DESC;")
-qua3 = ("SELECT content FROM article "+
+qua3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"n\" "+
@@ -90,19 +89,19 @@ qua3 = ("SELECT content FROM article "+
         "ORDER BY ranking DESC;")
 qua = [qua1, qua2, qua3]
 all_selects["Quartilis"] = qua
-qui1 = ("SELECT content FROM article "+
+qui1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"scots-irish folk\" "+
           "AND ranking BETWEEN 1 AND 30 "+
         "ORDER BY ranking DESC;")
-qui2 = ("SELECT content FROM article "+
+qui2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"shanty\" "+
           "AND ranking BETWEEN 1 AND 30 "+
         "ORDER BY ranking DESC;")
-qui3 = ("SELECT content FROM article "+
+qui3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"n\" "+
@@ -110,7 +109,7 @@ qui3 = ("SELECT content FROM article "+
         "ORDER BY ranking DESC;")
 qui = [qui1, qui2, qui3]
 all_selects["Quintilis"] = qui
-sex1 = ("SELECT content FROM article "+
+sex1 = ("SELECT id FROM article "+
         "WHERE (type = 1 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"american folk\" "+
@@ -120,13 +119,13 @@ sex1 = ("SELECT content FROM article "+
           "AND aux_type = \"hymn\" "+
           "AND ranking BETWEEN 1 AND 10) "+
         "ORDER BY aux_type, ranking DESC;")
-sex2 = ("SELECT content FROM article "+
+sex2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
-sex3 = ("SELECT content FROM article "+
+sex3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"blood\" "+
           "AND aux_type = \"n\" "+
@@ -134,19 +133,19 @@ sex3 = ("SELECT content FROM article "+
         "ORDER BY ranking DESC;")
 sex = [sex1, sex2, sex3]
 all_selects["Sextilis"] = sex
-sep1 = ("SELECT content FROM article "+
+sep1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 30 "+
         "ORDER BY ranking;")
-sep2 = ("SELECT content FROM article "+
+sep2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 30 "+
         "ORDER BY ranking;")
-sep3 = ("SELECT content FROM article "+
+sep3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"n\" "+
@@ -154,19 +153,19 @@ sep3 = ("SELECT content FROM article "+
         "ORDER BY ranking;")
 sep = [sep1, sep2, sep3]
 all_selects["September"] = sep
-oct1 = ("SELECT content FROM article "+
+oct1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"october\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking;")
-oct2 = ("SELECT content FROM article "+
+oct2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"october\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking;")
-oct3 = ("SELECT content FROM article "+
+oct3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"october\" "+
@@ -174,19 +173,19 @@ oct3 = ("SELECT content FROM article "+
         "ORDER BY ranking;")
 octo = [oct1, oct2, oct3]
 all_selects["October"] = octo
-nov1 = ("SELECT content FROM article "+
+nov1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 31 AND 60 "+
         "ORDER BY ranking;")
-nov2 = ("SELECT content FROM article "+
+nov2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 31 AND 60 "+
         "ORDER BY ranking;")
-nov3 = ("SELECT content FROM article "+
+nov3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"phlegm\" "+
           "AND aux_type = \"n\" "+
@@ -194,19 +193,19 @@ nov3 = ("SELECT content FROM article "+
         "ORDER BY ranking;")
 nov = [nov1, nov2, nov3]
 all_selects["November"] = nov
-dec1 = ("SELECT content FROM article "+
+dec1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 60 AND 88 "+
         "ORDER BY ranking DESC;")
-dec2 = ("SELECT content FROM article "+
+dec2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 60 AND 88 "+
         "ORDER BY ranking DESC;")
-dec3 = ("SELECT content FROM article "+
+dec3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
@@ -214,19 +213,19 @@ dec3 = ("SELECT content FROM article "+
         "ORDER BY ranking DESC;")
 dec = [dec1, dec2, dec3]
 all_selects["December"] = dec
-uno1 = ("SELECT content FROM article "+
+uno1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 30 AND 59 "+
         "ORDER BY ranking DESC;")
-uno2 = ("SELECT content FROM article "+
+uno2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 30 AND 59 "+
         "ORDER BY ranking DESC;")
-uno3 = ("SELECT content FROM article "+
+uno3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
@@ -234,19 +233,19 @@ uno3 = ("SELECT content FROM article "+
         "ORDER BY ranking DESC;")
 uno = [uno1, uno2, uno3]
 all_selects["Unodecember"] = uno
-duo1 = ("SELECT content FROM article "+
+duo1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
-duo2 = ("SELECT content FROM article "+
+duo2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
-duo3 = ("SELECT content FROM article "+
+duo3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"black bile\" "+
           "AND aux_type = \"n\" "+
@@ -254,19 +253,19 @@ duo3 = ("SELECT content FROM article "+
         "ORDER BY ranking DESC;")
 duo = [duo1, duo2, duo3]
 all_selects["Duodecember"] = duo
-int1 = ("SELECT content FROM article "+
+int1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
           "AND humour = \"intercalaris\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
-int2 = ("SELECT content FROM article "+
+int2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
           "AND humour = \"intercalaris\" "+
           "AND aux_type = \"n\" "+
           "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
-int3 = ("SELECT content FROM article "+
+int3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
           "AND humour = \"intercalaris\" "+
           "AND aux_type = \"n\" "+
@@ -285,10 +284,11 @@ def to_latex(hpml):
 
 ### A helper class.
 class Month:
-  def __init__(self, name, intro, articles):
+  def __init__(self, name, intro, articles, fullness):
     self.songs = articles["songs"]
     self.sonnets = articles["sonnets"]
     self.proverbs = articles["proverbs"]
+    self.fullness = fullness
 
   # Construct a string from
     lengths = [len(self.songs), len(self.sonnets), len(self.proverbs)]
@@ -297,18 +297,21 @@ class Month:
     for i in range(n):
       self.d = self.d+"\\bigskip\n\\bigskip\n\\section{}\n\n"
       self.d = self.d+"\\subsection{}\n\n"
-      self.d = self.d+to_latex(self.songs[i])+"\n\n"
+      self.d = self.d+Article(self.songs[i], self.fullness).digest()+"\n\n"
       self.d = self.d+"\\subsection{}\n\n"
-      self.d = self.d+to_latex(self.sonnets[i])+"\n\n"
+      self.d = (self.d+Article(self.sonnets[i], self.fullness).digest()+
+                "\n\n")
       self.d = self.d+"\\bigskip\n\\subsection{}\n\n"
-      self.d = self.d+to_latex(self.proverbs[i])+"\n\n"
+      self.d = (self.d+Article(self.proverbs[i], self.fullness).digest()+
+                "\n\n")
 
   def digest(self):
     return self.d
 
 ### The class in question.
 class Month_builder:
-  def __init__(self):
+  def __init__(self, fullness):
+    self.fullness = fullness
     conn = sqlite3.connect("almanack.db")
     self.c = conn.cursor()
     self.primilis = self.build_month("Primilis")
@@ -367,7 +370,7 @@ class Month_builder:
   def build_month(self, name):
     intro = self.fetch_intro(name)
     articles = self.fetch_articles(all_selects[name])
-    result = Month(name, intro, articles).digest()
+    result = Month(name, intro, articles, self.fullness).digest()
     return result
 
   # Wrap all months into one string.
@@ -378,5 +381,12 @@ class Month_builder:
               self.intercalaris)
     return result
 
-#mb = Month_builder()
-#print(mb.digest())
+# Run a demo.
+def demo():
+  mb = Month_builder("full")
+  print(mb.digest())
+
+# Run and wrap up.
+def run():
+  demo()
+#run()

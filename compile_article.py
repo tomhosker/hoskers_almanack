@@ -4,21 +4,30 @@
 import sqlite3, os, sys
 
 # Local imports.
-from hpml.hpml_compiler import HPML_compiler
-from encapsulator import Encapsulator
+from article import Article
+
+# Fetches the package loadout from the database.
+def fetch_loadout():
+  conn = sqlite3.connect("almanack.db")
+  c = conn.cursor()
+  select = "SELECT latex FROM package_loadout WHERE name = 'main';"
+  c.execute(select)
+  row = c.fetchone()
+  result = row[0]
+  return result
 
 # The function in question.
 def compile_article(idno):
-  conn = sqlite3.connect("almanack.db")
-  c = conn.cursor()
-  select = "SELECT content FROM article WHERE id = ?;"
-  c.execute(select, (idno,))
-  extract = c.fetchone()
-  hpml = extract[0]
-  compiler = HPML_compiler(None, hpml)
-  latex = compiler.digest()
-  encapsulator = Encapsulator(latex, "slim")
-  encapsulator.save()
+  loadout = fetch_loadout()
+  article = Article(idno, "full").digest()
+  current = ("\\documentclass{amsart}\n\n"+
+             loadout+"\n\n"+
+             "\\begin{document}\n"+
+             article+
+             "\\end{document}")
+  f = open("current.tex", "w")
+  f.write(current)
+  f.close()
   os.system("xelatex current.tex")
   os.system("cp current.pdf "+str(idno)+".pdf")
   os.system("rm -rf current*")
