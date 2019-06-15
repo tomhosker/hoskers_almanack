@@ -5,6 +5,7 @@
 import sqlite3
 
 # Local imports.
+import constants
 from article import Article
 
 # Constants.
@@ -312,7 +313,7 @@ class Month:
 class Month_builder:
   def __init__(self, fullness):
     self.fullness = fullness
-    conn = sqlite3.connect("almanack.db")
+    conn = sqlite3.connect(constants.db)
     self.c = conn.cursor()
     self.primilis = self.build_month("Primilis")
     self.sectilis = self.build_month("Sectilis")

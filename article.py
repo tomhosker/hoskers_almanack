@@ -4,6 +4,7 @@
 import sqlite3
 
 # Local imports.
+import constants
 from encapsulator import Mini_encapsulator
 from hpml.hpml_compiler import HPML_compiler
 from notes_builder import Notes_builder
@@ -18,9 +19,6 @@ def to_latex(hpml):
 
 # The class in question.
 class Article:
-  # Class variables.
-  db = "almanack.db"
-
   def __init__(self, idno, fullness):
     self.idno = idno
     self.fullness = fullness
@@ -31,7 +29,7 @@ class Article:
 
   # Fetches HPML from the database.
   def fetch_hpml(self):
-    conn = sqlite3.connect(Article.db)
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT content FROM article WHERE id = ?;"
     c.execute(select, (self.idno,))
@@ -41,7 +39,7 @@ class Article:
 
   # Ronseal.
   def fetch_christ_flag(self):
-    conn = sqlite3.connect(Article.db)
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT christFlag FROM article WHERE id = ?;"
     c.execute(select, (self.idno,))

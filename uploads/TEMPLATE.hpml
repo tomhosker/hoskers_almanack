@@ -1,0 +1,12 @@
+####AUTHOR{author} ####{or} ####NONAUTHOR{non_author}
+####CATEGORIES{type, aux_type, humour}
+####SOURCE{source}
+####TITLE{title} ####{or} ####NONTITLE{non_title} ####{Optional.}
+####REMARKS{remarks} ####{Optional.}
+####TUNE{tune} ####{Optional.}
+####REDACTED ####{Remove as necessary.}
+####CHRISTFLAG ####{Remove as necessary.}
+
+This is a line of HPML.
+####COMMENT{This is a comment on the above line.}
+This is some more HPML.

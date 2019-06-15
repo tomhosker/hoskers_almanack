@@ -22,6 +22,6 @@ lexicon = [
 
 # HPML, plain text, LaTeX.
 fractions = [
-  ["#HALF", "half", "\\sfrac{1}{2}"],
-  ["#THIRD", "third", "\\sfrac{1}{3}"],
-  ["#QUARTER", "quarter", "\\sfrac{1}{4}"]]
+  ["#HALF", "half", "\\sfrac{$1$}{$2$}"],
+  ["#THIRD", "third", "\\sfrac{$1$}{$3$}"],
+  ["#QUARTER", "quarter", "\\sfrac{$1$}{$4$}"]]

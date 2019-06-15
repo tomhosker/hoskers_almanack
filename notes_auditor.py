@@ -5,6 +5,7 @@
 import sqlite3, os, multiprocessing
 
 # Local imports.
+import constants
 from notes_builder import Notes_builder
 
 # The class in question.
@@ -32,7 +33,7 @@ class Notes_auditor:
 
   # Collect the ID nos of all articles on the database.
   def collect_idnos(self):
-    conn = sqlite3.connect("almanack.db")
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT id FROM article;"
     c.execute(select)
@@ -46,12 +47,13 @@ class Notes_auditor:
 
   # Fetch the correct loadout from the database.
   def fill_loadout(self):
-    conn = sqlite3.connect("almanack.db")
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT latex FROM package_loadout WHERE name = 'main';"
     c.execute(select)
     readout = c.fetchone()
     self.loadout = readout[0]
+    conn.close()
 
   # Ronseal.
   def run_xelatex(self):

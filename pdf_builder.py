@@ -4,16 +4,12 @@
 import sqlite3, os
 
 # Local imports.
-import almanack_utils
+import constants, almanack_utils
 from month_builder import Month_builder
 from bib_builder import build_bib
 
 # The class in question.
 class PDF_builder:
-  # Class variables.
-  version = "Fourth Draft"
-  db = "almanack.db"
-
   def __init__(self, fullness):
     # This determines how much front- and backmatter, etc gets put in.
     self.fullness = fullness
@@ -35,13 +31,13 @@ class PDF_builder:
   # Fetch packages used from the database.
   def fetch_loadout(self):
     select = "SELECT latex FROM package_loadout WHERE name = \"main\";"
-    rows = almanack_utils.fetch_to_dict(PDF_builder.db, select, tuple())
+    rows = almanack_utils.fetch_to_dict(constants.db, select, tuple())
     result = rows[0]["latex"]
     return result
 
   # Fetches the bits of LaTeX syntax which go between the lumps of content.
   def fetch_tween_syntax(self):
-    conn = sqlite3.connect(PDF_builder.db)
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT * FROM tween_syntax;"
     c.execute(select)
@@ -54,7 +50,7 @@ class PDF_builder:
   # Build the frontmatter from the database.
   def build_frontmatter(self):
     select = "SELECT * FROM frontmatter_chapters ORDER BY no;"
-    rows = almanack_utils.fetch_to_dict(PDF_builder.db, select, tuple())
+    rows = almanack_utils.fetch_to_dict(constants.db, select, tuple())
     result = ("\\listoffigures\n\n"+
               "\\part{Introductory Material}\n\n")
     for row in rows:
@@ -76,7 +72,7 @@ class PDF_builder:
   # Build the backmatter from the database.
   def build_backmatter(self):
     select = "SELECT * FROM backmatter_chapters ORDER BY no;"
-    rows = almanack_utils.fetch_to_dict(PDF_builder.db, select, tuple())
+    rows = almanack_utils.fetch_to_dict(constants.db, select, tuple())
     result = (self.tween_syntax["pre_backmatter"]+"\n\n"+
               "\\part{Other Material}\n\n")
     for row in rows:
@@ -92,7 +88,7 @@ class PDF_builder:
   # This is where the magic happens.
   def build_tex(self):
     tex =  ("\\documentclass{amsbook}\n"+
-            "\\title{Hosker's Almanack ("+PDF_builder.version+")}\n\n"+
+            "\\title{Hosker's Almanack ("+constants.version+")}\n\n"+
             self.loadout+"\n\n"+
             self.tween_syntax["in_preamble"]+"\n\n"+
             "\\begin{document}\n\n"+

@@ -4,6 +4,9 @@
 # Imports.
 import sqlite3
 
+# Local imports.
+import constants
+
 # Constants.
 max_width = 100
 
@@ -45,7 +48,7 @@ def remove_unpaired_braces(line):
 # Gets the list of packages (and related) from the database.
 def get_loadout(loadout_name):
   select = "SELECT latex FROM package_loadout WHERE name = ?;"
-  conn = sqlite3.connect("almanack.db")
+  conn = sqlite3.connect(constants.db)
   c = conn.cursor()
   c.execute(select, (loadout_name,))
   extract = c.fetchone()

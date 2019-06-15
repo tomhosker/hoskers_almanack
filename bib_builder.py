@@ -4,12 +4,12 @@
 import sqlite3
 
 # Local imports.
-import almanack_utils
+import constants, almanack_utils
 
 # Ronseal.
 def fetch_sources():
   select = "SELECT * FROM source ORDER BY code;"
-  sources = almanack_utils.fetch_to_dict("almanack.db", select, tuple())
+  sources = almanack_utils.fetch_to_dict(constants.db, select, tuple())
   return sources
 
 # Ronseal.

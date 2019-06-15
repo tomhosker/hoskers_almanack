@@ -5,6 +5,7 @@
 import sqlite3, os, multiprocessing
 
 # Local imports.
+import constants
 from hpml.hpml_compiler import HPML_compiler
 from encapsulator import Encapsulator
 
@@ -32,7 +33,7 @@ class Auditor:
 
   # Collect the ID nos of all articles on the database.
   def collect_idnos(self):
-    conn = sqlite3.connect("almanack.db")
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT id FROM article;"
     c.execute(select)
@@ -46,7 +47,7 @@ class Auditor:
 
   # Fetch a numbered article from the database.
   def fetch_hpml(self, idno):
-    conn = sqlite3.connect("almanack.db")
+    conn = sqlite3.connect(constants.db)
     c = conn.cursor()
     select = "SELECT content FROM article WHERE id = ?"
     c.execute(select, (idno,))

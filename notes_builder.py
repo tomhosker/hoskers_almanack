@@ -1,15 +1,14 @@
 ### This code holds a class which handles a given article's notes.
 
 # Imports.
-import sqlite3, os, sys
+import os, sys
 
 # Local imports.
-import almanack_utils
+import constants, almanack_utils
 
 # The class in question.
 class Notes_builder:
   # Class variables.
-  db = "almanack.db"
   named_non_authors = ["Anonymous"]
   redacted_marker = "$\mathfrak{R}$"
 
@@ -46,7 +45,7 @@ class Notes_builder:
                 "ON non_author.code = article.non_author "+
               "WHERE article.id = ?;")
     rows = (
-      almanack_utils.fetch_to_dict(Notes_builder.db, select, (self.idno,)))
+      almanack_utils.fetch_to_dict(constants.db, select, (self.idno,)))
     try:
       return rows[0]
     except:
@@ -112,7 +111,7 @@ class Notes_builder:
     select = ("SELECT line_no, comment FROM comment_on_line "+
               "WHERE article_id = ? ORDER BY line_no ASC;")
     rows = (
-      almanack_utils.fetch_to_dict(Notes_builder.db, select, (self.idno,)))
+      almanack_utils.fetch_to_dict(constants.db, select, (self.idno,)))
     result = ""
     for row in rows:
       result = result+"\P "+str(row["line_no"])+". "+row["comment"]

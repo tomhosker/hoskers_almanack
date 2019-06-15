@@ -4,11 +4,12 @@
 import sqlite3, os, sys
 
 # Local imports.
+import constants
 from article import Article
 
 # Fetches the package loadout from the database.
 def fetch_loadout():
-  conn = sqlite3.connect("almanack.db")
+  conn = sqlite3.connect(constants.db)
   c = conn.cursor()
   select = "SELECT latex FROM package_loadout WHERE name = 'main';"
   c.execute(select)
