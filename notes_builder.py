@@ -10,7 +10,7 @@ import constants, almanack_utils
 class Notes_builder:
   # Class variables.
   named_non_authors = ["Anonymous"]
-  redacted_marker = "$\mathfrak{R}$"
+  redacted_marker = "$\mathbb{R}$"
 
   def __init__(self, idno, fullness):
     self.idno = idno

@@ -22,39 +22,34 @@ class Article:
   def __init__(self, idno, fullness):
     self.idno = idno
     self.fullness = fullness
-    self.hpml = self.fetch_hpml()
-    self.christ_flag = self.fetch_christ_flag()
+    self.hpml = None
+    self.tune = None
+    self.christ_flag = False
+    self.fetch_fields()
     self.notes = Notes_builder(self.idno, self.fullness).digest()
     self.article = self.build_article()
 
-  # Fetches HPML from the database.
-  def fetch_hpml(self):
+  # Fetches the required data from the database.
+  def fetch_fields(self):
     conn = sqlite3.connect(constants.db)
     c = conn.cursor()
-    select = "SELECT content FROM article WHERE id = ?;"
+    select = "SELECT content, tune, christFlag FROM article WHERE id = ?;"
     c.execute(select, (self.idno,))
     row = c.fetchone()
-    result = row[0]
-    return result
-
-  # Ronseal.
-  def fetch_christ_flag(self):
-    conn = sqlite3.connect(constants.db)
-    c = conn.cursor()
-    select = "SELECT christFlag FROM article WHERE id = ?;"
-    c.execute(select, (self.idno,))
-    row = c.fetchone()
-    flag = row[0]
-    if flag == 1:
-      return True
-    else:
-      return False
+    self.hpml = row[0]
+    self.tune = row[1]
+    if row[2] == 1:
+      self.christ_flag = True
 
   # Sews the class's fields together.
   def build_article(self):
     latex = to_latex(self.hpml)
     if self.christ_flag:
       latex = "{\\color{red} "+latex+"}"
+    if self.tune != None:
+      latex = ("\\begin{center}\n"+
+               "\\textit{Tune: "+self.tune+"}\n"+
+               "\\end{center}\n\n")+latex
     footnote = "\\footnotetext{"+self.notes+"}"
     result = footnote+latex
     return result
@@ -65,7 +60,7 @@ class Article:
 
 # Run a demo.
 def demo():
-  print(Article(1, "full").digest())
+  print(Article(95, "full").digest())
 
 # Run and wrap up.
 def run():
