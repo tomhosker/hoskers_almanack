@@ -25,9 +25,13 @@ class Article:
     self.hpml = None
     self.tune = None
     self.christ_flag = False
+    self.notes = None
+    self.article = None
+    self.not_on_db = False
     self.fetch_fields()
-    self.notes = Notes_builder(self.idno, self.fullness).digest()
-    self.article = self.build_article()
+    if self.not_on_db == False:
+      self.notes = Notes_builder(self.idno, self.fullness).digest()
+      self.article = self.build_article()
 
   # Fetches the required data from the database.
   def fetch_fields(self):
@@ -36,10 +40,13 @@ class Article:
     select = "SELECT content, tune, christFlag FROM article WHERE id = ?;"
     c.execute(select, (self.idno,))
     row = c.fetchone()
-    self.hpml = row[0]
-    self.tune = row[1]
-    if row[2] == 1:
-      self.christ_flag = True
+    if len(row) == 3:
+      self.hpml = row[0]
+      self.tune = row[1]
+      if row[2] == 1:
+        self.christ_flag = True
+    else:
+      self.not_on_db = True
 
   # Sews the class's fields together.
   def build_article(self):

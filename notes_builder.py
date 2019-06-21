@@ -15,7 +15,10 @@ class Notes_builder:
   def __init__(self, idno, fullness):
     self.idno = idno
     self.fullness = fullness
+    self.not_on_db = False
     self.extract = self.fetch_extract()
+    if self.not_on_db:
+      return
     self.source = self.extract["source"]
     self.non_title = self.extract["non_title"]
     self.remarks = self.extract["remarks"]
@@ -49,7 +52,9 @@ class Notes_builder:
     try:
       return rows[0]
     except:
-      raise Exception("No article with ID "+str(self.idno)+".")
+      print("No article with ID "+str(self.idno)+".")
+      self.not_on_db = True
+      return None
 
   # Builds an article's title.
   def build_title(self):

@@ -1,5 +1,5 @@
-# A class to handle the encapsulation of a LaTeX verse snippet into an
-# autonomous, compilable .tex file.
+### A class to handle the encapsulation of a LaTeX verse snippet into a
+### "\begin{verse}", "\end{verse}" sandwich.
 
 # Imports.
 import sqlite3
@@ -69,22 +69,6 @@ def find_second_longest_line(snippet):
   second_longest_line = remove_line_endings(second_longest_line)
   second_longest_line = remove_unpaired_braces(second_longest_line)
   return second_longest_line
-
-### The class in question.
-class Encapsulator:
-  def __init__(self, snippet, loadout_name):
-    documentclass = "\\documentclass{amsart}"
-    title = "\\title{Current}"
-    loadout = get_loadout(loadout_name)
-    begin = "\\begin{document}\n\n\\begin{verse}"
-    end = "\\end{verse}\n\n\\end{document}"
-    second_longest_line = find_second_longest_line(snippet)
-    if len(second_longest_line) < max_width:
-      begin = begin.replace("\\begin{verse}",
-                "\\settowidth{\\versewidth}{"+second_longest_line+"}\n"+
-                "\\begin{verse}[\\versewidth]")
-    self.doc = (documentclass+"\n\n"+title+"\n\n"+loadout+"\n\n"+begin+"\n"+
-                snippet+"\n"+end)
 
   # Return the result as a string.
   def digest(self):
