@@ -10,9 +10,10 @@ from bib_builder import build_bib
 
 # The class in question.
 class PDF_builder:
-  def __init__(self, fullness):
+  def __init__(self, fullness, mods):
     # This determines how much front- and backmatter, etc gets put in.
     self.fullness = fullness
+    self.mods = mods
     build_bib()
     self.loadout = self.fetch_loadout()
     self.tween_syntax = self.fetch_tween_syntax()
@@ -63,7 +64,7 @@ class PDF_builder:
 
   # Build the mainmatter from the "Month_builder" class.
   def build_mainmatter(self):
-    month_builder = Month_builder(self.fullness)
+    month_builder = Month_builder(self.fullness, self.mods)
     result = ("\\part{The \\textit{Almanack} Proper}\n\n"+
               self.tween_syntax["pre_mainmatter"]+"\n\n")
     result = result+month_builder.digest()
@@ -117,8 +118,3 @@ class PDF_builder:
     except:
       print("Run build.tex() first!")
     os.system("rm sources.bib")
-
-# Run and wrap up.
-def run():
-  PDF_builder("full")
-run()

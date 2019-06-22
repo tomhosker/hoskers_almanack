@@ -7,6 +7,7 @@ import sqlite3
 import constants
 from encapsulator import Mini_encapsulator
 from hpml.hpml_compiler import HPML_compiler
+from hpml.preprocessor import Preprocessor
 from notes_builder import Notes_builder
 
 # Converts a snippet of HPML into (encapsulated) LaTeX code.
@@ -19,9 +20,10 @@ def to_latex(hpml):
 
 # The class in question.
 class Article:
-  def __init__(self, idno, fullness):
+  def __init__(self, idno, fullness, mods):
     self.idno = idno
     self.fullness = fullness
+    self.mods = mods
     self.hpml = None
     self.tune = None
     self.christ_flag = False
@@ -29,9 +31,11 @@ class Article:
     self.article = None
     self.not_on_db = False
     self.fetch_fields()
-    if self.not_on_db == False:
-      self.notes = Notes_builder(self.idno, self.fullness).digest()
-      self.article = self.build_article()
+    if self.not_on_db:
+      return
+    self.preprocess()
+    self.notes = Notes_builder(self.idno, self.fullness).digest()
+    self.article = self.build_article()
 
   # Fetches the required data from the database.
   def fetch_fields(self):
@@ -47,6 +51,13 @@ class Article:
         self.christ_flag = True
     else:
       self.not_on_db = True
+
+  # Carries out any mods.
+  def preprocess(self):
+    if self.mods == None:
+      return
+    else:
+      self.hpml = Preprocessor(self.hpml, self.mods).digest()
 
   # Sews the class's fields together.
   def build_article(self):

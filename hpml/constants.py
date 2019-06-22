@@ -1,27 +1,34 @@
-# HPML left, LaTeX right.
-lexicon = [
-  ["#LORD", "{\\hoskeroe LORD}"],
-  ["#GOD", "{\\hoskeroe GOD}"],
-  ["##TAB", "\\vin"],
-  ["#AHAT", "\\^{a}"],
-  ["#AGRAVE", "\\`{a}"],
-  ["#EACUTE", "\\'{e}"],
-  ["#EGRAVE", "\\`{e}"],
-  ["#EDDOT", "\\\"{e}"],
-  ["#EHAT", "\\^{e}"],
-  ["#KNOTS", "\\textsc{kts}"],
-  ["#ETC", "\\&c."],
-  ["#SHIP{", "\\textit{"],
-  ["#POUNDS", "{\pounds}"],
-  ["#SHILLINGS", "s"],
-  ["#OLDPENCE", "d"],
-  ["#PENCE", "p"],
-  ["#ENDOFSECTION", "\\aldine"],
-  ["#PERCENT", "\\%"],
-  ["#NUMERO", "\\textnumero"]]
+lexicon = dict()
+lexicon["#LORD"] = "{\\hoskeroe LORD}"
+lexicon["#GOD"] = "{\\hoskeroe GOD}"
+lexicon["##TAB"] = "{\\vin}"
+lexicon["#AHAT"] = "\\^{a}"
+lexicon["#AGRAVE"] = "\\`{a}"
+lexicon["#EACUTE"] = "\\'{e}"
+lexicon["#EGRAVE"] = "\\`{e}"
+lexicon["#EDDOT"] = "\\\"{e}"
+lexicon["#EHAT"] = "\\^{e}"
+lexicon["#KNOTS"] = "\\textsc{kts}"
+lexicon["#ETC"] = "\\&c."
+lexicon["#SHIP{"] = "{\\hoskeroe "
+lexicon["#POUNDS"] = "{\\pounds}"
+lexicon["#SHILLINGS"] = "s"
+lexicon["#PENCE"] = "d"
+lexicon["#ENDOFSECTION"] = "\\aldine"
+lexicon["#PERCENT"] = "\\%"
+lexicon["#NUMERO"] = "\\textnumero"
+lexicon["#ITAL{"] = "\\textit{"
 
-# HPML, plain text, LaTeX.
-fractions = [
-  ["#HALF", "half", "\\sfrac{$1$}{$2$}"],
-  ["#THIRD", "third", "\\sfrac{$1$}{$3$}"],
-  ["#QUARTER", "quarter", "\\sfrac{$1$}{$4$}"]]
+fractions = dict()
+half = dict()
+half["words"] = "half"
+half["latex"] = "\\sfrac{$1$}{$2$}"
+fractions["#HALF"] = half
+third = dict()
+third["words"] = "third"
+third["latex"] = "\\sfrac{$1$}{$3$}"
+fractions["#THIRD"] = third
+quarter = dict()
+quarter["words"] = "quarter"
+quarter["latex"] = "\\sfrac{$1$}{$4$}"
+fractions["#QUARTER"] = quarter

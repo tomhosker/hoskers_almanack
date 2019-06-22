@@ -13,13 +13,6 @@ class HPML_compiler:
       f = open(self.source_f, "r")
       self.source_s = f.read()
       f.close()
-    self.special_font_for_places = True
-    self.special_font_for_persons = True
-    self.special_font_for_publications = True
-    self.special_font_for_foreign_strings = True
-    self.numeric_fractions = True
-    self.suppress_ampersands = False
-    self.emdashes = False
     self.lines = self.source_s.split("\n")
     self.out = ""
     self.build_out()
@@ -68,9 +61,9 @@ class HPML_compiler:
   def process_syntactics(self):
     for line in self.lines:
       i = self.lines.index(line)
-      for entry in lexicon:
-        while entry[0] in line:
-          line = line.replace(entry[0], entry[1])
+      for entry in lexicon.keys():
+        while entry in line:
+          line = line.replace(entry, lexicon[entry])
       self.lines[i] = line
 
   # Ronseal.
@@ -78,10 +71,7 @@ class HPML_compiler:
     for line in self.lines:
       i = self.lines.index(line)
       while "#PLACE{" in line:
-        if self.special_font_for_places:
-          line = line.replace("#PLACE{", "\\textsc{")
-        else:
-          line = line.replace("#PLACE", "")
+        line = line.replace("#PLACE{", "\\textsc{")
       self.lines[i] = line
 
   # Ronseal.
@@ -89,10 +79,7 @@ class HPML_compiler:
     for line in self.lines:
       i = self.lines.index(line)
       while "#PERSON{" in line:
-        if self.special_font_for_persons:
-          line = line.replace("#PERSON{", "\\textit{")
-        else:
-          line = line.replace("#PERSON", "")
+        line = line.replace("#PERSON{", "\\textit{")
       self.lines[i] = line
 
   # Ronseal.
@@ -100,10 +87,7 @@ class HPML_compiler:
     for line in self.lines:
       i = self.lines.index(line)
       while "#PUBLICATION{" in line:
-        if self.special_font_for_publications:
-          line = line.replace("#PUBLICATION{", "{\\hoskeroe ")
-        else:
-          line = line.replace("#PUBLICATION", "")
+        line = line.replace("#PUBLICATION{", "{\\hoskeroe ")
       self.lines[i] = line
 
   # Ronseal.
@@ -111,23 +95,16 @@ class HPML_compiler:
     for line in self.lines:
       i = self.lines.index(line)
       while "#FOREIGN{" in line:
-        if self.special_font_for_foreign_strings:
-          line = line.replace("#FOREIGN{", "{\\hoskeroe ")
-        else:
-          line = line.replace("#FOREIGN", "")
+        line = line.replace("#FOREIGN{", "{\\hoskeroe ")
       self.lines[i] = line
 
   # Ronseal.
   def process_fractions(self):
     for line in self.lines:
       i = self.lines.index(line)
-
-      for entry in fractions:
-        while entry[0] in line:
-          if self.numeric_fractions:
-            line = line.replace(entry[0], entry[2])
-          else:
-            line = line.replace(entry[0], entry[1])
+      for entry in fractions.keys():
+        while entry in line:
+          line = line.replace(entry, fractions[entry]["latex"])
         self.lines[i] = line
 
   # Ronseal.
@@ -135,10 +112,7 @@ class HPML_compiler:
     for line in self.lines:
       i = self.lines.index(line)
       while "#ADD" in line:
-        if self.suppress_ampersands:
-          line = line.replace("#ADD", "and")
-        else:
-          line = line.replace("#ADD", "\&")
+        line = line.replace("#ADD", "\&")
       self.lines[i] = line
 
   # Handles stressed syllables.
@@ -181,15 +155,6 @@ class HPML_compiler:
       self.lines[i] = line
 
   # Ronseal.
-  def process_dashes(self):
-    for line in self.lines:
-      i = self.lines.index(line)
-      if self.emdashes:
-        while " -- " in line:
-          line = line.replace(" -- ", " --- ")
-      self.lines[i] = line
-
-  # Ronseal.
   def process_subscript(self):
     for line in self.lines:
       i = self.lines.index(line)
@@ -215,7 +180,6 @@ class HPML_compiler:
     self.process_ampersands()
     self.process_stress()
     self.process_flagverses()
-    self.process_dashes()
     self.process_subscript()
     self.process_whitespace()
 

@@ -275,44 +275,43 @@ int3 = ("SELECT id FROM article "+
 inter = [int1, int2, int3]
 all_selects["Intercalaris"] = inter
 
-# Converts a snippet of HPML into (encapsulated) LaTeX code.
-def to_latex(hpml):
-  compiler = HPML_compiler(None, hpml)
-  latex = compiler.digest()
-  mini_encapsulator = Mini_encapsulator(latex)
-  result = mini_encapsulator.digest()
-  return result
-
-### A helper class.
+# A helper class.
 class Month:
-  def __init__(self, name, intro, articles, fullness):
+  def __init__(self, name, intro, articles, fullness, mods):
+    self.name = name
+    self.intro = intro
     self.songs = articles["songs"]
     self.sonnets = articles["sonnets"]
     self.proverbs = articles["proverbs"]
     self.fullness = fullness
+    self.mods = mods
+    self.printout = self.build_printout()
 
-  # Construct a string from
+  def build_printout(self):
     lengths = [len(self.songs), len(self.sonnets), len(self.proverbs)]
     n = min(lengths)
-    self.d = "\\chapter{"+name+"}\n\n"+intro+"\n\n"
+    result = "\\chapter{"+self.name+"}\n\n"+self.intro+"\n\n"
     for i in range(n):
-      self.d = self.d+"\\bigskip\n\\bigskip\n\\section{}\n\n"
-      self.d = self.d+"\\subsection{}\n\n"
-      self.d = self.d+Article(self.songs[i], self.fullness).digest()+"\n\n"
-      self.d = self.d+"\\subsection{}\n\n"
-      self.d = (self.d+Article(self.sonnets[i], self.fullness).digest()+
-                "\n\n")
-      self.d = self.d+"\\bigskip\n\\subsection{}\n\n"
-      self.d = (self.d+Article(self.proverbs[i], self.fullness).digest()+
-                "\n\n")
+      song_obj = Article(self.songs[i], self.fullness, self.mods)
+      sonnet_obj = Article(self.sonnets[i], self.fullness, self.mods)
+      proverb_obj = Article(self.proverbs[i], self.fullness, self.mods)
+      song = song_obj.digest()
+      sonnet = sonnet_obj.digest()
+      proverb = proverb_obj.digest()
+      result = result+"\\bigskip\n\\bigskip\n\\section{}\n\n"
+      result = result+"\\subsection{}\n\n"+song+"\n\n"
+      result = result+"\\subsection{}\n\n"+sonnet+"\n\n"
+      result = result+"\\subsection{}\n\n"+proverb+"\n\n"
+    return result
 
   def digest(self):
-    return self.d
+    return self.printout
 
-### The class in question.
+# The class in question.
 class Month_builder:
-  def __init__(self, fullness):
+  def __init__(self, fullness, mods):
     self.fullness = fullness
+    self.mods = mods
     conn = sqlite3.connect(constants.db)
     self.c = conn.cursor()
     self.primilis = self.build_month("Primilis")
@@ -371,7 +370,7 @@ class Month_builder:
   def build_month(self, name):
     intro = self.fetch_intro(name)
     articles = self.fetch_articles(all_selects[name])
-    result = Month(name, intro, articles, self.fullness).digest()
+    result = Month(name, intro, articles, self.fullness, self.mods).digest()
     return result
 
   # Wrap all months into one string.

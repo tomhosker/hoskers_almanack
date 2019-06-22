@@ -1,14 +1,13 @@
-### This code builds "survey.txt", a document concerning the gaps presently
-### in the Almanack.
+### This code holds a class which identifies the gaps presently in the
+### Almanack, and sends a report to the screen and/or a file.
 
 # Imports.
 import sqlite3
 
 # Local imports.
-import month_builder
+import constants, month_builder
 
 # Constants.
-db = "almanack.db"
 p_pri1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
           "(humour = 'bile') AND (ranking = 999));")
 p_pri2 = ("SELECT id FROM article WHERE ((type = 2) AND "+
@@ -109,18 +108,14 @@ p_int3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
           "(humour = 'intercalaris') AND (ranking = 999));")
 p_int = [p_int1, p_int2, p_int3]
 
-### HELPER FUNCTIONS.
-
-# Count the number of items satifying a particular SELECT statement.
+# Helper functions.
 def count_select(select):
-  conn = sqlite3.connect(db)
+  conn = sqlite3.connect(constants.db)
   c = conn.cursor()
   c.execute(select)
   rows = c.fetchall()
   result = len(rows)
   return result
-
-# Builds the survey for a given month.
 def build_survey_for_month(name, selects, potential_selects, month_length):
   songs = count_select(selects[0])
   sonnets = count_select(selects[1])
@@ -137,21 +132,41 @@ def build_survey_for_month(name, selects, potential_selects, month_length):
             " needed, and "+str(potential_proverbs)+" available.")
   return result
 
-# Prints a survey for the whole Almanack to the screen.
-def print_survey():
-  print(build_survey_for_month("Primilis", month_builder.pri, p_pri, 30))
-  print(build_survey_for_month("Sectilis", month_builder.sec, p_sec, 29))
-  print(build_survey_for_month("Tertilis", month_builder.ter, p_ter, 30))
-  print(build_survey_for_month("Quartilis", month_builder.qua, p_qua, 29))
-  print(build_survey_for_month("Quintilis", month_builder.qui, p_qui, 30))
-  print(build_survey_for_month("Sextilis", month_builder.sex, p_sex, 29))
-  print(build_survey_for_month("September", month_builder.sep, p_sep, 30))
-  print(build_survey_for_month("October", month_builder.octo, p_oct, 29))
-  print(build_survey_for_month("November", month_builder.nov, p_nov, 30))
-  print(build_survey_for_month("December", month_builder.dec, p_dec, 29))
-  print(build_survey_for_month("Unodecember", month_builder.uno, p_uno, 30))
-  print(build_survey_for_month("Duodecember", month_builder.duo, p_duo, 29))
-  print(build_survey_for_month("Intercalaris", month_builder.inter,
-                               p_int, 29))
+# The class in question.
+class Survey:
+  def __init__(self):
+    pri = build_survey_for_month("Primilis", month_builder.pri, p_pri, 30)
+    sec = build_survey_for_month("Sectilis", month_builder.sec, p_sec, 29)
+    ter = build_survey_for_month("Tertilis", month_builder.ter, p_ter, 30)
+    qua = build_survey_for_month("Quartilis", month_builder.qua, p_qua, 29)
+    qui = build_survey_for_month("Quintilis", month_builder.qui, p_qui, 30)
+    sex = build_survey_for_month("Sextilis", month_builder.sex, p_sex, 29)
+    sep = build_survey_for_month("September", month_builder.sep, p_sep, 30)
+    octo = build_survey_for_month("October", month_builder.octo, p_oct, 29)
+    nov = build_survey_for_month("November", month_builder.nov, p_nov, 30)
+    dec = build_survey_for_month("December", month_builder.dec, p_dec, 29)
+    uno = build_survey_for_month("Unodecember", month_builder.uno,
+                                 p_uno, 30)
+    duo = build_survey_for_month("Duodecember", month_builder.duo,
+                                 p_duo, 29)
+    inter = build_survey_for_month("Intercalaris", month_builder.inter,
+                                   p_int, 29)
+    self.printout = (pri+"\n\n"+sec+"\n\n"+ter+"\n\n"+qua+"\n\n"+qui+"\n\n"+
+                     sex+"\n\n"+sep+"\n\n"+octo+"\n\n"+nov+"\n\n"+
+                     dec+"\n\n"+uno+"\n\n"+duo+"\n\n"+inter)
 
-print_survey()
+  # Ronseal.
+  def print_to_screen(self):
+    print(self.printout)
+
+  # Ronseal.
+  def write_to_file(self):
+    f = open("survey.txt", "w")
+    f.write(self.printout)
+    f.close()
+
+# Run and wrap up.
+def run():
+  survey = Survey()
+  survey.print_to_screen()
+run()
