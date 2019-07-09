@@ -47,7 +47,7 @@ p_qui3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
           "(humour = 'blood') AND (ranking = 999));")
 p_qui = [p_qui1, p_qui2, p_qui3]
 p_sex1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
-          "(humour = 'blood') AND (aux_type = 'american folk') AND "+
+          "(humour = 'blood') AND (aux_type = 'imperial folk') AND "+
           "(ranking = 999)) OR ((type = 1) AND (humour = 'blood') AND "+
           "(aux_type = 'hymn') AND (ranking = 999));")
 p_sex2 = ("SELECT id FROM article WHERE ((type = 2) AND "+

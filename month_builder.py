@@ -113,7 +113,7 @@ all_selects["Quintilis"] = qui
 sex1 = ("SELECT id FROM article "+
         "WHERE (type = 1 "+
           "AND humour = \"blood\" "+
-          "AND aux_type = \"american folk\" "+
+          "AND aux_type = \"imperial folk\" "+
           "AND ranking BETWEEN 1 AND 19) "+
         "OR (type = 1 "+
           "AND humour = \"blood\" "+
