@@ -44,7 +44,10 @@ class Article:
     select = "SELECT content, tune, christFlag FROM article WHERE id = ?;"
     c.execute(select, (self.idno,))
     row = c.fetchone()
-    if len(row) == 3:
+    conn.close()
+    if row == None:
+      raise Exception("No article with that ID in the database.")
+    elif len(row) == 3:
       self.hpml = row[0]
       self.tune = row[1]
       if row[2] == 1:
@@ -78,7 +81,7 @@ class Article:
 
 # Run a demo.
 def demo():
-  print(Article(95, "full").digest())
+  print(Article(95, "full", None).digest())
 
 # Run and wrap up.
 def run():

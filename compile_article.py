@@ -22,7 +22,7 @@ def fetch_loadout():
 def compile_article(idno):
   build_bib()
   loadout = fetch_loadout()
-  article_object = Article(idno, "full")
+  article_object = Article(idno, "full", None)
   if article_object.not_on_db:
     print("No article with ID "+str(idno)+" on the database.")
     return False
