@@ -116,5 +116,5 @@ class PDF_builder:
       os.system("cp main.pdf almanack.pdf")
       os.system("rm -rf main*")
     except:
-      print("Run build.tex() first!")
+      print("Run build_tex() first!")
     os.system("rm sources.bib")

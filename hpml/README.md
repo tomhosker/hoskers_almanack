@@ -31,8 +31,8 @@ HPML on the left, LaTeX on the right.
 
 #### Foreign Characters
 
-`#{EACUTE}` = `\'e`
-`#{EHAT}` = `\^e`
+`#{EACUTE}` = `{#EACUTE}` = `\'e`
+`#{EHAT}` = `{#EHAT}` = `\^e`
 
 ### Semantic Markups
 

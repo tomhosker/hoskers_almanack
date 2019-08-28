@@ -18,6 +18,7 @@ lexicon["#ENDOFSECTION"] = "\\aldine"
 lexicon["#PERCENT"] = "\\%"
 lexicon["#NUMERO"] = "\\textnumero"
 lexicon["#ITAL{"] = "\\textit{"
+lexicon["|"] = "$\mid$"
 
 fractions = dict()
 half = dict()
