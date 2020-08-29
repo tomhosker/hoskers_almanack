@@ -3,12 +3,12 @@
 This document allows HPML syntax highlighting on Gedit. If you're using
 Ubuntu, run:
 
-  cp hpml.lang /usr/share/gtksourceview-3.0/language-specs/hpml.lang
+  sudo cp hpml.lang /usr/share/gtksourceview-4/language-specs/hpml.lang
+  sudo chmod 0644 /usr/share/gtksourceview-4/language-specs/hpml.lang
 
-to install said highlighting on your machine.
+from this directory to install said highlighting on your machine.
 -->
-<language id="hpml" name="Hosker's Poetical Markup Language" version="2.0"
-          _section="Markup">
+<language id="hpml" name="HPML" version="2.0" _section="Markup">
   <metadata>
     <property name="globs">*.hmpl</property>
     <property name="line-comment-start">####</property>
