@@ -1,11 +1,15 @@
-### This code holds a class which identifies the gaps presently in the
-### Almanack, and sends a report to the screen and/or a file.
+"""
+This code holds a class which identifies the gaps presently in the Almanack,
+and sends a report to the screen and/or a file.
+"""
 
-# Imports.
+# Standard imports.
 import sqlite3
+import sys
 
 # Local imports.
-import constants, month_builder
+import constants
+import month_builder
 
 # Constants.
 p_pri1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
@@ -108,65 +112,91 @@ p_int3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
           "(humour = 'intercalaris') AND (ranking = 999));")
 p_int = [p_int1, p_int2, p_int3]
 
-# Helper functions.
-def count_select(select):
-  conn = sqlite3.connect(constants.db)
-  c = conn.cursor()
-  c.execute(select)
-  rows = c.fetchall()
-  result = len(rows)
-  return result
-def build_survey_for_month(name, selects, potential_selects, month_length):
-  songs = count_select(selects[0])
-  sonnets = count_select(selects[1])
-  proverbs = count_select(selects[2])
-  potential_songs = count_select(potential_selects[0])
-  potential_sonnets = count_select(potential_selects[1])
-  potential_proverbs = count_select(potential_selects[2])
-  result = "For the month of "+name+"...\n"
-  result = (result+str(songs)+" songs out of "+str(month_length)+
-            " needed, and "+str(potential_songs)+" available.\n")
-  result = (result+str(sonnets)+" sonnets out of "+str(month_length)+
-            " needed, and "+str(potential_sonnets)+" available.\n")
-  result = (result+str(proverbs)+" proverbs out of "+str(month_length)+
-            " needed, and "+str(potential_proverbs)+" available.")
-  return result
+##############
+# MAIN CLASS #
+##############
 
 # The class in question.
 class Survey:
-  def __init__(self):
-    pri = build_survey_for_month("Primilis", month_builder.pri, p_pri, 30)
-    sec = build_survey_for_month("Sectilis", month_builder.sec, p_sec, 29)
-    ter = build_survey_for_month("Tertilis", month_builder.ter, p_ter, 30)
-    qua = build_survey_for_month("Quartilis", month_builder.qua, p_qua, 29)
-    qui = build_survey_for_month("Quintilis", month_builder.qui, p_qui, 30)
-    sex = build_survey_for_month("Sextilis", month_builder.sex, p_sex, 29)
-    sep = build_survey_for_month("September", month_builder.sep, p_sep, 30)
-    octo = build_survey_for_month("October", month_builder.octo, p_oct, 29)
-    nov = build_survey_for_month("November", month_builder.nov, p_nov, 30)
-    dec = build_survey_for_month("December", month_builder.dec, p_dec, 29)
-    uno = build_survey_for_month("Unodecember", month_builder.uno,
-                                 p_uno, 30)
-    duo = build_survey_for_month("Duodecember", month_builder.duo,
-                                 p_duo, 29)
-    inter = build_survey_for_month("Intercalaris", month_builder.inter,
-                                   p_int, 29)
-    self.printout = (pri+"\n\n"+sec+"\n\n"+ter+"\n\n"+qua+"\n\n"+qui+"\n\n"+
-                     sex+"\n\n"+sep+"\n\n"+octo+"\n\n"+nov+"\n\n"+
-                     dec+"\n\n"+uno+"\n\n"+duo+"\n\n"+inter)
+    def __init__(self):
+        pri = build_survey_for_month("Primilis", month_builder.pri, p_pri,
+                                     30)
+        sec = build_survey_for_month("Sectilis", month_builder.sec, p_sec,
+                                     29)
+        ter = build_survey_for_month("Tertilis", month_builder.ter, p_ter,
+                                     30)
+        qua = build_survey_for_month("Quartilis", month_builder.qua, p_qua,
+                                     29)
+        qui = build_survey_for_month("Quintilis", month_builder.qui, p_qui,
+                                     30)
+        sex = build_survey_for_month("Sextilis", month_builder.sex, p_sex,
+                                     29)
+        sep = build_survey_for_month("September", month_builder.sep, p_sep,
+                                     30)
+        ott = build_survey_for_month("October", month_builder.octo, p_oct,
+                                     29)
+        nov = build_survey_for_month("November", month_builder.nov, p_nov,
+                                     30)
+        dec = build_survey_for_month("December", month_builder.dec, p_dec,
+                                     29)
+        uno = build_survey_for_month("Unodecember", month_builder.uno,
+                                     p_uno, 30)
+        duo = build_survey_for_month("Duodecember", month_builder.duo,
+                                     p_duo, 29)
+        inter = build_survey_for_month("Intercalaris", month_builder.inter,
+                                       p_int, 29)
+        self.printout = (pri+"\n\n"+sec+"\n\n"+ter+"\n\n"+qua+"\n\n"+qui+
+                         "\n\n"+sex+"\n\n"+sep+"\n\n"+ott+"\n\n"+nov+"\n\n"+
+                         dec+"\n\n"+uno+"\n\n"+duo+"\n\n"+inter)
 
-  # Ronseal.
-  def print_to_screen(self):
-    print(self.printout)
+    def print_to_screen(self):
+        """ Ronseal. """
+        print(self.printout)
 
-  # Ronseal.
-  def write_to_file(self):
-    f = open("survey.txt", "w")
-    f.write(self.printout)
-    f.close()
+    def write_to_file(self):
+        """ Ronseal. """
+        with open("survey.txt", "w") as survey_file:
+            survey_file.write(self.printout)
 
-# Run and wrap up.
+####################
+# HELPER FUNCTIONS #
+####################
+
+def count_select(select):
+    """ A template for counting the length of the result of a SELECT
+    query. """
+    conn = sqlite3.connect(constants.db)
+    cursor = conn.cursor()
+    cursor.execute(select)
+    rows = cursor.fetchall()
+    result = len(rows)
+    return result
+
+def build_survey_for_month(name, selects, potential_selects, month_length):
+    """ Ronseal. """
+    songs = count_select(selects[0])
+    sonnets = count_select(selects[1])
+    proverbs = count_select(selects[2])
+    potential_songs = count_select(potential_selects[0])
+    potential_sonnets = count_select(potential_selects[1])
+    potential_proverbs = count_select(potential_selects[2])
+    result = "For the month of "+name+"...\n"
+    result = (result+str(songs)+" songs out of "+str(month_length)+
+              " needed, and "+str(potential_songs)+" available.\n")
+    result = (result+str(sonnets)+" sonnets out of "+str(month_length)+
+              " needed, and "+str(potential_sonnets)+" available.\n")
+    result = (result+str(proverbs)+" proverbs out of "+str(month_length)+
+              " needed, and "+str(potential_proverbs)+" available.")
+    return result
+
+###################
+# RUN AND WRAP UP #
+###################
+
 def run():
-  survey = Survey()
-  survey.print_to_screen()
-run()
+    survey = Survey()
+    if "--test" not in sys.argv:
+        survey.print_to_screen()
+
+if __name__ == "__main__":
+    run()

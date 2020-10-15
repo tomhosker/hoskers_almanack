@@ -1,101 +1,128 @@
-### This code holds a class which conducts an audit of the articles in the
-### database.
+"""
+This code defines a class which conducts an audit of the articles in the
+database.
+"""
 
-# Imports.
-import sqlite3, os, multiprocessing
+# Path voodoo.
+import sys
+sys.path.append("hpml")
+
+# Standard imports.
+import os
+import sqlite3
+from subprocess import Popen, PIPE
+from threading import Thread
 
 # Local imports.
 import constants
-from hpml.hpml_compiler import HPML_compiler
+from hpml_compiler import HPMLCompiler
 from encapsulator import Encapsulator
 
-# The class in question.
+##############
+# MAIN CLASS #
+##############
+
 class Auditor:
-  def __init__(self):
-    self.idnos = None
-    self.collect_idnos()
-    self.hpml = ""
-    self.reset_report()
-    self.screentext = ""
-    self.run_class()
+    """ The class in question. """
+    def __init__(self, report_filename="audit.txt"):
+        self.report_filename = report_filename
+        self.idnos = self.collect_idnos()
+        self.hpml = ""
+        self.reset_report()
+        self.latex_process = None
+        self.screentext = ""
 
-  # Scrub the report.
-  def reset_report(self):
-    f = open("audit.txt", "w")
-    f.write("")
-    f.close()
+    def reset_report(self):
+        """ Scrub the report. """
+        if os.path.exists(self.report_filename):
+            os.remove(self.report_filename)
+        os.system("touch "+self.report_filename)
 
-  # Ronseal.
-  def write_to_report(self, line):
-    f = open("audit.txt", "a")
-    f.write(line+"\n")
-    f.close()
+    def write_to_report(self, line):
+        """ Ronseal. """
+        with open(self.report_filename, "a") as fileobj:
+            fileobj.write(line+"\n")
 
-  # Collect the ID nos of all articles on the database.
-  def collect_idnos(self):
-    conn = sqlite3.connect(constants.db)
-    c = conn.cursor()
-    select = "SELECT id FROM article;"
-    c.execute(select)
-    readout = c.fetchall()
-    idnos = []
-    for item in readout:
-      idnos.append(item[0])
-    idnos.sort()
-    self.idnos = idnos
-    conn.close()
+    def collect_idnos(self):
+        """ Collect the ID nos of all articles on the database. """
+        conn = sqlite3.connect(constants.db)
+        cursor = conn.cursor()
+        select = "SELECT id FROM article;"
+        cursor.execute(select)
+        readout = cursor.fetchall()
+        conn.close()
+        result = []
+        for item in readout:
+            result.append(item[0])
+        result.sort()
+        return result
 
-  # Fetch a numbered article from the database.
-  def fetch_hpml(self, idno):
-    conn = sqlite3.connect(constants.db)
-    c = conn.cursor()
-    select = "SELECT content FROM article WHERE id = ?"
-    c.execute(select, (idno,))
-    readout = c.fetchone()
-    self.hpml = readout[0]
-    conn.close()
+    def fetch_hpml(self, idno):
+        """ Fetch a numbered article from the database. """
+        conn = sqlite3.connect(constants.db)
+        cursor = conn.cursor()
+        select = "SELECT content FROM article WHERE id = ?"
+        cursor.execute(select, (idno,))
+        readout = cursor.fetchone()
+        conn.close()
+        self.hpml = readout[0]
 
-  # Ronseal.
-  def run_pdflatex(self):
-    self.screentext = os.popen("xelatex current.tex").read()
+    def run_xelatex(self):
+        """ Ronseal. """
+        args = ["xelatex", "-interaction=nonstopmode", "current.tex"]
+        self.latex_process = Popen(args, stdout=PIPE)
+        lines = self.latex_process.stdout.readlines()
+        for line in self.latex_process.stdout:
+            self.screentext = self.screentext+line.decode("utf-8")+"\n"
 
-  # Attempt to compile an article, and kill the process if necessary.
-  def attempt_to_compile(self):
-    p = multiprocessing.Process(target=self.run_pdflatex(),
-                                name="run_pdflatex",
-                                args=tuple())
-    p.start()
-    p.join(3)
-    if p.is_alive():
-      p.terminate()
-      p.join()
-      return False
-    return True
+    def attempt_to_compile(self):
+        """ Attempt to compile an article, and kill the process if
+        necessary. """
+        thread = Thread(target=self.run_xelatex())
+        thread.start()
+        thread.join(3)
+        if thread.is_alive():
+            self.latex_process.kill()
+            thread.join()
+            return False
+        return True
 
-  # Audit one article.
-  def audit(self, idno):
-    self.fetch_hpml(idno)
-    compiler = HPML_compiler(None, self.hpml)
-    latex = compiler.digest()
-    if "#" in latex:
-      self.write_to_report(str(idno)+": Untranslated HPML.")
-      return
-    encapsulator = Encapsulator(latex, "slim")
-    encapsulator.save()
-    if self.attempt_to_compile() == False:
-      self.write_to_report(str(idno)+": Would not compile.")
-    elif "!" in self.screentext:
-      self.write_to_report(str(idno)+": ERROR.")
-    elif (("Runaway argument?" in self.screentext) or
-          ("Underfull" in self.screentext) or
-          ("Overfull" in self.screentext) or
-          ("Warning" in self.screentext)):
-      self.write_to_report(str(idno)+": warning.")
+    def audit(self, idno):
+        """ Audit one article. """
+        self.fetch_hpml(idno)
+        compiler = HPMLCompiler(source_string=self.hpml)
+        latex = compiler.out
+        if "#" in latex:
+            self.write_to_report(str(idno)+": Untranslated HPML.")
+            return
+        encapsulator = Encapsulator(latex)
+        encapsulator.save()
+        if not self.attempt_to_compile():
+            self.write_to_report(str(idno)+": WOULD NOT COMPILE.")
+        elif "!" in self.screentext:
+            self.write_to_report(str(idno)+": ERROR.")
+        elif (("Runaway argument?" in self.screentext) or
+              ("Underfull" in self.screentext) or
+              ("Overfull" in self.screentext) or
+              ("Warning" in self.screentext)):
+            self.write_to_report(str(idno)+": warning.")
 
-  # Ronseal.
-  def run_class(self):
-    for idno in self.idnos:
-      print(idno)
-      self.audit(idno)
+    def run_me(self):
+        """ Ronseal. """
+        print("Conducting audit...")
+        for idno in self.idnos:
+            print("Auditing article with id="+str(idno)+"...")
+            self.audit(idno)
+        print("Audit complete!")
 
-Auditor()
+###################
+# RUN AND WRAP UP #
+###################
+
+def run():
+    auditor = Auditor()
+    if "--test" not in sys.argv:
+        auditor.run_me()
+
+if __name__ == "__main__":
+    run()

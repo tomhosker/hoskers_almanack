@@ -1,25 +1,35 @@
-### This code compiles the entire Almanack.
+"""
+This code provides a concise entry-point for the using the PDFBuilder class.
+"""
 
-# Imports.
+# Standard imports.
 import sys
 
 # Local imports.
-from pdf_builder import PDF_builder
+from pdf_builder import PDFBuilder
 
-# This is where the magic happens.
-def compile_almanack(args):
-  if len(args) == 1:
-    fullness = "full"
-  else:
-    fullness = args[1]
-  mods = []
-  for arg in args:
-    if args.index(arg) > 1:
-      mods.append(arg)
-  PDF_builder(fullness, mods)
-  print(args)
+# Configurations.
+FULLNESS = "full" # Options: full, slender.
+MODS = [] # See hpml/preprocessor.py for strings you can put in this list.
 
-# Run and wrap up.
+#############
+# FUNCTIONS #
+#############
+
+def compile_almanack(quiet=False):
+    """ Compile the Almanack with the above configurations. """
+    builder = PDFBuilder(fullness=FULLNESS, mods=MODS, quiet=quiet)
+    builder.build()
+
+###################
+# RUN AND WRAP UP #
+###################
+
 def run():
-  compile_almanack(sys.argv)
-run()
+    if "--test" in sys.argv:
+        compile_almanack(quiet=True)
+    else:
+        compile_almanack()
+
+if __name__ == "__main__":
+    run()

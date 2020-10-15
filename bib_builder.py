@@ -1,59 +1,76 @@
-### This code builds a BibTeX bibliography from the database.
+"""
+This code builds a BibTeX bibliography from the database.
+"""
 
-# Imports.
+# Standard imports.
+import os
 import sqlite3
+import sys
 
 # Local imports.
-import constants, almanack_utils
+import constants
+import almanack_utils
 
-# Ronseal.
+# Local constants.
+PATH_TO_BIB = "sources.bib"
+
+#############
+# FUNCTIONS #
+#############
+
 def fetch_sources():
-  select = "SELECT * FROM source ORDER BY code;"
-  sources = almanack_utils.fetch_to_dict(constants.db, select, tuple())
-  return sources
+    """ Ronseal. """
+    select = "SELECT * FROM source ORDER BY code;"
+    sources = almanack_utils.fetch_to_dict(constants.db, select, tuple())
+    return sources
 
-# Ronseal.
 def wipe_bib():
-  f = open("sources.bib", "w")
-  f.write("")
-  f.close()
+    """ Ronseal. """
+    if os.path.exists(PATH_TO_BIB):
+        os.remove(PATH_TO_BIB)
+    os.system("touch "+PATH_TO_BIB)
 
-# Builds our .bib file.
 def build_bib():
-  sources = fetch_sources()
-  wipe_bib()
-  f = open("sources.bib", "a")
-  for source in sources:
-    code = source["code"]
-    keywords = source["keywords"]
-    if source["author"] == None:
-      author = ""
-    else:
-      author = source["author"]
-    title = source["title"]
-    if source["year"] == None:
-      year = ""
-    else:
-      year = str(source["year"])
-    if source["editor"] == None:
-      editor = ""
-    else:
-      editor = source["editor"]
-    if source["translator"] == None:
-      translator = ""
-    else:
-      translator = source["translator"]
-    f.write("@book{"+code+",\n")
-    f.write("  keywords = \""+keywords+"\",\n")
-    f.write("  author = \""+author+"\",\n")
-    f.write("  title = \""+title+"\",\n")
-    f.write("  year = \""+year+"\",\n")
-    f.write("  editor = \""+editor+"\",\n")
-    f.write("  translator = \""+translator+"\"\n")
-    f.write("}\n\n")
-  f.close()
+    """ Builds our .bib file. """
+    sources = fetch_sources()
+    wipe_bib()
+    with open("sources.bib", "a") as fileobj:
+        for source in sources:
+            code = source["code"]
+            keywords = source["keywords"]
+            if source["author"] is None:
+                author = ""
+            else:
+                author = source["author"]
+            title = source["title"]
+            if source["year"] is None:
+                year = ""
+            else:
+                year = str(source["year"])
+            if source["editor"] is None:
+                editor = ""
+            else:
+                editor = source["editor"]
+            if source["translator"] is None:
+                translator = ""
+            else:
+                translator = source["translator"]
+            fileobj.write("@book{"+code+",\n")
+            fileobj.write("    keywords = \""+keywords+"\",\n")
+            fileobj.write("    author = \""+author+"\",\n")
+            fileobj.write("    title = \""+title+"\",\n")
+            fileobj.write("    year = \""+year+"\",\n")
+            fileobj.write("    editor = \""+editor+"\",\n")
+            fileobj.write("    translator = \""+translator+"\"\n")
+            fileobj.write("}\n\n")
 
-# Run and wrap up.
+###################
+# RUN AND WRAP UP #
+###################
+
 def run():
-  build_bib()
-#run()
+    if "--test" not in sys.argv:
+        build_bib()
+
+if __name__ == "__main__":
+    run()

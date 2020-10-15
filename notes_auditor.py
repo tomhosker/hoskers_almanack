@@ -1,99 +1,114 @@
-### This code holds a class which conducts an audit of the NOTES to the
-### articles in the database.
+"""
+This code defines a class which conducts an audit of the notes to the
+articles in the database.
+"""
 
-# Imports.
-import sqlite3, os, multiprocessing
+# Standard imports.
+import multiprocessing
+import os
+import sqlite3
+import sys
 
 # Local imports.
 import constants
-from notes_builder import Notes_builder
+from notes_builder import NotesBuilder
 
-# The class in question.
-class Notes_auditor:
-  def __init__(self):
-    self.idnos = None
-    self.collect_idnos()
-    self.loadout = None
-    self.fill_loadout()
-    self.reset_report()
-    self.screentext = ""
-    self.run_class()
+##############
+# MAIN CLASS #
+##############
 
-  # Scrub the report.
-  def reset_report(self):
-    f = open("audit.txt", "w")
-    f.write("")
-    f.close()
+class NotesAuditor:
+    """ The class in question. """
+    def __init__(self):
+        self.idnos = None
+        self.collect_idnos()
+        self.loadout = None
+        self.fill_loadout()
+        self.reset_report()
+        self.screentext = ""
 
-  # Ronseal.
-  def write_to_report(self, line):
-    f = open("audit.txt", "a")
-    f.write(line+"\n")
-    f.close()
+    def reset_report(self):
+        """ Scrub the report. """
+        with open("audit.txt", "w") as audit_file:
+            audit_file.write("")
 
-  # Collect the ID nos of all articles on the database.
-  def collect_idnos(self):
-    conn = sqlite3.connect(constants.db)
-    c = conn.cursor()
-    select = "SELECT id FROM article;"
-    c.execute(select)
-    readout = c.fetchall()
-    idnos = []
-    for item in readout:
-      idnos.append(item[0])
-    idnos.sort()
-    self.idnos = idnos
-    conn.close()
+    def write_to_report(self, line):
+        """ Ronseal. """
+        with open("audit.txt", "a") as audit_file:
+            audit_file.write(line+"\n")
 
-  # Fetch the correct loadout from the database.
-  def fill_loadout(self):
-    conn = sqlite3.connect(constants.db)
-    c = conn.cursor()
-    select = "SELECT latex FROM package_loadout WHERE name = 'main';"
-    c.execute(select)
-    readout = c.fetchone()
-    self.loadout = readout[0]
-    conn.close()
+    def collect_idnos(self):
+        """ Collect the ID nos of all articles on the database. """
+        conn = sqlite3.connect(constants.db)
+        cursor = conn.cursor()
+        select = "SELECT id FROM article;"
+        cursor.execute(select)
+        readout = cursor.fetchall()
+        idnos = []
+        for item in readout:
+            idnos.append(item[0])
+        idnos.sort()
+        self.idnos = idnos
+        conn.close()
 
-  # Ronseal.
-  def run_xelatex(self):
-    self.screentext = os.popen("xelatex current.tex").read()
+    def fill_loadout(self):
+        """ Fetch the correct loadout from the database. """
+        conn = sqlite3.connect(constants.db)
+        cursor = conn.cursor()
+        select = "SELECT latex FROM package_loadout WHERE name = 'main';"
+        cursor.execute(select)
+        readout = cursor.fetchone()
+        self.loadout = readout[0]
+        conn.close()
 
-  # Attempt to compile an article, and kill the process if necessary.
-  def attempt_to_compile(self):
-    p = multiprocessing.Process(target=self.run_xelatex(),
-                                name="run_xelatex",
-                                args=tuple())
-    p.start()
-    p.join(3)
-    if p.is_alive():
-      p.terminate()
-      p.join()
-      return False
-    return True
+    def run_xelatex(self):
+        """ Ronseal. """
+        self.screentext = os.popen("xelatex current.tex").read()
 
-  # Audit one article.
-  def audit(self, idno):
-    notes = Notes_builder(idno).digest()
-    tex = ("\\documentclass{amsart}\n\n"+self.loadout+"\n\n"+
-           "\\begin{document}\n\n"+notes+"\n\n"+"\\end{document}")
-    f = open("current.tex", "w")
-    f.write(tex)
-    f.close()
-    if self.attempt_to_compile() == False:
-      self.write_to_report(str(idno)+": Would not compile.")
-    elif "!" in self.screentext:
-      self.write_to_report(str(idno)+": ERROR.")
-    elif (("Runaway argument?" in self.screentext) or
-          ("Underfull" in self.screentext) or
-          ("Overfull" in self.screentext) or
-          ("Warning" in self.screentext)):
-      self.write_to_report(str(idno)+": warning.")
+    def attempt_to_compile(self):
+        """ Attempt to compile an article, and kill the process if
+        necessary. """
+        process = multiprocessing.Process(target=self.run_xelatex(),
+                                          name="run_xelatex", args=tuple())
+        process.start()
+        process.join(3)
+        if process.is_alive():
+            process.terminate()
+            process.join()
+            return False
+        return True
 
-  # Ronseal.
-  def run_class(self):
-    for idno in self.idnos:
-      print(idno)
-      self.audit(idno)
+    def audit(self, idno):
+        """ Audit one article. """
+        notes = NotesBuilder(idno, "full").out
+        tex = ("\\documentclass{amsart}\n\n"+self.loadout+"\n\n"+
+               "\\begin{document}\n\n"+notes+"\n\n"+"\\end{document}")
+        with open("current.tex", "w") as current_file:
+            current_file.write(tex)
+        if not self.attempt_to_compile():
+            self.write_to_report(str(idno)+": Would not compile.")
+        elif "!" in self.screentext:
+            self.write_to_report(str(idno)+": ERROR.")
+        elif (("Runaway argument?" in self.screentext) or
+              ("Underfull" in self.screentext) or
+              ("Overfull" in self.screentext) or
+              ("Warning" in self.screentext)):
+            self.write_to_report(str(idno)+": warning.")
 
-Notes_auditor()
+    def run_me(self):
+        """ Ronseal. """
+        for idno in self.idnos:
+            print("Auditing notes on article with id="+str(idno)+"...")
+            self.audit(idno)
+
+###################
+# RUN AND WRAP UP #
+###################
+
+def run():
+    auditor = NotesAuditor()
+    if "--test" not in sys.argv:
+        auditor.run_me()
+
+if __name__ == "__main__":
+    run()

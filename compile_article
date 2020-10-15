@@ -1,9 +1,0 @@
-if [ "$#" -lt 1 ]
-then
-  echo "Please specify the ID of the article you wish to compile."
-elif [ "$#" -ne 1 ]
-then
-  echo "Please specify the ID of the article you wish to compile *alone*."
-else
-  python3 compile_article.py $1
-fi

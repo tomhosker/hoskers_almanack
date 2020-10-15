@@ -1,89 +1,116 @@
-### This file holds a class which constructs the LaTeX for a given article.
+"""
+This code defines a class which constructs the LaTeX for a given article.
+"""
 
-# Imports.
+# Path voodoo.
+import sys
+sys.path.append("hpml")
+
+# Standard imports.
 import sqlite3
 
 # Local imports.
 import constants
-from encapsulator import Mini_encapsulator
-from hpml.hpml_compiler import HPML_compiler
-from hpml.preprocessor import Preprocessor
-from notes_builder import Notes_builder
+from encapsulator import MiniEncapsulator
+from hpml_compiler import HPMLCompiler
+from preprocessor import Preprocessor
+from notes_builder import NotesBuilder
 
-# Converts a snippet of HPML into (encapsulated) LaTeX code.
-def to_latex(hpml):
-  compiler = HPML_compiler(None, hpml)
-  latex = compiler.digest()
-  mini_encapsulator = Mini_encapsulator(latex)
-  result = mini_encapsulator.digest()
-  return result
+##############
+# MAIN CLASS #
+##############
 
 # The class in question.
 class Article:
-  def __init__(self, idno, fullness, mods):
-    self.idno = idno
-    self.fullness = fullness
-    self.mods = mods
-    self.hpml = None
-    self.tune = None
-    self.christ_flag = False
-    self.notes = None
-    self.article = None
-    self.not_on_db = False
-    self.fetch_fields()
-    if self.not_on_db:
-      return
-    self.preprocess()
-    self.notes = Notes_builder(self.idno, self.fullness).digest()
-    self.article = self.build_article()
+    def __init__(self, idno, fullness="full", mods=None):
+        self.idno = idno
+        self.fullness = fullness
+        self.mods = mods
+        self.hpml = None
+        self.tune = None
+        self.christ_flag = False
+        self.notes = None
+        self.article = None
+        self.not_on_db = False
+        self.fetch_fields()
+        if self.not_on_db:
+            return
+        self.preprocess()
+        self.notes = NotesBuilder(self.idno, self.fullness).out
+        self.out = self.build_article()
 
-  # Fetches the required data from the database.
-  def fetch_fields(self):
-    conn = sqlite3.connect(constants.db)
-    c = conn.cursor()
-    select = "SELECT content, tune, christFlag FROM article WHERE id = ?;"
-    c.execute(select, (self.idno,))
-    row = c.fetchone()
-    conn.close()
-    if row == None:
-      raise Exception("No article with that ID in the database.")
-    elif len(row) == 3:
-      self.hpml = row[0]
-      self.tune = row[1]
-      if row[2] == 1:
-        self.christ_flag = True
-    else:
-      self.not_on_db = True
+    def fetch_fields(self):
+        """ Fetches the required data from the database. """
+        conn = sqlite3.connect(constants.db)
+        cursor = conn.cursor()
+        select = ("SELECT content, tune, christFlag "+
+                  "FROM article WHERE id = ?;")
+        cursor.execute(select, (self.idno,))
+        row = cursor.fetchone()
+        conn.close()
+        if not row:
+            raise Exception("No article with that ID in the database.")
+        elif len(row) == 3:
+            self.hpml = row[0]
+            self.tune = row[1]
+            if row[2] == 1:
+                self.christ_flag = True
+        else:
+            self.not_on_db = True
 
-  # Carries out any mods.
-  def preprocess(self):
-    if self.mods == None:
-      return
-    else:
-      self.hpml = Preprocessor(self.hpml, self.mods).digest()
+    def preprocess(self):
+        """ Carries out any mods. """
+        if not self.mods:
+            return
+        preprocessor = Preprocessor(self.hpml, self.mods)
+        result = preprocessor.hpml
+        return result
 
-  # Sews the class's fields together.
-  def build_article(self):
-    latex = to_latex(self.hpml)
-    if self.christ_flag:
-      latex = "{\\color{red} "+latex+"}"
-    if self.tune != None:
-      latex = ("\\begin{center}\n"+
-               "\\textit{Tune: "+self.tune+"}\n"+
-               "\\end{center}\n\n")+latex
-    footnote = "\\footnotetext{"+self.notes+"}"
-    result = footnote+latex
+    def build_article(self):
+        """ Sews the class's fields together. """
+        latex = to_latex(self.hpml)
+        if self.christ_flag:
+            latex = "{\\color{red} "+latex+"}"
+        if self.tune:
+            latex = ("\\begin{center}\n"+
+                     "\\textit{Tune: "+self.tune+"}\n"+
+                     "\\end{center}\n\n")+latex
+        footnote = "\\footnotetext{"+self.notes+"}"
+        result = footnote+latex
+        return result
+
+    def digest(self):
+        """ Deprecated. """
+        return self.out
+
+####################
+# HELPER FUNCTIONS #
+####################
+
+def to_latex(hpml):
+    """ Converts a snippet of HPML into (encapsulated) LaTeX code. """
+    compiler = HPMLCompiler(source_string=hpml)
+    latex = compiler.out
+    mini_encapsulator = MiniEncapsulator(latex)
+    result = mini_encapsulator.out
     return result
 
-  # Returns the class's product as a string.
-  def digest(self):
-    return self.article
+###########
+# TESTING #
+###########
 
-# Run a demo.
 def demo():
-  print(Article(95, "full", None).digest())
+    """ Run a demo. """
+    article = Article(95, fullness="full")
+    print(article.out)
 
-# Run and wrap up.
+###################
+# RUN AND WRAP UP #
+###################
+
 def run():
-  demo()
-#run()
+    if "--test" not in sys.argv:
+        demo()
+
+if __name__ == "__main__":
+    run()
