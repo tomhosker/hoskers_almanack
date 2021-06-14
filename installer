@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Constants.
+PATH_TO_GTKSOURCEVIEW="/usr/share/gtksourceview-4"
+TARGET_PATH_FOR_HPML_LANG="$PATH_TO_GTKSOURCEVIEW/language-specs/hpml.lang"
+
+echo "I'm assuming that you've already installed Python, LaTeX and an SQLite"\
+     "browser, so please install them if you haven't already..."
+
+echo "Setting up HPML highlighting in Gedit..."
+if [ -f $TARGET_PATH_FOR_HPML_LANG ]; then
+    echo "Looks like we're already set up!"
+elif [ -d $PATH_TO_GTKSOURCEVIEW ]; then
+    sudo cp hpml/hpml.lang $TARGET_PATH_FOR_HPML_LANG
+    sudo chmod 0644 $TARGET_PATH_FOR_HPML_LANG
+    echo "Done!"
+else
+    echo "The folder $PATH_TO_GTKSOURCEVIEW does not exist on this machine. "\
+         "Please amend the PATH_TO_GTKSOURCEVIEW variable in this script, and "\
+         "then try running it again."
+    exit 1
+fi
