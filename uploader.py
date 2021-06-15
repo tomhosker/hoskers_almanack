@@ -184,8 +184,9 @@ class Uploader:
         cursor = connection.cursor()
         try:
             cursor.execute(insert, params)
-        except sqlite3.OperationalError:
+        except sqlite3.OperationalError as error:
             print("Error uploading content:\n"+self.hpml)
+            print("Error: "+str(error))
             result = False
         finally:
             if result:
