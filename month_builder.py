@@ -199,19 +199,19 @@ nov = [nov1, nov2, nov3]
 all_selects["November"] = nov
 dec1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 60 AND 88 "+
         "ORDER BY ranking DESC;")
 dec2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 60 AND 88 "+
         "ORDER BY ranking DESC;")
 dec3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 60 AND 88 "+
         "ORDER BY ranking DESC;")
@@ -219,19 +219,19 @@ dec = [dec1, dec2, dec3]
 all_selects["December"] = dec
 uno1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 30 AND 59 "+
         "ORDER BY ranking DESC;")
 uno2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 30 AND 59 "+
         "ORDER BY ranking DESC;")
 uno3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 30 AND 59 "+
         "ORDER BY ranking DESC;")
@@ -239,19 +239,19 @@ uno = [uno1, uno2, uno3]
 all_selects["Unodecember"] = uno
 duo1 = ("SELECT id FROM article "+
         "WHERE type = 1 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
 duo2 = ("SELECT id FROM article "+
         "WHERE type = 2 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")
 duo3 = ("SELECT id FROM article "+
         "WHERE type = 3 "+
-            "AND humour = \"black bile\" "+
+            "AND humour = \"black-bile\" "+
             "AND aux_type = \"n\" "+
             "AND ranking BETWEEN 1 AND 29 "+
         "ORDER BY ranking DESC;")

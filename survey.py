@@ -84,25 +84,25 @@ p_nov3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
           "(humour = 'phlegm') AND (ranking = 999));")
 p_nov = [p_nov1, p_nov2, p_nov3]
 p_dec1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_dec2 = ("SELECT id FROM article WHERE ((type = 2) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_dec3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_dec = [p_dec1, p_dec2, p_dec3]
 p_uno1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_uno2 = ("SELECT id FROM article WHERE ((type = 2) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_uno3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_uno = [p_uno1, p_uno2, p_uno3]
 p_duo1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_duo2 = ("SELECT id FROM article WHERE ((type = 2) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_duo3 = ("SELECT id FROM article WHERE ((type = 3) AND "+
-          "(humour = 'black bile') AND (ranking = 999));")
+          "(humour = 'black-bile') AND (ranking = 999));")
 p_duo = [p_duo1, p_duo2, p_duo3]
 p_int1 = ("SELECT id FROM article WHERE ((type = 1) AND "+
           "(humour = 'intercalaris') AND (ranking = 999));")
