@@ -6,18 +6,21 @@ repository.
 # Standard imports.
 import sqlite3
 
+# Local imports.
+import constants
+
 #############
 # FUNCTIONS #
 #############
 
-def fetch_to_dict(database_name, select, parameters):
+def fetch_to_dict(select, parameters, path_to_db=constants.PATH_TO_DB):
     """ Runs a "SELECT" query, and wraps the results into a dictionary. """
-    conn = sqlite3.connect(database_name)
-    conn.row_factory = sqlite3.Row
-    c = conn.cursor()
-    c.execute(select, parameters)
-    extract = c.fetchall()
-    conn.close()
+    connection = sqlite3.connect(path_to_db)
+    connection.row_factory = sqlite3.Row
+    cursor = connection.cursor()
+    cursor.execute(select, parameters)
+    extract = cursor.fetchall()
+    connection.close()
     rows = []
     for item in extract:
         row = dict(item)

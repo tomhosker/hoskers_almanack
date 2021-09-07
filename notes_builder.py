@@ -7,8 +7,7 @@ import os
 import sys
 
 # Local imports.
-import constants
-import almanack_utils
+from almanack_utils import fetch_to_dict
 
 ##############
 # MAIN CLASS #
@@ -38,8 +37,7 @@ class NotesBuilder:
         self.notes_without_comments = self.build_notes()
         self.comments_on_lines = self.build_comments()
         self.out = self.notes_without_comments
-        if ((self.comments_on_lines is not None) and
-            (self.fullness != "slender")):
+        if (self.comments_on_lines and (self.fullness != "slender")):
             self.out = self.out+" "+self.comments_on_lines
 
     def fetch_extract(self):
@@ -57,8 +55,7 @@ class NotesBuilder:
                   "LEFT JOIN non_author "+
                       "ON non_author.code = article.non_author "+
                   "WHERE article.id = ?;")
-        rows = almanack_utils.fetch_to_dict(constants.db, select,
-                                            (self.idno,))
+        rows = fetch_to_dict(select, (self.idno,))
         try:
             return rows[0]
         except:
@@ -124,8 +121,7 @@ class NotesBuilder:
         """ Builds an articles line comments. """
         select = ("SELECT line_no, comment FROM comment_on_line "+
                   "WHERE article_id = ? ORDER BY line_no ASC;")
-        rows = almanack_utils.fetch_to_dict(constants.db, select,
-                                            (self.idno,))
+        rows = fetch_to_dict(select, (self.idno,))
         result = ""
         for row in rows:
             result = result+"\P "+str(row["line_no"])+". "+row["comment"]
@@ -161,8 +157,7 @@ def demo():
 ###################
 
 def run():
-    if "--test" not in sys.argv:
-        demo()
+    demo()
 
 if __name__ == "__main__":
     run()

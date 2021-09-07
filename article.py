@@ -11,10 +11,14 @@ import sqlite3
 
 # Local imports.
 import constants
+from almanack_utils import fetch_to_dict
 from encapsulator import MiniEncapsulator
+from notes_builder import NotesBuilder
 from hpml_compiler import HPMLCompiler
 from preprocessor import Preprocessor
-from notes_builder import NotesBuilder
+
+# Local constants.
+PATH_TO_ARTICLE_DEMO_OUTPUT = "article_demo_output.tex"
 
 ##############
 # MAIN CLASS #
@@ -31,32 +35,23 @@ class Article:
         self.christ_flag = False
         self.notes = None
         self.article = None
-        self.not_on_db = False
-        self.fetch_fields()
-        if self.not_on_db:
-            return
-        self.preprocess()
-        self.notes = NotesBuilder(self.idno, self.fullness).out
-        self.out = self.build_article()
+        self.notes = None
 
-    def fetch_fields(self):
+    def fill_fields(self):
         """ Fetches the required data from the database. """
-        conn = sqlite3.connect(constants.db)
-        cursor = conn.cursor()
-        select = ("SELECT content, tune, christFlag "+
-                  "FROM article WHERE id = ?;")
-        cursor.execute(select, (self.idno,))
-        row = cursor.fetchone()
-        conn.close()
+        row = fetch_article(self.idno)
         if not row:
-            raise Exception("No article with that ID in the database.")
+            raise Exception(
+                      "No article with id="+str(self.idno)+" in the "+
+                      "database.")
         elif len(row) == 3:
-            self.hpml = row[0]
-            self.tune = row[1]
-            if row[2] == 1:
+            self.hpml = row["content"]
+            self.tune = row["tune"]
+            if row["christFlag"]:
                 self.christ_flag = True
         else:
-            self.not_on_db = True
+            raise Exception(
+                      "Unsatisfactory article with id="+str(self.idno)+".")
 
     def preprocess(self):
         """ Carries out any mods. """
@@ -66,7 +61,19 @@ class Article:
         result = preprocessor.hpml
         return result
 
-    def build_article(self):
+    def build_notes(self):
+        """ Ronseal. """
+        builder = NotesBuilder(self.idno, self.fullness)
+        result = builder.out
+        return result
+
+    def make_me_one_with_everything(self):
+        """ Bring the data in this object to fruition. """
+        self.fill_fields()
+        self.preprocess()
+        self.build_notes()
+
+    def digest(self):
         """ Sews the class's fields together. """
         latex = to_latex(self.hpml)
         if self.christ_flag:
@@ -75,17 +82,24 @@ class Article:
             latex = ("\\begin{center}\n"+
                      "\\textit{Tune: "+self.tune+"}\n"+
                      "\\end{center}\n\n")+latex
-        footnote = "\\footnotetext{"+self.notes+"}"
-        result = footnote+latex
+        if self.notes:
+            footnote = "\\footnotetext{"+self.notes+"}"
+            result = footnote+latex
+        else:
+            result = latex
         return result
-
-    def digest(self):
-        """ Deprecated. """
-        return self.out
 
 ####################
 # HELPER FUNCTIONS #
 ####################
+
+def fetch_article(idno, path_to_db=constants.PATH_TO_DB):
+    """ Extract a list of article IDs from a select statement. """
+    select = ("SELECT content, tune, christFlag "+
+              "FROM article WHERE id = ?;")
+    extract = fetch_to_dict(select, (idno,))
+    result = extract[0]
+    return result
 
 def to_latex(hpml):
     """ Converts a snippet of HPML into (encapsulated) LaTeX code. """
@@ -99,18 +113,19 @@ def to_latex(hpml):
 # TESTING #
 ###########
 
-def demo():
+def demo(path_to_output=PATH_TO_ARTICLE_DEMO_OUTPUT):
     """ Run a demo. """
     article = Article(95, fullness="full")
-    print(article.out)
+    article.make_me_one_with_everything()
+    with open(path_to_output, "w") as output_file:
+        output_file.write(article.digest())
 
 ###################
 # RUN AND WRAP UP #
 ###################
 
 def run():
-    if "--test" not in sys.argv:
-        demo()
+    demo()
 
 if __name__ == "__main__":
     run()
