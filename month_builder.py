@@ -19,8 +19,9 @@ DEFAULT_PATH_TO_DEMO_OUTPUT = "month_builder_demo_output.tex"
 
 class MonthBuilder:
     """ The class in question. """
-    def __init__(self, name, selects=DEFAULT_SELECTS, fullness="full",
-                 mods=None):
+    def __init__(
+            self, name, selects=DEFAULT_SELECTS, fullness="full", mods=None
+        ):
         self.name = name
         self.selects = selects
         self.fullness = fullness
