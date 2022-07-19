@@ -32,26 +32,38 @@ class MonthBuilder:
 
     def digest(self):
         """ Condense the month into a single string. """
-        min_count = min([len(self.songs), len(self.sonnets),
-                         len(self.proverbs)])
+        min_count = \
+            min([len(self.songs), len(self.sonnets), len(self.proverbs)])
         result = "\\chapter{"+self.name+"}\n\n"
         for index in range(min_count):
-            song_obj = Article(
-                           self.songs[index], fullness=self.fullness,
-                           mods=self.mods)
-            sonnet_obj = Article(
-                             self.sonnets[index], fullness=self.fullness,
-                             mods=self.mods)
-            proverb_obj = Article(
-                              self.proverbs[index], fullness=self.fullness,
-                              mods=self.mods)
+            song_obj = \
+                Article(
+                    self.songs[index],
+                    fullness=self.fullness,
+                    mods=self.mods
+                )
+            sonnet_obj = \
+                Article(
+                    self.sonnets[index],
+                    fullness=self.fullness,
+                    mods=self.mods
+                )
+            proverb_obj = \
+                Article(
+                    self.proverbs[index],
+                    fullness=self.fullness,
+                    mods=self.mods
+                )
             song = song_obj.digest()
             sonnet = sonnet_obj.digest()
             proverb = proverb_obj.digest()
-            result = result+"\\bigskip\n\\bigskip\n\\section{}\n\n"
-            result = result+"\\subsection{}\n\n"+song+"\n\n"
-            result = result+"\\subsection{}\n\n"+sonnet+"\n\n"
-            result = result+"\\subsection{}\n\n"+proverb+"\n\n"
+            result = (
+                result+
+                "\\bigskip\n\\bigskip\n\\section{}\n\n"+
+                "\\subsection{}\n\n"+song+"\n\n"+
+                "\\subsection{}\n\n"+sonnet+"\n\n"+
+                "\\subsection{}\n\n"+proverb+"\n\n"
+            )
         return result
 
 ####################

@@ -21,7 +21,7 @@ PATH_TO_BIB = "sources.bib"
 def fetch_sources():
     """ Ronseal. """
     select = "SELECT * FROM source ORDER BY code;"
-    sources = almanack_utils.fetch_to_dict(constants.db, select, tuple())
+    sources = almanack_utils.fetch_to_dict(select, tuple())
     return sources
 
 def wipe_bib():

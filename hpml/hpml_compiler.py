@@ -17,7 +17,7 @@ class HPMLCompiler:
     def __init__(self, source_file=None, source_string=None):
         self.source_file = source_file
         self.source_string = source_string
-        if source_string is None:
+        if not source_string:
             with open(self.source_file, "r") as the_file:
                 self.source_string = the_file.read()
         self.lines = self.source_string.split("\n")
@@ -29,7 +29,7 @@ class HPMLCompiler:
             i = self.lines.index(line)
             # Remove whitespace from line ends.
             while line.endswith(" "):
-                line = line[0:len(line)]
+                line = line[:len(line)-1]
             self.lines[i] = line
         # Remove any remaining blank lines.
         while(self.lines[len(self.lines)-1] == ""):

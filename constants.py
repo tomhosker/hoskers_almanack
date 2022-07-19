@@ -25,8 +25,3 @@ SPECIAL_RANKINGS = {
     200: "Shortlisted.",
     999: "Not listed."
 }
-TEMPORARY_RANKINGS = {
-    190: "Candidate for the most senior most.",
-    191: "Candidate for the second most senior month.",
-    192: "Candidate for the least senior month."
-}

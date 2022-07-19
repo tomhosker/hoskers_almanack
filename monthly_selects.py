@@ -1,3 +1,70 @@
+"""
+This code defines a class which builds a SELECT query for the songs, sonnets or
+proverbs for a given month.
+
+Example:
+
+    SELECT id
+    FROM article
+    WHERE type = 1
+        AND humour = 'yellow-bile'
+        AND aux_type = 'n'
+        AND ranking BETWEEN 1 AND 30
+    ORDER BY ranking;
+"""
+
+# Local constants.
+TOP_PRECEDENCE_INT = 0
+MID_PRECEDENCE_INT = 1
+BOTTOM_PRECEDENCE_INT = 2
+MID_PRECEDENCE_CONDITION = "= 101"
+BOTTOM_PRECEDENCE_CONDITION = "= 102"
+STANDARD_ORDER_BY = "ORDER BY ranking, author, non_author, content"
+
+##############
+# MAIN CLASS #
+##############
+
+class MonthlySelect:
+    """ The class in question. """
+    def __init__(self, humour, article_type, precedence, days, override=None):
+        self.humour = humour
+        self.article_type = article_type
+        self.precedence = precedence
+        self.days = days
+        self.override = override
+        self.ranking_condition = self.get_ranking_condition()
+        self.query = self.get_query()
+
+    def get_ranking_condition(self):
+        """ Return the ranking condition portion of the query. """
+        if self.precedence == TOP_PRECEDENCE_INT:
+            return "BETWEEN 1 AND "+str(self.days)
+        if self.precedence == MID_PRECEDENCE_INT:
+            return MID_PRECEDENCE_CONDITION
+        if self.precedence == BOTTOM_PRECEDENCE_INT:
+            return BOTTOM_PRECEDENCE_CONDITION
+        raise Exception("Bad precedence int: "+str(self.precedence))
+
+    def get_query(self):
+        """ Return a string giving the SQL query in question. """
+        if self.override:
+            return self.override
+        result = (
+            "SELECT id "+
+            "FROM article "+
+            "WHERE type = "+str(self.article_type)+" "+
+            "AND humour = '"+self.humour+"' "+
+            "AND aux_type = 'n' "+
+            "AND ranking "+self.ranking_condition+" "+
+            STANDARD_ORDER_BY+";"
+        )
+        return result
+
+#######################
+# ONES I MADE EARLIER #
+#######################
+
 PRI_SONGS = (
     "SELECT id FROM article "+
     "WHERE type = 1 "+
@@ -295,7 +362,7 @@ INT_SONGS = (
     "WHERE type = 1 "+
         "AND humour = \"intercalaris\" "+
         "AND aux_type = \"n\" "+
-        "AND ranking BETWEEN 1 AND 29 "+
+        "AND ranking = 200 "+
     "ORDER BY ranking DESC;"
 )
 INT_SONNETS = (
@@ -303,7 +370,7 @@ INT_SONNETS = (
     "WHERE type = 2 "+
         "AND humour = \"intercalaris\" "+
         "AND aux_type = \"n\" "+
-        "AND ranking BETWEEN 1 AND 29 "+
+        "AND ranking = 200 "+
     "ORDER BY ranking DESC;"
 )
 INT_PROVERBS = (
@@ -311,30 +378,30 @@ INT_PROVERBS = (
     "WHERE type = 3 "+
         "AND humour = \"intercalaris\" "+
         "AND aux_type = \"n\" "+
-        "AND ranking BETWEEN 1 AND 29 "+
+        "AND ranking = 200 "+
     "ORDER BY ranking DESC;"
 )
 
 DEFAULT_SELECTS = {
     "Primilis": {
-        "songs": PRI_SONGS,
-        "sonnets": PRI_SONNETS,
-        "proverbs": PRI_PROVERBS
+        "songs": MonthlySelect("yellow-bile", 1, 0, 30).query,
+        "sonnets": MonthlySelect("yellow-bile", 2, 0, 30).query,
+        "proverbs": MonthlySelect("yellow-bile", 3, 0, 30).query
     },
     "Sectilis": {
-        "songs": SEC_SONGS,
-        "sonnets": SEC_SONNETS,
-        "proverbs": SEC_PROVERBS
+        "songs": MonthlySelect("yellow-bile", 1, 1, 29).query,
+        "sonnets": MonthlySelect("yellow-bile", 2, 1, 29).query,
+        "proverbs": MonthlySelect("yellow-bile", 3, 1, 29).query
     },
     "Tertilis": {
-        "songs": TER_SONGS,
-        "sonnets": TER_SONNETS,
-        "proverbs": TER_PROVERBS
+        "songs": MonthlySelect("yellow-bile", 1, 2, 30).query,
+        "sonnets": MonthlySelect("yellow-bile", 2, 2, 30).query,
+        "proverbs": MonthlySelect("yellow-bile", 3, 2, 30).query
     },
     "Quartilis": {
         "songs": QUA_SONGS,
-        "sonnets": QUA_SONNETS,
-        "proverbs": QUA_PROVERBS
+        "sonnets": MonthlySelect("blood", 2, 2, 29).query,
+        "proverbs": MonthlySelect("blood", 3, 2, 29).query
     },
     "Quintilis": {
         "songs": QUI_SONGS,
@@ -343,13 +410,13 @@ DEFAULT_SELECTS = {
     },
     "Sextilis": {
         "songs": SEX_SONGS,
-        "sonnets": SEX_SONNETS,
-        "proverbs": SEX_PROVERBS
+        "sonnets": MonthlySelect("blood", 2, 1, 29).query,
+        "proverbs": MonthlySelect("blood", 3, 1, 29).query
     },
     "September": {
-        "songs": SEP_SONGS,
-        "sonnets": SEP_SONNETS,
-        "proverbs": SEP_PROVERBS
+        "songs": MonthlySelect("phlegm", 1, 0, 30).query,
+        "sonnets": MonthlySelect("phlegm", 2, 0, 30).query,
+        "proverbs": MonthlySelect("phlegm", 3, 0, 30).query
     },
     "October": {
         "songs": OCT_SONGS,
@@ -357,19 +424,19 @@ DEFAULT_SELECTS = {
         "proverbs": OCT_PROVERBS
     },
     "November": {
-        "songs": NOV_SONGS,
-        "sonnets": NOV_SONNETS,
-        "proverbs": NOV_PROVERBS
+        "songs": MonthlySelect("phlegm", 1, 2, 30).query,
+        "sonnets": MonthlySelect("phlegm", 2, 2, 30).query,
+        "proverbs": MonthlySelect("phlegm", 3, 2, 30).query
     },
     "December": {
-        "songs": DEC_SONGS,
-        "sonnets": DEC_SONNETS,
-        "proverbs": DEC_PROVERBS
+        "songs": MonthlySelect("black-bile", 1, 2, 29).query,
+        "sonnets": MonthlySelect("black-bile", 2, 2, 29).query,
+        "proverbs": MonthlySelect("black-bile", 3, 2, 29).query
     },
     "Unodecember": {
-        "songs": UNO_SONGS,
-        "sonnets": UNO_SONNETS,
-        "proverbs": UNO_PROVERBS
+        "songs": MonthlySelect("black-bile", 1, 1, 30).query,
+        "sonnets": MonthlySelect("black-bile", 2, 1, 30).query,
+        "proverbs": MonthlySelect("black-bile", 3, 1, 30).query
     },
     "Duodecember": {
         "songs": DUO_SONGS,

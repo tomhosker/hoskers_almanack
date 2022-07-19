@@ -36,6 +36,7 @@ class Article:
         self.notes = None
         self.article = None
         self.notes = None
+        self.fill_fields()
 
     def fill_fields(self):
         """ Fetches the required data from the database. """
@@ -79,9 +80,12 @@ class Article:
         if self.christ_flag:
             latex = "{\\color{red} "+latex+"}"
         if self.tune:
-            latex = ("\\begin{center}\n"+
-                     "\\textit{Tune: "+self.tune+"}\n"+
-                     "\\end{center}\n\n")+latex
+            latex = (
+                "\\begin{center}\n"+
+                "\\textit{Tune: "+self.tune+"}\n"+
+                "\\end{center}\n\n"+
+                latex
+            )
         if self.notes:
             footnote = "\\footnotetext{"+self.notes+"}"
             result = footnote+latex
