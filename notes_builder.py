@@ -37,24 +37,26 @@ class NotesBuilder:
         self.notes_without_comments = self.build_notes()
         self.comments_on_lines = self.build_comments()
         self.out = self.notes_without_comments
-        if (self.comments_on_lines and (self.fullness != "slender")):
+        if (self.comments_on_lines and (self.fullness == "full")):
             self.out = self.out+" "+self.comments_on_lines
 
     def fetch_extract(self):
         """ Fetches an article's metadata from the database. """
-        select = ("SELECT article.source AS source, "+
-                      "article.title AS title, "+
-                      "article.non_title AS non_title, "+
-                      "article.remarks AS remarks, "+
-                      "article.redacted AS redacted, "+
-                      "author.full_title AS author, "+
-                      "author.dob AS dob, author.dod AS dod, "+
-                      "non_author.name AS non_author "+
-                  "FROM article "+
-                  "LEFT JOIN author ON author.code = article.author "+
-                  "LEFT JOIN non_author "+
-                      "ON non_author.code = article.non_author "+
-                  "WHERE article.id = ?;")
+        select = (
+            "SELECT article.source AS source, "+
+                "article.title AS title, "+
+                "article.non_title AS non_title, "+
+                "article.remarks AS remarks, "+
+                "article.redacted AS redacted, "+
+                "author.full_title AS author, "+
+                "author.dob AS dob, author.dod AS dod, "+
+                "non_author.name AS non_author "+
+            "FROM article "+
+            "LEFT JOIN author ON author.code = article.author "+
+            "LEFT JOIN non_author "+
+                "ON non_author.code = article.non_author "+
+            "WHERE article.id = ?;"
+        )
         rows = fetch_to_dict(select, (self.idno,))
         try:
             return rows[0]
@@ -65,11 +67,10 @@ class NotesBuilder:
 
     def build_title(self):
         """ Builds an article's title. """
-        if self.extract["title"] is None:
-            return None
-        else:
+        if self.extract["title"]:
             result = "`"+self.extract["title"]+"'"
             return result
+        return None
 
     def build_dates(self):
         """ Builds an author's dates. """
@@ -92,28 +93,25 @@ class NotesBuilder:
 
     def build_notes(self):
         """ Builds an article's notes from its record on the database. """
-        if self.redacted == 1:
+        redacted_str = None
+        if self.redacted:
             pre_result = NotesBuilder.redacted_marker
-        else:
-            pre_result = None
+        author_dates = None
         if self.author:
             author_dates = self.author+" "+self.dates
-        else:
-            author_dates = None
         cited_source = "\\cite{"+self.source+"}"
-        result_list = [self.title, self.non_title, author_dates,
-                       self.non_author, cited_source]
-        result = "" 
-        for item in result_list:
-            if item != None:
-                result = result+item
-            if result_list.index(item) != len(result_list)-1:
-                result = result+", "
-            else:
-                result = result+"."
-        if pre_result:
-            result = pre_result+" "+result
-        if self.remarks and (self.fullness != "slender"):
+        components = [
+            self.title,
+            self.non_title,
+            author_dates,
+            self.non_author,
+            cited_source
+        ]
+        components = list(filter(None, components))
+        result = ", ".join(components)+"."
+        if self.redacted:
+            result = NotesBuilder.redacted_marker+" "+result
+        if self.remarks and (self.fullness == "full"):
             result = result+" "+self.remarks
         return result
 
@@ -131,10 +129,6 @@ class NotesBuilder:
             return None
         else:
             return result
-
-    def digest(self):
-        """ Deprecated. """
-        return self.out
 
 ###########
 # TESTING #

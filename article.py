@@ -36,43 +36,31 @@ class Article:
         self.notes = None
         self.article = None
         self.notes = None
-        self.fill_fields()
+        self.fill_attributes()
 
-    def fill_fields(self):
+    def fill_attributes(self):
         """ Fetches the required data from the database. """
         row = fetch_article(self.idno)
         if not row:
-            raise Exception(
-                      "No article with id="+str(self.idno)+" in the "+
-                      "database.")
-        elif len(row) == 3:
-            self.hpml = row["content"]
-            self.tune = row["tune"]
-            if row["christFlag"]:
-                self.christ_flag = True
-        else:
-            raise Exception(
-                      "Unsatisfactory article with id="+str(self.idno)+".")
+            raise Exception("No article with id="+str(self.idno)+".")
+        self.hpml = row["content"]
+        self.tune = row["tune"]
+        if row["christFlag"]:
+            self.christ_flag = True
+        self.preprocess()
+        self.build_notes()
 
     def preprocess(self):
         """ Carries out any mods. """
         if not self.mods:
             return
         preprocessor = Preprocessor(self.hpml, self.mods)
-        result = preprocessor.hpml
-        return result
+        self.hpml = preprocessor.hpml
 
     def build_notes(self):
         """ Ronseal. """
         builder = NotesBuilder(self.idno, self.fullness)
-        result = builder.out
-        return result
-
-    def make_me_one_with_everything(self):
-        """ Bring the data in this object to fruition. """
-        self.fill_fields()
-        self.preprocess()
-        self.build_notes()
+        self.notes = builder.out
 
     def digest(self):
         """ Sews the class's fields together. """
@@ -120,7 +108,6 @@ def to_latex(hpml):
 def demo(path_to_output=PATH_TO_ARTICLE_DEMO_OUTPUT):
     """ Run a demo. """
     article = Article(95, fullness="full")
-    article.make_me_one_with_everything()
     with open(path_to_output, "w") as output_file:
         output_file.write(article.digest())
 
