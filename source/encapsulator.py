@@ -4,10 +4,7 @@ snippet into a full .tex file.
 """
 
 # Standard imports.
-import sqlite3
-
-# Local imports.
-import configs
+from pathlib import Path
 
 # Local constants.
 DEFAULT_LOADOUT = "main"
@@ -106,12 +103,10 @@ def remove_unpaired_braces(line):
 
 def get_loadout(loadout_name):
     """ Gets the list of packages (and related) from the database. """
-    query = "SELECT latex FROM package_loadout WHERE name = ?;"
-    connection = sqlite3.connect(configs.PATH_TO_DB)
-    cursor = connection.cursor()
-    cursor.execute(query, (loadout_name,))
-    extract = cursor.fetchone()
-    result = extract[0]
+    filename = loadout_name+".tex"
+    path_to_loadout = str(Path(__file__).parent/"package_loadouts"/filename)
+    with open(path_to_loadout, "r") as loadout_file:
+        result = loadout_file.read()
     return result
 
 def find_second_longest_line(snippet):

@@ -11,9 +11,9 @@ from .almanack_utils import fetch_to_dict
 
 class NotesBuilder:
     """ The class in question. """
-    # Class variables.
-    named_non_authors = ["Anonymous"]
-    redacted_marker = "$\mathbb{R}$"
+    # Class attributes.
+    NAMED_NON_AUTHORS = ["Anonymous"]
+    REDACTED_MARKER = "$\mathbb{R}$"
 
     def __init__(self, idno, fullness):
         self.idno = idno
@@ -83,7 +83,7 @@ class NotesBuilder:
 
     def build_non_author(self):
         """ Handles the "non_author" field. """
-        if self.extract["non_author"] in NotesBuilder.named_non_authors:
+        if self.extract["non_author"] in NotesBuilder.NAMED_NON_AUTHORS:
             return self.extract["non_author"]
         return None
 
@@ -91,7 +91,7 @@ class NotesBuilder:
         """ Builds an article's notes from its record on the database. """
         redacted_str = None
         if self.redacted:
-            pre_result = NotesBuilder.redacted_marker
+            pre_result = NotesBuilder.REDACTED_MARKER
         author_dates = None
         if self.author:
             author_dates = self.author+" "+self.dates
@@ -106,7 +106,7 @@ class NotesBuilder:
         components = list(filter(None, components))
         result = ", ".join(components)+"."
         if self.redacted:
-            result = NotesBuilder.redacted_marker+" "+result
+            result = NotesBuilder.REDACTED_MARKER+" "+result
         if self.remarks and (self.fullness == "full"):
             result = result+" "+self.remarks
         return result
@@ -125,29 +125,3 @@ class NotesBuilder:
             return None
         else:
             return result
-
-###########
-# TESTING #
-###########
-
-def demo():
-    """ Run a demonstration. """
-    print(NotesBuilder(1, "full").out)
-    print()
-    print(NotesBuilder(4, "full").out)
-    print()
-    print(NotesBuilder(19, "full").out)
-    print()
-    print(NotesBuilder(26, "full").out)
-    print()
-    print(NotesBuilder(26, "slender").out)
-
-###################
-# RUN AND WRAP UP #
-###################
-
-def run():
-    demo()
-
-if __name__ == "__main__":
-    run()

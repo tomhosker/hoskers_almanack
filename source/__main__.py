@@ -3,7 +3,10 @@ This code provides a concise entry-point for the using the PDFBuilder class.
 """
 
 # Local imports.
-import .configs
+if __package__:
+    from . import configs
+else:
+    import configs
 from .pdf_builder import PDFBuilder
 
 ###################

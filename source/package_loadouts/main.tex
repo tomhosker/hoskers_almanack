@@ -1,14 +1,39 @@
-\usepackage{microtype,verse,graphicx,multirow,multicol,caption,xfrac,marginnote,color,pifont,fourier-orns}
+\usepackage{
+    caption,
+    color,
+    fourier-orns,
+    marginnote,
+    microtype,
+    pifont,
+    verse,
+    xfrac
+}
 
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
 \newfontfamily\hoskeroe{English Towne}
 \newfontfamily\greekish{CMU Serif}
 \newfontfamily\arabicish{KacstQurn}
-\setmainfont[Numbers=OldStyle]{CMU Serif}
+\setmainfont[
+    ItalicFont=cmunti.otf,
+    BoldFont=cmunbx.otf,
+    BoldItalicFont=cmunbi.otf,
+    Numbers=OldStyle
+]{cmunrm.otf}
 
 \usepackage[backend=bibtex,style=authortitle,citestyle=authortitle]{biblatex}
 \addbibresource{sources.bib}
 
 % For Arabic text inside left-to-right text.
 \newcommand{\textarabic}[1]{\bgroup\textdir TRT\arabicish #1\egroup}
+
+% Fix fractions.
+\usepackage{xfrac}
+\DeclareInstance{xfrac}{cmunrm.otf(0)}{text}{
+    slash-symbol-font = ptm,
+    scale-factor=0.8,
+    numerator-top-sep = 0pt,
+    denominator-bot-sep = 0pt,
+    slash-right-kern=-.25em,
+    slash-left-kern=-.3em
+}

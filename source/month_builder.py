@@ -23,9 +23,9 @@ class MonthBuilder:
         self.selects = selects
         self.fullness = fullness
         self.mods = mods
-        self.songs = fetch_to_dict(selects[self.name]["songs"], (,))
-        self.sonnets = fetch_to_dict(selects[self.name]["sonnets"], (,))
-        self.proverbs = fetch_to_dict(selects[self.name]["proverbs"], (,))
+        self.songs = fetch_to_dict(selects[self.name]["songs"], tuple())
+        self.sonnets = fetch_to_dict(selects[self.name]["sonnets"], tuple())
+        self.proverbs = fetch_to_dict(selects[self.name]["proverbs"], tuple())
 
     def digest(self):
         """ Condense the month into a single string. """

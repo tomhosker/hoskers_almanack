@@ -7,7 +7,10 @@ import os
 from pathlib import Path
 
 # Local imports.
-import .configs
+if __package__:
+    from . import configs
+else:
+    import configs
 from .almanack_utils import fetch_to_dict
 
 # Local constants.
@@ -30,19 +33,25 @@ def wipe_bib(path_to_bib=configs.PATH_TO_BIB):
     if Path(path_to_bib).exists():
         os.remove(path_to_bib)
 
-def none_to_empty(input_string):
+def none_to_empty(input_var):
     """ Convert a None to an empty string, and everything else to its string
     equivalent. """
-    if input_string is None:
+    if input_var is None:
         return ""
-    return str(input_string)
+    return str(input_var)
 
 def get_book_summary(data):
     """ Get the portion of our .bib file corresponding to a given book. """
     result = "@book{"+data["code"]+",\n"
     for attribute in BOOK_ATTRIBUTES:
-        result = result+"    "+attribute+" = \""+data[attribute]+"\",\n"
-    (
+        result = (
+            result+
+            "    "+
+            attribute+
+            " = \""+
+            none_to_empty(data[attribute])+
+            "\",\n"
+        )
     result = result+"}\n\n"
     return result
 
@@ -50,7 +59,7 @@ def build_bib():
     """ Build our .bib file. """
     sources = fetch_sources()
     wipe_bib()
-    with open("sources.bib", "a") as fileobj:
+    with open(configs.PATH_TO_BIB, "a") as fileobj:
         for source in sources:
             fileobj.write(get_book_summary(source))
 

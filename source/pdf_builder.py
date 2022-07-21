@@ -3,11 +3,17 @@ This code defines a class which builds almanack.pdf.
 """
 
 # Standard imports.
+import os
+import subprocess
 from pathlib import Path
 
 # Local imports.
-import .configs
+if __package__:
+    from . import configs
+else:
+    import configs
 from .almanack_utils import fetch_to_dict
+from .encapsulator import get_loadout
 from .month_builder import MonthBuilder
 from .bib_builder import build_bib
 
@@ -31,7 +37,7 @@ class PDFBuilder:
         self.mods = mods
         self.version = version
         self.quiet = quiet
-        self.loadout = self.fetch_loadout()
+        self.loadout = get_loadout("main")
         if self.fullness == "full":
             self.frontmatter = self.build_frontmatter()
         else:
@@ -41,14 +47,6 @@ class PDFBuilder:
             self.backmatter = self.build_backmatter()
         else:
             self.backmatter = ""
-
-    def fetch_loadout(self):
-        """ Fetch packages used from the database. """
-        path_to_loadout = \
-            str(Path(__file__).parent/"package_loadouts"/"main.tex")
-        with open(path_to_loadout, "r") as loadout_file:
-            result = loadout_file.read()
-        return result
 
     def build_frontmatter(self):
         """ Build the frontmatter from the database. """
@@ -76,7 +74,7 @@ class PDFBuilder:
         """ Build the backmatter from the database. """
         result = ""
         select = "SELECT * FROM backmatter_chapters ORDER BY no;"
-        rows = almanack_utils.fetch_to_dict(select, tuple())
+        rows = fetch_to_dict(select, tuple())
         for row in rows:
             title = "\\chapter{"+row["name"]+"}"
             content = row["content"]
@@ -88,11 +86,11 @@ class PDFBuilder:
         path_to_base = str(Path(__file__).parent/"base.tex")
         with open(path_to_base, "r") as base_file:
             tex = base_file.read()
-        tex.replace("#VERSION_STRING", self.version)
-        tex.replace("#PACKAGE_LOADOUT", self.loadout)
-        tex.replace("#FRONTMATTER", self.frontmatter)
-        tex.replace("#MAINTMATTER", self.mainmatter)
-        tex.replace("#BACKMATTER", self.backmatter)
+        tex = tex.replace("#VERSION_STRING", self.version)
+        tex = tex.replace("#PACKAGE_LOADOUT", self.loadout)
+        tex = tex.replace("#FRONTMATTER", self.frontmatter)
+        tex = tex.replace("#MAINMATTER", self.mainmatter)
+        tex = tex.replace("#BACKMATTER", self.backmatter)
         with open("main.tex", "w") as fileobj:
             fileobj.write(tex)
 
@@ -110,16 +108,33 @@ class PDFBuilder:
             else:
                 subprocess.run(command, check=True)
         os.rename("main.pdf", self.path_to_output)
-        for path_obj in Path.cwd().glob("current.*"):
-            os.remove(str(path_obj))
-        os.remove("sources.bib")
 
     def build(self):
         """ Build everything. """
+        purge_main()
         print("Building bibliography...")
         build_bib()
         print("Building .tex file...")
         self.build_tex()
         print("Building PDF...")
         self.build_pdf()
+        purge_main()
+        #os.remove(configs.PATH_TO_BIB)
         print("PDF built!")
+
+####################
+# HELPER FUNCTIONS #
+####################
+
+def purge_main():
+    """ Purge all the "main" files. """
+    purge_stem("main")
+    try:
+        os.remove("main-blx.bib")
+    except FileNotFoundError:
+        pass
+
+def purge_stem(stem):
+    """ Remove all the files beginning with a given stem. """
+    for path_obj in Path.cwd().glob(stem+".*"):
+        os.remove(str(path_obj))

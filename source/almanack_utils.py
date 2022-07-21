@@ -7,7 +7,10 @@ repository.
 import sqlite3
 
 # Local imports.
-import .configs
+if __package__:
+    from . import configs
+else:
+    import configs
 
 #############
 # FUNCTIONS #
