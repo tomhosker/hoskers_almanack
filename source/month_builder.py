@@ -6,12 +6,9 @@ This code defines a class which builds the contents of a given month.
 import sqlite3
 
 # Local imports.
-import configs
-from article import Article
-from monthly_selects import DEFAULT_SELECTS
-
-# Local constants.
-DEFAULT_PATH_TO_DEMO_OUTPUT = "month_builder_demo_output.tex"
+from .almanack_utils import fetch_to_dict
+from .article import Article
+from .monthly_selects import DEFAULT_SELECTS
 
 ##############
 # MAIN CLASS #
@@ -26,9 +23,9 @@ class MonthBuilder:
         self.selects = selects
         self.fullness = fullness
         self.mods = mods
-        self.songs = fetch_articles(selects[self.name]["songs"])
-        self.sonnets = fetch_articles(selects[self.name]["sonnets"])
-        self.proverbs = fetch_articles(selects[self.name]["proverbs"])
+        self.songs = fetch_to_dict(selects[self.name]["songs"], (,))
+        self.sonnets = fetch_to_dict(selects[self.name]["sonnets"], (,))
+        self.proverbs = fetch_to_dict(selects[self.name]["proverbs"], (,))
 
     def digest(self):
         """ Condense the month into a single string. """
@@ -38,19 +35,19 @@ class MonthBuilder:
         for index in range(min_count):
             song_obj = \
                 Article(
-                    self.songs[index],
+                    self.songs[index]["id"],
                     fullness=self.fullness,
                     mods=self.mods
                 )
             sonnet_obj = \
                 Article(
-                    self.sonnets[index],
+                    self.sonnets[index]["id"],
                     fullness=self.fullness,
                     mods=self.mods
                 )
             proverb_obj = \
                 Article(
-                    self.proverbs[index],
+                    self.proverbs[index]["id"],
                     fullness=self.fullness,
                     mods=self.mods
                 )
@@ -65,43 +62,3 @@ class MonthBuilder:
                 "\\subsection{}\n\n"+proverb+"\n\n"
             )
         return result
-
-####################
-# HELPER FUNCTIONS #
-####################
-
-def fetch_articles(select, path_to_db=configs.PATH_TO_DB):
-    """ Extract a list of article IDs from a select statement. """
-    connection = sqlite3.connect(path_to_db)
-    cursor = connection.cursor()
-    cursor.execute(select)
-    extract = cursor.fetchall()
-    connection.close()
-    result = []
-    for item in extract:
-        result.append(item[0])
-    return result
-
-###########
-# TESTING #
-###########
-
-def demo(path_to_demo_output=DEFAULT_PATH_TO_DEMO_OUTPUT,
-         month_to_demo="Primilis"):
-    """ Run a demonstration. """
-    month_builder = MonthBuilder(month_to_demo)
-    digest = month_builder.digest()
-    with open(path_to_demo_output, "w") as output_file:
-        output_file.write(digest)
-    print("Demo output saved to "+path_to_demo_output)
-
-###################
-# RUN AND WRAP UP #
-###################
-
-def run():
-    """ Run this file. """
-    demo()
-
-if __name__ == "__main__":
-    run()

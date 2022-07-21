@@ -1,13 +1,9 @@
 """
-This code holds a class which handles a given article's notes.
+This code defines a class which handles a given article's notes.
 """
 
-# Standard imports.
-import os
-import sys
-
 # Local imports.
-from almanack_utils import fetch_to_dict
+from .almanack_utils import fetch_to_dict
 
 ##############
 # MAIN CLASS #

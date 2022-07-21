@@ -13,6 +13,7 @@ from pathlib import Path
 PATH_OBJ_TO_REPO = Path.home()/"hoskers_almanack"
 PATH_TO_DB = str(PATH_OBJ_TO_REPO/"almanack.db")
 PATH_TO_OUTPUT = str(PATH_OBJ_TO_REPO/"almanack.pdf")
+PATH_TO_BIB = str(PATH_OBJ_TO_REPO/"sources.bib")
 
 # Other.
 VERSION = "First Proof"

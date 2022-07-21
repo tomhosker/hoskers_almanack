@@ -4,14 +4,16 @@ This code builds a BibTeX bibliography from the database.
 
 # Standard imports.
 import os
-import sqlite3
-import sys
+from pathlib import Path
 
 # Local imports.
-import almanack_utils
+import .configs
+from .almanack_utils import fetch_to_dict
 
 # Local constants.
-PATH_TO_BIB = "sources.bib"
+BOOK_ATTRIBUTES = (
+    "keywords", "author", "title", "year", "editor", "translator"
+)
 
 #############
 # FUNCTIONS #
@@ -20,56 +22,44 @@ PATH_TO_BIB = "sources.bib"
 def fetch_sources():
     """ Ronseal. """
     select = "SELECT * FROM source ORDER BY code;"
-    sources = almanack_utils.fetch_to_dict(select, tuple())
+    sources = fetch_to_dict(select, tuple())
     return sources
 
-def wipe_bib():
+def wipe_bib(path_to_bib=configs.PATH_TO_BIB):
     """ Ronseal. """
-    if os.path.exists(PATH_TO_BIB):
-        os.remove(PATH_TO_BIB)
-    os.system("touch "+PATH_TO_BIB)
+    if Path(path_to_bib).exists():
+        os.remove(path_to_bib)
+
+def none_to_empty(input_string):
+    """ Convert a None to an empty string, and everything else to its string
+    equivalent. """
+    if input_string is None:
+        return ""
+    return str(input_string)
+
+def get_book_summary(data):
+    """ Get the portion of our .bib file corresponding to a given book. """
+    result = "@book{"+data["code"]+",\n"
+    for attribute in BOOK_ATTRIBUTES:
+        result = result+"    "+attribute+" = \""+data[attribute]+"\",\n"
+    (
+    result = result+"}\n\n"
+    return result
 
 def build_bib():
-    """ Builds our .bib file. """
+    """ Build our .bib file. """
     sources = fetch_sources()
     wipe_bib()
     with open("sources.bib", "a") as fileobj:
         for source in sources:
-            code = source["code"]
-            keywords = source["keywords"]
-            if source["author"] is None:
-                author = ""
-            else:
-                author = source["author"]
-            title = source["title"]
-            if source["year"] is None:
-                year = ""
-            else:
-                year = str(source["year"])
-            if source["editor"] is None:
-                editor = ""
-            else:
-                editor = source["editor"]
-            if source["translator"] is None:
-                translator = ""
-            else:
-                translator = source["translator"]
-            fileobj.write("@book{"+code+",\n")
-            fileobj.write("    keywords = \""+keywords+"\",\n")
-            fileobj.write("    author = \""+author+"\",\n")
-            fileobj.write("    title = \""+title+"\",\n")
-            fileobj.write("    year = \""+year+"\",\n")
-            fileobj.write("    editor = \""+editor+"\",\n")
-            fileobj.write("    translator = \""+translator+"\"\n")
-            fileobj.write("}\n\n")
+            fileobj.write(get_book_summary(source))
 
 ###################
 # RUN AND WRAP UP #
 ###################
 
 def run():
-    if "--test" not in sys.argv:
-        build_bib()
+    build_bib()
 
 if __name__ == "__main__":
     run()

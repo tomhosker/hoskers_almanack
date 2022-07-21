@@ -7,7 +7,7 @@ repository.
 import sqlite3
 
 # Local imports.
-import configs
+import .configs
 
 #############
 # FUNCTIONS #

@@ -4,25 +4,24 @@ into a PDF.
 """
 
 # Standard imports.
-import sqlite3, os, sys
+import argparse
+import os
+import subprocess
 
 # Local imports.
-import configs
-from article import Article
-from bib_builder import build_bib
+from .almanack_utils import fetch_to_dict
+from .article import Article
+from .bib_builder import build_bib
 
 #############
 # FUNCTIONS #
 #############
 
-def fetch_loadout():
+def fetch_loadout(loadout_name="main"):
     """ Fetches the package loadout from the database. """
-    conn = sqlite3.connect(configs.PATH_TO_DB)
-    c = conn.cursor()
-    select = "SELECT latex FROM package_loadout WHERE name = 'main';"
-    c.execute(select)
-    row = c.fetchone()
-    result = row[0]
+    select = "SELECT latex FROM package_loadout WHERE name = ?;"
+    readout = fetch_to_dict(select, (loadout_name,))
+    result = readout[0]["latex"]
     return result
 
 def compile_article(idno):
@@ -34,19 +33,22 @@ def compile_article(idno):
         print("No article with ID "+str(idno)+" on the database.")
         return False
     article = article_object.digest()
-    current = ("\\documentclass{amsart}\n\n"+
-               loadout+"\n\n"+
-               "\\begin{document}\n\n"+
-               article+"\n"
-               "\\end{document}")
+    current = (
+        "\\documentclass{amsart}\n\n"+
+        loadout+"\n\n"+
+        "\\begin{document}\n\n"+
+        article+"\n\n"+
+        "\\end{document}"
+    )
     with open("current.tex", "w") as current_fileobj:
         current_fileobj.write(current)
-    os.system("xelatex current.tex")
-    os.system("bibtex current.aux")
-    os.system("xelatex current.tex")
-    os.system("cp current.pdf "+str(idno)+".pdf")
-    os.system("rm -rf current*")
-    os.system("rm sources.bib")
+    subprocess.run(["xelatex", "current.tex"], check=True)
+    subprocess.run(["bibtex", "current.aux"], check=True)
+    subprocess.run(["xelatex", "current.tex"], check=True)
+    os.rename("current.pdf", str(idno)+".pdf")
+    for path_obj in Path.cwd().glob("current.*"):
+        os.remove(str(path_obj))
+    os.remove("sources.bib")
     return True
 
 ###################
@@ -54,15 +56,14 @@ def compile_article(idno):
 ###################
 
 def run():
-    if len(sys.argv) <= 1:
-        print("Please specify which article to compile (by its ID).")
-        return
-    try:
-        idno = int(sys.argv[1])
-    except:
-        print("Please specify an article by its ID *number*.")
+    """ Run this file. """
+    parser = argparse.ArgumentParser(description="Compile a given article.")
+    parser.add_argument("id-num", type=int, default=None, dest="id_num")
+    arguments = parser.parse_args()
+    if arguments.id_num is None:
+        print("Please specify an article by its ID number.")
     else:
-        compile_article(idno)
+        compile_article(arguments.id_num)
 
 if __name__ == "__main__":
     run()

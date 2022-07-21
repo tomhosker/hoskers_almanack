@@ -3,8 +3,8 @@ This code provides a concise entry-point for the using the PDFBuilder class.
 """
 
 # Local imports.
-import configs
-from pdf_builder import PDFBuilder
+import .configs
+from .pdf_builder import PDFBuilder
 
 ###################
 # RUN AND WRAP UP #
@@ -15,7 +15,8 @@ def run():
         PDFBuilder(
             path_to_output=configs.PATH_TO_OUTPUT,
             fullness=configs.FULLNESS,
-            mods=configs.MODS
+            mods=configs.MODS,
+            version=configs.VERSION
         )
     builder.build()
 

@@ -6,22 +6,18 @@ This code defines a class which constructs the LaTeX for a given article.
 import sqlite3
 
 # Local imports.
-import configs
-from almanack_utils import fetch_to_dict
-from encapsulator import MiniEncapsulator
-from notes_builder import NotesBuilder
-from hpml.hpml_compiler import HPMLCompiler
-from hpml.preprocessor import Preprocessor
-
-# Local constants.
-PATH_TO_ARTICLE_DEMO_OUTPUT = "article_demo_output.tex"
+from .almanack_utils import fetch_to_dict
+from .encapsulator import MiniEncapsulator
+from .notes_builder import NotesBuilder
+from .hpml.hpml_compiler import HPMLCompiler
+from .hpml.preprocessor import Preprocessor
 
 ##############
 # MAIN CLASS #
 ##############
 
-# The class in question.
 class Article:
+    """ The class in question. """
     def __init__(self, idno, fullness="full", mods=None):
         self.idno = idno
         self.fullness = fullness
@@ -81,10 +77,12 @@ class Article:
 # HELPER FUNCTIONS #
 ####################
 
-def fetch_article(idno, path_to_db=configs.PATH_TO_DB):
+def fetch_article(idno):
     """ Extract a list of article IDs from a select statement. """
-    select = ("SELECT content, tune, christFlag "+
-              "FROM article WHERE id = ?;")
+    select = (
+        "SELECT content, tune, christFlag "+
+        "FROM article WHERE id = ?;"
+    )
     extract = fetch_to_dict(select, (idno,))
     result = extract[0]
     return result
@@ -96,23 +94,3 @@ def to_latex(hpml):
     mini_encapsulator = MiniEncapsulator(latex)
     result = mini_encapsulator.out
     return result
-
-###########
-# TESTING #
-###########
-
-def demo(path_to_output=PATH_TO_ARTICLE_DEMO_OUTPUT):
-    """ Run a demo. """
-    article = Article(95, fullness="full")
-    with open(path_to_output, "w") as output_file:
-        output_file.write(article.digest())
-
-###################
-# RUN AND WRAP UP #
-###################
-
-def run():
-    demo()
-
-if __name__ == "__main__":
-    run()
