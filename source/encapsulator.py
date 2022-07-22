@@ -4,6 +4,7 @@ snippet into a full .tex file.
 """
 
 # Standard imports.
+import re
 from pathlib import Path
 
 # Local constants.
@@ -17,8 +18,12 @@ MAX_WIDTH = 100
 
 class Encapsulator:
     """ The class in question. """
-    def __init__(self, snippet, loadout=DEFAULT_LOADOUT,
-                 path_to_output=DEFAULT_PATH_TO_OUTPUT):
+    def __init__(
+            self,
+            snippet,
+            loadout=DEFAULT_LOADOUT,
+            path_to_output=DEFAULT_PATH_TO_OUTPUT
+        ):
         self.original = snippet
         self.loadout = loadout
         self.path_to_output = path_to_output
@@ -47,20 +52,35 @@ class Encapsulator:
 
 class MiniEncapsulator:
     """ Sandwich a snippet of .tex code into a verse environment. """
-    def __init__(self, snippet):
+    def __init__(self, snippet, notes=None):
         self.original = snippet
+        self.notes = notes
+        self.body = self.make_body()
         self.out = self.build_output()
+
+    def make_body(self):
+        """ Ronseal. """
+        result = self.original
+        if self.notes:
+            note_string = "\\footnotetext{"+self.notes+"}"
+            if "\n" in result:
+                result = result.replace("\n", note_string+"\n", 1)
+            else:
+                result = result+note_string
+        return result
 
     def build_output(self):
         """ Ronseal. """
         second_longest_line = find_second_longest_line(self.original)
         if len(second_longest_line) < MAX_WIDTH:
-            begin = ("\\settowidth{\\versewidth}{"+second_longest_line+
-                     "}\n"+"\\begin{verse}[\\versewidth]")
+            begin = (
+                "\\settowidth{\\versewidth}{"+second_longest_line+"}\n"+
+                "\\begin{verse}[\\versewidth]"
+            )
         else:
             begin = "\\begin{verse}"
         end = "\\end{verse}"
-        result = begin+"\n"+self.original+"\n"+end
+        result = begin+"\n"+self.body+"\n"+end
         return result
 
     def digest(self):
@@ -109,16 +129,24 @@ def get_loadout(loadout_name):
         result = loadout_file.read()
     return result
 
+def len_line_of_latex(line):
+    """ Find the printed length of a line of LaTeX. """
+    line = re.sub(r"\\\w*{([^}]*)}", "\\1", line)
+    if "Nieb" in line:
+        print(line)
+    result = len(line)
+    return result
+
 def find_second_longest_line(snippet):
     """ Ronseal. """
     lines = snippet.split("\n")
     longest_line = lines[0]
     second_longest_line = lines[0]
     for line in lines:
-        if len(line) > len(longest_line):
+        if len_line_of_latex(line) > len_line_of_latex(longest_line):
             second_longest_line = longest_line
             longest_line = line
-        elif len(line) > len(second_longest_line):
+        elif len_line_of_latex(line) > len_line_of_latex(second_longest_line):
             second_longest_line = line
     second_longest_line = remove_line_endings(second_longest_line)
     second_longest_line = remove_unpaired_braces(second_longest_line)

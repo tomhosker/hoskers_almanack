@@ -89,9 +89,6 @@ class NotesBuilder:
 
     def build_notes(self):
         """ Builds an article's notes from its record on the database. """
-        redacted_str = None
-        if self.redacted:
-            pre_result = NotesBuilder.REDACTED_MARKER
         author_dates = None
         if self.author:
             author_dates = self.author+" "+self.dates
@@ -113,8 +110,10 @@ class NotesBuilder:
 
     def build_comments(self):
         """ Builds an articles line comments. """
-        select = ("SELECT line_no, comment FROM comment_on_line "+
-                  "WHERE article_id = ? ORDER BY line_no ASC;")
+        select = (
+            "SELECT line_no, comment FROM comment_on_line "+
+            "WHERE article_id = ? ORDER BY line_no ASC;"
+        )
         rows = fetch_to_dict(select, (self.idno,))
         result = ""
         for row in rows:
@@ -123,5 +122,4 @@ class NotesBuilder:
                 result = result+" "
         if result == "":
             return None
-        else:
-            return result
+        return result

@@ -9,6 +9,7 @@
     xfrac
 }
 
+% Sort out fonts.
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
 \newfontfamily\hoskeroe{English Towne}
@@ -21,7 +22,8 @@
     Numbers=OldStyle
 ]{cmunrm.otf}
 
-\usepackage[backend=bibtex,style=authortitle,citestyle=authortitle]{biblatex}
+% Sort out BibTex.
+\usepackage[backend=bibtex, style=authortitle, citestyle=authortitle]{biblatex}
 \addbibresource{sources.bib}
 
 % For Arabic text inside left-to-right text.
@@ -37,3 +39,8 @@
     slash-right-kern=-.25em,
     slash-left-kern=-.3em
 }
+
+\interfootnotelinepenalty=0
+
+% Always call the hyperref package last.
+\usepackage[hidelinks]{hyperref}

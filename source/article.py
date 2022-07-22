@@ -56,21 +56,16 @@ class Article:
 
     def digest(self):
         """ Sews the class's fields together. """
-        latex = to_latex(self.hpml)
+        result = to_latex(self.hpml, self.notes)
         if self.christ_flag:
-            latex = "{\\color{red} "+latex+"}"
+            result = "{\\color{red} "+result+"}"
         if self.tune:
-            latex = (
+            result = (
                 "\\begin{center}\n"+
                 "\\textit{Tune: "+self.tune+"}\n"+
                 "\\end{center}\n\n"+
-                latex
+                result
             )
-        if self.notes:
-            footnote = "\\footnotetext{"+self.notes+"}"
-            result = footnote+latex
-        else:
-            result = latex
         return result
 
 ####################
@@ -87,10 +82,10 @@ def fetch_article(idno):
     result = extract[0]
     return result
 
-def to_latex(hpml):
+def to_latex(hpml, notes):
     """ Converts a snippet of HPML into (encapsulated) LaTeX code. """
     compiler = HPMLCompiler(source_string=hpml)
     latex = compiler.out
-    mini_encapsulator = MiniEncapsulator(latex)
+    mini_encapsulator = MiniEncapsulator(latex, notes=notes)
     result = mini_encapsulator.out
     return result
