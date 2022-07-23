@@ -132,8 +132,6 @@ def get_loadout(loadout_name):
 def len_line_of_latex(line):
     """ Find the printed length of a line of LaTeX. """
     line = re.sub(r"\\\w*{([^}]*)}", "\\1", line)
-    if "Nieb" in line:
-        print(line)
     result = len(line)
     return result
 

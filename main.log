@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2021.9.13)  22 JUL 2022 12:47
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2021.9.13)  23 JUL 2022 01:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1530,11 +1530,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [205]
-[206]
-Overfull \vbox (1.54985pt too high) has occurred while \output is active []
-
-
-[207]
+[206] [207]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [208]
@@ -1965,7 +1961,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  30950 strings out of 492912
  594372 string characters out of 6134893
- 928628 words of memory out of 5000000
+ 928631 words of memory out of 5000000
  34485 multiletter control sequences out of 15000+600000
  545871 words of font info for 113 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
