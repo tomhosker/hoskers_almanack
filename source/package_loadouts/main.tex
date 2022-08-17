@@ -1,4 +1,6 @@
 \usepackage{
+    footmisc,
+    %bigfoot,
     caption,
     color,
     fourier-orns,
@@ -39,6 +41,10 @@
     slash-right-kern=-.25em,
     slash-left-kern=-.3em
 }
+
+\makeatletter
+\@beginparpenalty=10000
+\makeatother
 
 % Always call the hyperref package last.
 \usepackage[hidelinks]{hyperref}

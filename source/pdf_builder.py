@@ -118,7 +118,7 @@ class PDFBuilder:
         self.build_tex()
         print("Building PDF...")
         self.build_pdf()
-        #purge_main()
+        purge_main()
         os.remove(configs.PATH_TO_BIB)
         print("PDF built!")
 

@@ -11,6 +11,8 @@ from pathlib import Path
 DEFAULT_LOADOUT = "main"
 DEFAULT_PATH_TO_OUTPUT = "current.tex"
 MAX_WIDTH = 100
+FALLBACK_WIDTH_STR = "0.8\\textwidth"
+DEFAULT_POEM_LINES = 5
 
 ##############
 # MAIN CLASS #
@@ -52,9 +54,10 @@ class Encapsulator:
 
 class MiniEncapsulator:
     """ Sandwich a snippet of .tex code into a verse environment. """
-    def __init__(self, snippet, notes=None):
+    def __init__(self, snippet, notes=None, poem_lines=DEFAULT_POEM_LINES):
         self.original = snippet
         self.notes = notes
+        self.poem_lines = poem_lines
         self.body = self.make_body()
         self.out = self.build_output()
 
@@ -71,16 +74,20 @@ class MiniEncapsulator:
 
     def build_output(self):
         """ Ronseal. """
+        components = []
         second_longest_line = find_second_longest_line(self.original)
-        if len(second_longest_line) < MAX_WIDTH:
-            begin = (
-                "\\settowidth{\\versewidth}{"+second_longest_line+"}\n"+
-                "\\begin{verse}[\\versewidth]"
+        if len_line_of_latex(second_longest_line) <= MAX_WIDTH:
+            components.append(
+                "\\settowidth{\\versewidth}{"+second_longest_line+"}"
             )
+            components.append("\\begin{verse}[\\versewidth]")
         else:
-            begin = "\\begin{verse}"
-        end = "\\end{verse}"
-        result = begin+"\n"+self.body+"\n"+end
+            components.append("\\begin{verse}["+FALLBACK_WIDTH_STR+"]")
+        if self.poem_lines:
+            components.append("\\poemlines{"+str(self.poem_lines)+"}")
+        components.append(self.body)
+        components.append("\\end{verse}")
+        result = "\n".join(components)
         return result
 
     def digest(self):

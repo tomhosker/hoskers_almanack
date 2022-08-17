@@ -27,7 +27,6 @@ class Article:
         self.christ_flag = False
         self.notes = None
         self.article = None
-        self.notes = None
         self.fill_attributes()
 
     def fill_attributes(self):
