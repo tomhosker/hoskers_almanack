@@ -7,6 +7,9 @@ snippet into a full .tex file.
 import re
 from pathlib import Path
 
+# Local imports.
+from .configs import PATH_OBJ_TO_PACKAGE_LOADOUTS
+
 # Local constants.
 DEFAULT_LOADOUT = "main"
 DEFAULT_PATH_TO_OUTPUT = "current.tex"
@@ -131,7 +134,7 @@ def remove_unpaired_braces(line):
 def get_loadout(loadout_name):
     """ Gets the list of packages (and related) from the database. """
     filename = loadout_name+".tex"
-    path_to_loadout = str(Path(__file__).parent/"package_loadouts"/filename)
+    path_to_loadout = str(PATH_OBJ_TO_PACKAGE_LOADOUTS/filename)
     with open(path_to_loadout, "r") as loadout_file:
         result = loadout_file.read()
     return result
