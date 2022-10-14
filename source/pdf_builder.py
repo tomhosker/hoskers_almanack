@@ -68,13 +68,13 @@ class PDFBuilder:
         self.loadout = get_loadout(self.loadout_id)
         if self.fullness == FULL:
             self.frontmatter = self.build_frontmatter()
-        self.mainmatter = self.build_mainmatter()
         if self.fullness in (FULL, SLENDER):
             self.backmatter = self.build_backmatter()
+        self.mainmatter = self.build_mainmatter() # This should be last.
 
     def build_frontmatter(self):
         """ Build the frontmatter from the database. """
-        chapters = []
+        chapters = ["\\part{Introductory Material}"]
         select = "SELECT * FROM frontmatter_chapters ORDER BY no;"
         rows = fetch_to_dict(select, tuple())
         for row in rows:
@@ -88,6 +88,8 @@ class PDFBuilder:
     def build_mainmatter(self):
         """ Build the mainmatter from the "MonthBuilder" class. """
         chapters = []
+        if self.frontmatter or self.backmatter:
+            chapters.append("\\part{The \\textit{Almanack} Proper}")
         for month_name in MONTH_NAMES:
             month_builder = \
                 MonthBuilder(month_name, fullness=self.fullness, mods=self.mods)
@@ -97,7 +99,7 @@ class PDFBuilder:
 
     def build_backmatter(self):
         """ Build the backmatter from the database. """
-        chapters = []
+        chapters = ["\\part{Supplementary Material}"]
         select = "SELECT * FROM backmatter_chapters ORDER BY no;"
         rows = fetch_to_dict(select, tuple())
         for row in rows:

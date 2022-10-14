@@ -33,8 +33,15 @@ MINIMAL = "minimal"
 FULLNESS = FULL
 
 # Column keys.
+ID_KEY = "id"
 NAME_KEY = "name"
 CONTENT_KEY = "content"
+SONG_KEY = "song"
+SONNET_KEY = "sonnet"
+PROVERB_KEY = "proverb"
+SONGS_KEY = "songs"
+SONNETS_KEY = "sonnets"
+PROVERBS_KEY = "proverbs"
 
 # Month names.
 MONTH_NAMES_LATIN = (

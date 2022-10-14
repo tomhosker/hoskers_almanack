@@ -117,7 +117,7 @@ class NotesBuilder:
         rows = fetch_to_dict(select, (self.idno,))
         result = ""
         for row in rows:
-            result = result+"\P "+str(row["line_no"])+". "+row["comment"]
+            result = result+"\\P "+str(row["line_no"])+". "+row["comment"]
             if rows.index(row) != len(rows)-1:
                 result = result+" "
         if result == "":

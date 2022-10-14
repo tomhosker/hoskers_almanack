@@ -8,7 +8,8 @@ import sqlite3
 # Local imports.
 from .almanack_utils import fetch_to_dict
 from .article import Article
-from .monthly_selects import DEFAULT_SELECTS
+from .configs import FULL, ID_KEY, SONGS_KEY, SONNETS_KEY, PROVERBS_KEY
+from .monthly_selects import SELECTS
 
 ##############
 # MAIN CLASS #
@@ -16,49 +17,53 @@ from .monthly_selects import DEFAULT_SELECTS
 
 class MonthBuilder:
     """ The class in question. """
-    def __init__(
-            self, name, selects=DEFAULT_SELECTS, fullness="full", mods=None
-        ):
+    # Class attributes.
+    SECTION_SEPARATOR = "\n\n"
+
+    def __init__(self, name, fullness=FULL, mods=None):
         self.name = name
-        self.selects = selects
         self.fullness = fullness
         self.mods = mods
-        self.songs = fetch_to_dict(selects[self.name]["songs"], tuple())
-        self.sonnets = fetch_to_dict(selects[self.name]["sonnets"], tuple())
-        self.proverbs = fetch_to_dict(selects[self.name]["proverbs"], tuple())
+        self.songs = fetch_to_dict(SELECTS[self.name][SONGS_KEY])
+        self.sonnets = fetch_to_dict(SELECTS[self.name][SONNETS_KEY])
+        self.proverbs = fetch_to_dict(SELECTS[self.name][PROVERBS_KEY])
 
     def digest(self):
         """ Condense the month into a single string. """
         min_count = \
             min([len(self.songs), len(self.sonnets), len(self.proverbs)])
-        result = "\\chapter{"+self.name+"}\n\n"
+        components = ["\\chapter{"+self.name+"}"]
         for index in range(min_count):
             song_obj = \
                 Article(
-                    self.songs[index]["id"],
+                    self.songs[index][ID_KEY],
                     fullness=self.fullness,
                     mods=self.mods
                 )
             sonnet_obj = \
                 Article(
-                    self.sonnets[index]["id"],
+                    self.sonnets[index][ID_KEY],
                     fullness=self.fullness,
                     mods=self.mods
                 )
             proverb_obj = \
                 Article(
-                    self.proverbs[index]["id"],
+                    self.proverbs[index][ID_KEY],
                     fullness=self.fullness,
                     mods=self.mods
                 )
-            song = song_obj.digest()
-            sonnet = sonnet_obj.digest()
-            proverb = proverb_obj.digest()
-            result = (
-                result+
-                "\\bigskip\n\\bigskip\n\\section{}\n\n"+
-                "\\subsection{}\n\n"+song+"\n\n"+
-                "\\subsection{}\n\n"+sonnet+"\n\n"+
-                "\\subsection{}\n\n"+proverb+"\n\n"
-            )
+            components.append("\\section{}")
+            components.append("\\subsection{}")
+            components.append(song_obj.digest())
+            components.append("\\subsection{}")
+            components.append(sonnet_obj.digest())
+            components.append("\\subsection{}")
+            components.append(proverb_obj.digest())
+        print(SELECTS[self.name][SONGS_KEY])
+        print(len(self.songs))
+        print(SELECTS[self.name][SONNETS_KEY])
+        print(len(self.sonnets))
+        print(SELECTS[self.name][PROVERBS_KEY])
+        print(len(self.proverbs))
+        result = self.SECTION_SEPARATOR.join(components)
         return result

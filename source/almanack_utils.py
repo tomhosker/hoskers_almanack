@@ -7,16 +7,13 @@ repository.
 import sqlite3
 
 # Local imports.
-if __package__:
-    from . import configs
-else:
-    import configs
+from .configs import PATH_TO_DB
 
 #############
 # FUNCTIONS #
 #############
 
-def fetch_to_dict(select, parameters, path_to_db=configs.PATH_TO_DB):
+def fetch_to_dict(select, parameters=tuple(), path_to_db=PATH_TO_DB):
     """ Runs a "SELECT" query, and wraps the results into a dictionary. """
     connection = sqlite3.connect(path_to_db)
     connection.row_factory = sqlite3.Row
