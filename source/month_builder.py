@@ -59,11 +59,5 @@ class MonthBuilder:
             components.append(sonnet_obj.digest())
             components.append("\\subsection{}")
             components.append(proverb_obj.digest())
-        print(SELECTS[self.name][SONGS_KEY])
-        print(len(self.songs))
-        print(SELECTS[self.name][SONNETS_KEY])
-        print(len(self.sonnets))
-        print(SELECTS[self.name][PROVERBS_KEY])
-        print(len(self.proverbs))
         result = self.SECTION_SEPARATOR.join(components)
         return result
