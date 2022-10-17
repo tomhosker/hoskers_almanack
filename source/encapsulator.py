@@ -57,10 +57,17 @@ class Encapsulator:
 
 class MiniEncapsulator:
     """ Sandwich a snippet of .tex code into a verse environment. """
-    def __init__(self, snippet, notes=None, poem_lines=DEFAULT_POEM_LINES):
+    def __init__(
+            self,
+            snippet,
+            notes=None,
+            poem_lines=DEFAULT_POEM_LINES,
+            is_prose_poem=False
+        ):
         self.original = snippet
         self.notes = notes
         self.poem_lines = poem_lines
+        self.is_prose_poem = is_prose_poem
         self.body = self.make_body()
         self.out = self.build_output()
 
@@ -77,6 +84,8 @@ class MiniEncapsulator:
 
     def build_output(self):
         """ Ronseal. """
+        if self.is_prose_poem:
+            return self.body
         components = []
         second_longest_line = find_second_longest_line(self.original)
         if len_line_of_latex(second_longest_line) <= MAX_WIDTH:
@@ -92,10 +101,6 @@ class MiniEncapsulator:
         components.append("\\end{verse}")
         result = "\n".join(components)
         return result
-
-    def digest(self):
-        """ Deprecated. """
-        return self.out
 
 def remove_line_endings(line):
     """ Remove any line-ending syntax. """
