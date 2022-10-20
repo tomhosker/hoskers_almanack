@@ -63,7 +63,11 @@ class Article:
 
     def get_latex(self):
         """ Convert a snippet of HPML into (encapsulated) LaTeX code. """
-        compiler = HPMLCompiler(source_string=self.hpml)
+        compiler = \
+            HPMLCompiler(
+                source_string=self.hpml,
+                is_prose_poem=self.is_prose_poem
+            )
         result = compiler.out
         mini_encapsulator = \
             MiniEncapsulator(
@@ -99,13 +103,4 @@ def fetch_article(idno):
     select = "SELECT * FROM article WHERE id = ?;"
     extract = fetch_to_dict(select, (idno,))
     result = extract[0]
-    return result
-
-def to_latex(hpml, notes, encapsulate=True):
-    """ Converts a snippet of HPML into (encapsulated) LaTeX code. """
-    compiler = HPMLCompiler(source_string=hpml)
-    result = compiler.out
-    if encapsulate:
-        mini_encapsulator = MiniEncapsulator(result, notes=notes)
-        result = mini_encapsulator.out
     return result

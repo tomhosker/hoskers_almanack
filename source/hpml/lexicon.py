@@ -17,6 +17,7 @@ lexicon = {
     "#SHILLINGS": "s",
     "#PENCE": "d",
     "#ENDOFSECTION": "\\aldine",
+    "#PAUSE": "$\\wp$",
     "#PERCENT": "\\%",
     "#NUMERO": "\\textnumero",
     "#ITAL{": "\\textit{",
