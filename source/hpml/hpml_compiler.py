@@ -2,9 +2,6 @@
 This code defines a class which compiles HPML into LaTeX.
 """
 
-# Standard imports.
-import sys
-
 # Local imports.
 from .lexicon import lexicon, fractions
 
@@ -14,9 +11,15 @@ from .lexicon import lexicon, fractions
 
 class HPMLCompiler:
     """ The class in question. """
-    def __init__(self, source_file=None, source_string=None):
+    def __init__(
+            self,
+            source_file=None,
+            source_string=None,
+            is_prose_poem=False
+        ):
         self.source_file = source_file
         self.source_string = source_string
+        self.is_prose_poem = is_prose_poem
         if not source_string:
             with open(self.source_file, "r") as the_file:
                 self.source_string = the_file.read()
@@ -37,29 +40,33 @@ class HPMLCompiler:
 
     def add_endings(self):
         """ Adds "\\", "\\*" or "\\!" to each line, as appropriate. """
-        for line in self.lines:
-            i = self.lines.index(line)
-            if ((line == "") or (line == "{\itshape ") or
-                (i == len(self.lines)-1)):
+        if self.is_prose_poem:
+            return
+        for index, line in enumerate(self.lines):
+            if (
+                (line == "") or
+                (line == "{\itshape ") or
+                (index == len(self.lines)-1)
+               ):
                 continue
-            if (i != len(self.lines)-1) and (self.lines[i+1] == ""):
+            if (index != len(self.lines)-1) and (self.lines[index+1] == ""):
                 line = line+"\\\\!"
-                self.lines[i] = line
+                self.lines[index] = line
                 continue
-            if (i == 0) or (i == len(self.lines)-2):
+            if (index == 0) or (index == len(self.lines)-2):
                 line = line+"\\\\*"
-                self.lines[i] = line
+                self.lines[index] = line
                 continue
-            elif self.lines[i-1] == "":
+            elif self.lines[index-1] == "":
                 line = line+"\\\\*"
-                self.lines[i] = line
+                self.lines[index] = line
                 continue
-            elif (i < len(self.lines)-2) and (self.lines[i+2] == ""):
+            elif (index < len(self.lines)-2) and (self.lines[index+2] == ""):
                 line = line+"\\\\*"
-                self.lines[i] = line
+                self.lines[index] = line
                 continue
             line = line+"\\\\"
-            self.lines[i] = line
+            self.lines[index] = line
 
     def process_syntactics(self):
         """ Translate those clusters for which clear equivalents exist. """
@@ -221,23 +228,3 @@ class HPMLCompiler:
                     filename = self.source_file+".tex"
         with open(filename, "w") as fileobj:
             fileobj.write(self.out)
-
-###########
-# TESTING #
-###########
-
-def demo():
-    """ Run a demo. """
-    test_obj = HPMLCompiler(source_file="test2.hpml")
-    print(test_obj.out)
-
-###################
-# RUN AND WRAP UP #
-###################
-
-def run():
-    if "--test" not in sys.argv:
-        demo()
-
-if __name__ == "__main__":
-    run()

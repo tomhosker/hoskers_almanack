@@ -7,6 +7,13 @@ import sqlite3
 
 # Local imports.
 from .almanack_utils import fetch_to_dict
+from .configs import (
+    CONTENT_KEY,
+    TUNE_KEY,
+    IS_PROSE_POEM_KEY,
+    CHRIST_FLAG_KEY,
+    FULL
+)
 from .encapsulator import MiniEncapsulator
 from .notes_builder import NotesBuilder
 from .hpml.hpml_compiler import HPMLCompiler
@@ -18,12 +25,13 @@ from .hpml.preprocessor import Preprocessor
 
 class Article:
     """ The class in question. """
-    def __init__(self, idno, fullness="full", mods=None):
+    def __init__(self, idno, fullness=FULL, mods=None):
         self.idno = idno
         self.fullness = fullness
         self.mods = mods
         self.hpml = None
         self.tune = None
+        self.is_prose_poem = False
         self.christ_flag = False
         self.notes = None
         self.article = None
@@ -34,10 +42,10 @@ class Article:
         row = fetch_article(self.idno)
         if not row:
             raise Exception("No article with id="+str(self.idno)+".")
-        self.hpml = row["content"]
-        self.tune = row["tune"]
-        if row["christFlag"]:
-            self.christ_flag = True
+        self.hpml = row[CONTENT_KEY]
+        self.tune = row[TUNE_KEY]
+        self.is_prose_poem = bool(row[IS_PROSE_POEM_KEY])
+        self.christ_flag = bool(row[CHRIST_FLAG_KEY])
         self.preprocess()
         self.build_notes()
 
@@ -53,16 +61,35 @@ class Article:
         builder = NotesBuilder(self.idno, self.fullness)
         self.notes = builder.out
 
+    def get_latex(self):
+        """ Convert a snippet of HPML into (encapsulated) LaTeX code. """
+        compiler = \
+            HPMLCompiler(
+                source_string=self.hpml,
+                is_prose_poem=self.is_prose_poem
+            )
+        result = compiler.out
+        mini_encapsulator = \
+            MiniEncapsulator(
+                result,
+                notes=self.notes,
+                is_prose_poem=self.is_prose_poem
+            )
+        result = mini_encapsulator.out
+        return result
+
     def digest(self):
         """ Sews the class's fields together. """
-        result = to_latex(self.hpml, self.notes)
+        encapsulate = not self.is_prose_poem
+        result = self.get_latex()
         if self.christ_flag:
             result = "{\\color{red} "+result+"}"
         if self.tune:
             result = (
                 "\\begin{center}\n"+
                 "\\textit{Tune: "+self.tune+"}\n"+
-                "\\end{center}\n\n"+
+                "\\end{center}\n"+
+                "\n"+
                 result
             )
         return result
@@ -73,18 +100,7 @@ class Article:
 
 def fetch_article(idno):
     """ Extract a list of article IDs from a select statement. """
-    select = (
-        "SELECT content, tune, christFlag "+
-        "FROM article WHERE id = ?;"
-    )
+    select = "SELECT * FROM article WHERE id = ?;"
     extract = fetch_to_dict(select, (idno,))
     result = extract[0]
-    return result
-
-def to_latex(hpml, notes):
-    """ Converts a snippet of HPML into (encapsulated) LaTeX code. """
-    compiler = HPMLCompiler(source_string=hpml)
-    latex = compiler.out
-    mini_encapsulator = MiniEncapsulator(latex, notes=notes)
-    result = mini_encapsulator.out
     return result
