@@ -15,7 +15,7 @@ PATH_TO_GTKSOURCEVIEW = "/usr/share/gtksourceview-4"
 SOURCE_PATH_FOR_HPML_LANG = "hpml/hpml.lang"
 TARGET_PATH_FOR_HPML_LANG = \
     str(Path(PATH_TO_GTKSOURCEVIEW)/"language-specs"/"hpml.lang")
-APT_PACKAGES = ("sqlitebrowser", "texlive-full")
+APT_PACKAGES = ("pdftk", "sqlitebrowser", "texlive-full")
 
 #############
 # FUNCTIONS #
