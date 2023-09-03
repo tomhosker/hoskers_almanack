@@ -1,6 +1,6 @@
 """
-This code defines a class which performs a series of replacement on a
-snippet of HPML.
+This code defines a class which performs a series of replacement on a snippet of
+HPML.
 """
 
 # Local imports.
