@@ -39,19 +39,18 @@ class NotesBuilder:
     def fetch_extract(self):
         """ Fetches an article's metadata from the database. """
         select = (
-            "SELECT article.source AS source, "+
-                "article.title AS title, "+
-                "article.non_title AS non_title, "+
-                "article.remarks AS remarks, "+
-                "article.redacted AS redacted, "+
-                "author.full_title AS author, "+
-                "author.dob AS dob, author.dod AS dod, "+
-                "non_author.name AS non_author "+
-            "FROM article "+
-            "LEFT JOIN author ON author.code = article.author "+
-            "LEFT JOIN non_author "+
-                "ON non_author.code = article.non_author "+
-            "WHERE article.id = ?;"
+            "SELECT Article.source AS source, "+
+                "Article.title AS title, "+
+                "Article.non_title AS non_title, "+
+                "Article.remarks AS remarks, "+
+                "Article.redacted AS redacted, "+
+                "Author.full_title AS author, "+
+                "Author.dob AS dob, author.dod AS dod, "+
+                "NonAuthor.name AS non_author "+
+            "FROM Article "+
+            "LEFT JOIN Author ON Author.code = Article.author "+
+            "LEFT JOIN NonAuthor ON NonAuthor.code = Article.non_author "+
+            "WHERE Article.id = ?;"
         )
         rows = fetch_to_dict(select, (self.idno,))
         try:
@@ -59,7 +58,7 @@ class NotesBuilder:
         except:
             print("No article with ID "+str(self.idno)+".")
             self.not_on_db = True
-            return None
+        return None
 
     def build_title(self):
         """ Builds an article's title. """
@@ -111,13 +110,15 @@ class NotesBuilder:
     def build_comments(self):
         """ Builds an articles line comments. """
         select = (
-            "SELECT line_no, comment FROM comment_on_line "+
-            "WHERE article_id = ? ORDER BY line_no ASC;"
+            "SELECT line_num, comment "+
+            "FROM CommentOnLine "+
+            "WHERE article_id = ? "+
+            "ORDER BY line_num ASC;"
         )
         rows = fetch_to_dict(select, (self.idno,))
         result = ""
         for row in rows:
-            result = result+"\\P "+str(row["line_no"])+". "+row["comment"]
+            result = result+"\\P "+str(row["line_num"])+". "+row["comment"]
             if rows.index(row) != len(rows)-1:
                 result = result+" "
         if result == "":

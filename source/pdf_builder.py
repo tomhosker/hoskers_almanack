@@ -75,7 +75,7 @@ class PDFBuilder:
     def build_frontmatter(self):
         """ Build the frontmatter from the database. """
         chapters = ["\\part{Introductory Material}"]
-        select = "SELECT * FROM frontmatter_chapters ORDER BY no;"
+        select = "SELECT * FROM FrontmatterChapter ORDER BY num;"
         rows = fetch_to_dict(select, tuple())
         for row in rows:
             title = "\\chapter{"+row[NAME_KEY]+"}"
@@ -100,7 +100,7 @@ class PDFBuilder:
     def build_backmatter(self):
         """ Build the backmatter from the database. """
         chapters = ["\\part{Supplementary Material}"]
-        select = "SELECT * FROM backmatter_chapters ORDER BY no;"
+        select = "SELECT * FROM BackmatterChapter ORDER BY num;"
         rows = fetch_to_dict(select, tuple())
         for row in rows:
             title = "\\chapter{"+row[NAME_KEY]+"}"

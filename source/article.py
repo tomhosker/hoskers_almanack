@@ -100,7 +100,7 @@ class Article:
 
 def fetch_article(idno):
     """ Extract a list of article IDs from a select statement. """
-    select = "SELECT * FROM article WHERE id = ?;"
+    select = "SELECT * FROM Article WHERE id = ?;"
     extract = fetch_to_dict(select, (idno,))
     result = extract[0]
     return result

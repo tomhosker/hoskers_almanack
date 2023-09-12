@@ -5,7 +5,7 @@ proverbs for a given month.
 Example:
 
     SELECT id
-    FROM article
+    FROM Article
     WHERE type = 1
         AND humour = 'yellow-bile'
         AND aux_type = 'n'
@@ -52,7 +52,7 @@ class MonthlySelect:
             return self.override
         result = (
             "SELECT id "+
-            "FROM article "+
+            "FROM Article "+
             "WHERE type = "+str(self.article_type)+" "+
             "AND humour = '"+self.humour+"' "+
             "AND aux_type = 'n' "+
@@ -76,121 +76,121 @@ def get_monthly_select(*args, **kwargs):
 ######################
 
 QUA_SONGS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 1 "+
-        "AND humour = \"blood\" "+
-        "AND aux_type = \"english folk\" "+
+        "AND humour = 'blood' "+
+        "AND aux_type = 'english-folk' "+
         "AND ((ranking BETWEEN 1 AND 29) OR (ranking = 101)) "+
     "ORDER BY ranking DESC;"
 )
 QUI_SONGS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 1 "+
-        "AND humour = \"blood\" "+
-        "AND aux_type = \"scots-irish folk\" "+
+        "AND humour = 'blood' "+
+        "AND aux_type = 'scots-irish-folk' "+
         "AND ranking BETWEEN 1 AND 30 "+
     "ORDER BY ranking DESC;"
 )
 QUI_SONNETS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 2 "+
-        "AND humour = \"blood\" "+
-        "AND aux_type = \"shanty\" "+
+        "AND humour = 'blood' "+
+        "AND aux_type = 'shanty' "+
         "AND ranking BETWEEN 1 AND 30 "+
     "ORDER BY ranking DESC;"
 )
 QUI_PROVERBS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 3 "+
-        "AND humour = \"blood\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'blood' "+
+        "AND aux_type = 'n' "+
         "AND ranking BETWEEN 1 AND 30 "+
     "ORDER BY ranking DESC;"
 )
 SEX_SONGS = (
     "SELECT id "+
-    "FROM article "+
+    "FROM Article "+
     "WHERE ("+
         "type = 1 AND "+
-        "humour = \"blood\" AND "+
-        "aux_type = \"imperial folk\" AND "+
+        "humour = 'blood' AND "+
+        "aux_type = 'imperial-folk' AND "+
         "((ranking BETWEEN 1 AND 19) OR (ranking = 101))"+
     ") OR ("+
         "type = 1 AND "+
-        "humour = \"blood\" AND "+
-        "aux_type = \"hymn\" AND "+
+        "humour = 'blood' AND "+
+        "aux_type = 'hymn' AND "+
         "((ranking BETWEEN 1 AND 10) OR (ranking = 101))"+
     ") ORDER BY aux_type, ranking DESC;"
 )
 OCT_SONGS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 1 "+
-        "AND humour = \"phlegm\" "+
-        "AND aux_type = \"october\" "+
+        "AND humour = 'phlegm' "+
+        "AND aux_type = 'october' "+
         "AND ranking BETWEEN 1 AND 29 "+
     "ORDER BY ranking;"
 )
 OCT_SONNETS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 2 "+
-        "AND humour = \"phlegm\" "+
-        "AND aux_type = \"october\" "+
+        "AND humour = 'phlegm' "+
+        "AND aux_type = 'october' "+
         "AND ranking BETWEEN 1 AND 29 "+
     "ORDER BY ranking;"
 )
 OCT_PROVERBS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 3 "+
-        "AND humour = \"phlegm\" "+
-        "AND aux_type = \"october\" "+
+        "AND humour = 'phlegm' "+
+        "AND aux_type = 'october' "+
         "AND ranking BETWEEN 1 AND 29 "+
     "ORDER BY ranking;"
 )
 DUO_SONGS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 1 "+
-        "AND humour = \"black-bile\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'black-bile' "+
+        "AND aux_type = 'n' "+
         "AND ranking BETWEEN 1 AND 29 "+
     "ORDER BY ranking DESC;"
 )
 DUO_SONNETS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 2 "+
-        "AND humour = \"black-bile\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'black-bile' "+
+        "AND aux_type = 'n' "+
         "AND ranking BETWEEN 1 AND 29 "+
     "ORDER BY ranking DESC;"
 )
 DUO_PROVERBS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 3 "+
-        "AND humour = \"black-bile\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'black-bile' "+
+        "AND aux_type = 'n' "+
         "AND ranking BETWEEN 1 AND 29 "+
     "ORDER BY ranking DESC;"
 )
 INT_SONGS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 1 "+
-        "AND humour = \"intercalaris\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'intercalaris' "+
+        "AND aux_type = 'n' "+
         "AND ranking = 200 "+
     "ORDER BY ranking DESC;"
 )
 INT_SONNETS = (
-    "SELECT id FROM article "+
+    "SELECT id FROM Article "+
     "WHERE type = 2 "+
-        "AND humour = \"intercalaris\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'intercalaris' "+
+        "AND aux_type = 'n' "+
         "AND ranking = 200 "+
     "ORDER BY ranking DESC;"
 )
 INT_PROVERBS = (
     "SELECT id FROM article "+
     "WHERE type = 3 "+
-        "AND humour = \"intercalaris\" "+
-        "AND aux_type = \"n\" "+
+        "AND humour = 'intercalaris' "+
+        "AND aux_type = 'n' "+
         "AND ranking = 200 "+
     "ORDER BY ranking DESC;"
 )
