@@ -67,11 +67,4 @@ MONTH_NAMES = MONTH_NAMES_LATIN
 # Other.
 LOADOUT_ID = "main"
 MODS = None # See hpml/preprocessor.py for strings you can put in here.
-SPECIAL_RANKINGS = {
-    99: "Shortlisted",
-    101: "Assigned to the second most senior month",
-    102: "Assigned to the least senior month",
-    200: "Chosen but with no particular ranking",
-    999: "Not chosen."
-}
 VERSION = "First Proof"

@@ -42,9 +42,15 @@
     slash-left-kern=-.3em
 }
 
+
+% Page break stuff.
 \makeatletter
 \@beginparpenalty=10000
 \makeatother
+
+% Standardise the manner in which books, poems, etc are referenced.
+\newcommand{\refbook}[1]{\textit{#1}}
+\newcommand{\refpoem}[1]{``#1''}
 
 % Always call the hyperref package last.
 \usepackage[hidelinks]{hyperref}
