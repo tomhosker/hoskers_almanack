@@ -15,7 +15,12 @@ from .almanack_utils import fetch_to_dict
 
 # Local constants.
 BOOK_ATTRIBUTES = (
-    "keywords", "author", "title", "year", "editor", "translator"
+    "keywords",
+    "author",
+    "title",
+    "year",
+    "editor",
+    "translator"
 )
 
 #############
