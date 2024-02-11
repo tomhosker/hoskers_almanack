@@ -2,39 +2,71 @@
 This code defines a class which handles a given article's notes.
 """
 
+# Standard imports.
+from dataclasses import dataclass
+from enum import Enum
+
 # Local imports.
-from .almanack_utils import fetch_to_dict
+from .almanack_utils import AlmanackError, fetch_to_dict
+from .configs import COMMENT_SEPARATOR
+from .constants import ColumnNames, Fullnesses
+
+# Local constants.
+NAMED_NON_AUTHORS = ["Anonymous"]
+REDACTED_MARKER = "$\\mathbb{R}$"
+
+#########
+# ENUMS #
+#########
+
+class AuthorColumnNames(Enum):
+    """ Gives the names of the columns of the Author table. """
+    DOB = "dob"
+    DOD = "dod"
+
+class CommentColumnNames(Enum):
+    """ Gives the names of the columns of the CommentOnLine table. """
+    LINE_NUM = "line_num"
+    COMMENT = "comment"
 
 ##############
 # MAIN CLASS #
 ##############
 
+@dataclass
 class NotesBuilder:
     """ The class in question. """
-    # Class attributes.
-    NAMED_NON_AUTHORS = ["Anonymous"]
-    REDACTED_MARKER = "$\mathbb{R}$"
+    article_id: int
+    fullness: Fullnesses = Fullnesses.FULL
+    extract: dict = None
+    source: str = None
+    non_title: str = None
+    remarks: str = None
+    redacted: str = None
+    author: str = None
+    title: str = None
+    dates: str = None
+    non_author: str = None
+    notes_without_comments: str = None
+    comments_on_lines: str = None
 
-    def __init__(self, idno, fullness):
-        self.idno = idno
-        self.fullness = fullness
-        self.not_on_db = False
+    def digest(self):
+        """ Get a LaTeX representation of the article's notes. """
         self.extract = self.fetch_extract()
-        if self.not_on_db:
-            return
-        self.source = self.extract["source"]
-        self.non_title = self.extract["non_title"]
-        self.remarks = self.extract["remarks"]
-        self.redacted = self.extract["redacted"]
-        self.author = self.extract["author"]
+        self.source = self.extract[ColumnNames.SOURCE.value]
+        self.non_title = self.extract[ColumnNames.NON_TITLE.value]
+        self.remarks = self.extract[ColumnNames.REMARKS.value]
+        self.redacted = self.extract[ColumnNames.REDACTED.value]
+        self.author = self.extract[ColumnNames.AUTHOR.value]
         self.title = self.build_title()
         self.dates = self.build_dates()
         self.non_author = self.build_non_author()
         self.notes_without_comments = self.build_notes()
         self.comments_on_lines = self.build_comments()
-        self.out = self.notes_without_comments
-        if (self.comments_on_lines and (self.fullness == "full")):
-            self.out = self.out+" "+self.comments_on_lines
+        result = self.notes_without_comments
+        if (self.comments_on_lines and (self.fullness == Fullnesses.FULL)):
+            result = result+" "+self.comments_on_lines
+        return result
 
     def fetch_extract(self):
         """ Fetches an article's metadata from the database. """
@@ -53,37 +85,38 @@ class NotesBuilder:
             "WHERE Article.id = ?;"
         )
         rows = fetch_to_dict(select, (self.idno,))
-        try:
-            return rows[0]
-        except:
-            print("No article with ID "+str(self.idno)+".")
-            self.not_on_db = True
-        return None
+        if not rows:
+            raise AlmanackError("No article with id: "+str(self.article_id))
+        result = rows[0]
+        return result
 
     def build_title(self):
         """ Builds an article's title. """
-        if self.extract["title"]:
-            result = "`"+self.extract["title"]+"'"
+        if self.extract[ColumnNames.TITLE.value]:
+            result = "`"+self.extract[ColumnNames.TITLE.value]+"'"
             return result
         return None
 
     def build_dates(self):
         """ Builds an author's dates. """
-        if self.extract["dob"] is None:
+        raw_dob = self.extract[AuthorColumnNames.DOB.value]
+        raw_dod = self.extract[AuthorColumnNames.DOD.value]
+        if raw_dob is None:
             dob = "?"
         else:
-            dob = str(self.extract["dob"])
-        if self.extract["dod"] is None:
+            dob = str(raw_dob)
+        if raw_dod is None:
             dod = "?"
         else:
-            dod = str(self.extract["dod"])
+            dod = str(raw_dod)
         result = "("+dob+" -- "+dod+")"
         return result
 
     def build_non_author(self):
         """ Handles the "non_author" field. """
-        if self.extract["non_author"] in NotesBuilder.NAMED_NON_AUTHORS:
-            return self.extract["non_author"]
+        non_author = self.extract[ColumnNames.NON_AUTHOR.value]
+        if non_author in NotesBuilder.NAMED_NON_AUTHORS:
+            return non_author
         return None
 
     def build_notes(self):
@@ -103,7 +136,7 @@ class NotesBuilder:
         result = ", ".join(components)+"."
         if self.redacted:
             result = NotesBuilder.REDACTED_MARKER+" "+result
-        if self.remarks and (self.fullness == "full"):
+        if self.remarks and (self.fullness == Fullnesses.FULL):
             result = result+" "+self.remarks
         return result
 
@@ -116,11 +149,12 @@ class NotesBuilder:
             "ORDER BY line_num ASC;"
         )
         rows = fetch_to_dict(select, (self.idno,))
-        result = ""
+        if not rows:
+            return None
         for row in rows:
-            result = result+"\\P "+str(row["line_num"])+". "+row["comment"]
+            line_num = row[CommentColumnNames.LINE_NUM.value]
+            comment = row[CommentColumnNames.COMMENT.value]
+            result = result+COMMENT_SEPARATOR+" "+str(line_num)+". "+comment
             if rows.index(row) != len(rows)-1:
                 result = result+" "
-        if result == "":
-            return None
         return result

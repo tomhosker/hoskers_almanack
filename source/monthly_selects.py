@@ -13,6 +13,9 @@ Example:
     ORDER BY ranking;
 """
 
+# Standard imports.
+from types import SimpleNamespace
+
 # Local constants.
 TOP_PRECEDENCE_INT = 0
 MID_PRECEDENCE_INT = 1
@@ -196,69 +199,69 @@ INT_PROVERBS = (
 )
 
 SELECTS = {
-    "Primilis": {
-        "songs": get_monthly_select("yellow-bile", 1, 0, 30),
-        "sonnets": get_monthly_select("yellow-bile", 2, 0, 30),
-        "proverbs": get_monthly_select("yellow-bile", 3, 0, 30)
-    },
-    "Sectilis": {
-        "songs": get_monthly_select("yellow-bile", 1, 1, 29),
-        "sonnets": get_monthly_select("yellow-bile", 2, 1, 29),
-        "proverbs": get_monthly_select("yellow-bile", 3, 1, 29)
-    },
-    "Tertilis": {
-        "songs": get_monthly_select("yellow-bile", 1, 2, 30),
-        "sonnets": get_monthly_select("yellow-bile", 2, 2, 30),
-        "proverbs": get_monthly_select("yellow-bile", 3, 2, 30)
-    },
-    "Quartilis": {
-        "songs": QUA_SONGS,
-        "sonnets": get_monthly_select("blood", 2, 2, 29),
-        "proverbs": get_monthly_select("blood", 3, 2, 29)
-    },
-    "Quintilis": {
-        "songs": QUI_SONGS,
-        "sonnets": QUI_SONNETS,
-        "proverbs": QUI_PROVERBS
-    },
-    "Sextilis": {
-        "songs": SEX_SONGS,
-        "sonnets": get_monthly_select("blood", 2, 1, 29),
-        "proverbs": get_monthly_select("blood", 3, 1, 29)
-    },
-    "September": {
-        "songs": get_monthly_select("phlegm", 1, 0, 30),
-        "sonnets": get_monthly_select("phlegm", 2, 0, 30),
-        "proverbs": get_monthly_select("phlegm", 3, 0, 30)
-    },
-    "October": {
-        "songs": OCT_SONGS,
-        "sonnets": OCT_SONNETS,
-        "proverbs": OCT_PROVERBS
-    },
-    "November": {
-        "songs": get_monthly_select("phlegm", 1, 2, 30),
-        "sonnets": get_monthly_select("phlegm", 2, 2, 30),
-        "proverbs": get_monthly_select("phlegm", 3, 2, 30)
-    },
-    "December": {
-        "songs": get_monthly_select("black-bile", 1, 2, 29),
-        "sonnets": get_monthly_select("black-bile", 2, 2, 29),
-        "proverbs": get_monthly_select("black-bile", 3, 2, 29)
-    },
-    "Unodecember": {
-        "songs": get_monthly_select("black-bile", 1, 1, 30),
-        "sonnets": get_monthly_select("black-bile", 2, 1, 30),
-        "proverbs": get_monthly_select("black-bile", 3, 1, 30)
-    },
-    "Duodecember": {
-        "songs": DUO_SONGS,
-        "sonnets": DUO_SONNETS,
-        "proverbs": DUO_PROVERBS
-    },
-    "Intercalaris": {
-        "songs": INT_SONGS,
-        "sonnets": INT_SONNETS,
-        "proverbs": INT_PROVERBS
-    }
+    "Primilis": SimpleNamespace(
+        songs=get_monthly_select("yellow-bile", 1, 0, 30),
+        sonnets=get_monthly_select("yellow-bile", 2, 0, 30),
+        proverbs=get_monthly_select("yellow-bile", 3, 0, 30)
+    ),
+    "Sectilis": SimpleNamespace(
+        songs=get_monthly_select("yellow-bile", 1, 1, 29),
+        sonnets=get_monthly_select("yellow-bile", 2, 1, 29),
+        proverbs=get_monthly_select("yellow-bile", 3, 1, 29)
+    ),
+    "Tertilis": SimpleNamespace(
+        songs=get_monthly_select("yellow-bile", 1, 2, 30),
+        sonnets=get_monthly_select("yellow-bile", 2, 2, 30),
+        proverbs=get_monthly_select("yellow-bile", 3, 2, 30)
+    ),
+    "Quartilis": SimpleNamespace(
+        songs=QUA_SONGS,
+        sonnets=get_monthly_select("blood", 2, 2, 29),
+        proverbs=get_monthly_select("blood", 3, 2, 29)
+    ),
+    "Quintilis": SimpleNamespace(
+        songs=QUI_SONGS,
+        sonnets=QUI_SONNETS,
+        proverbs=QUI_PROVERBS
+    ),
+    "Sextilis": SimpleNamespace(
+        songs=SEX_SONGS,
+        sonnets=get_monthly_select("blood", 2, 1, 29),
+        proverbs=get_monthly_select("blood", 3, 1, 29)
+    ),
+    "September": SimpleNamespace(
+        songs=get_monthly_select("phlegm", 1, 0, 30),
+        sonnets=get_monthly_select("phlegm", 2, 0, 30),
+        proverbs=get_monthly_select("phlegm", 3, 0, 30)
+    ),
+    "October": SimpleNamespace(
+        songs=OCT_SONGS,
+        sonnets=OCT_SONNETS,
+        proverbs=OCT_PROVERBS
+    ),
+    "November": SimpleNamespace(
+        songs=get_monthly_select("phlegm", 1, 2, 30),
+        sonnets=get_monthly_select("phlegm", 2, 2, 30),
+        proverbs=get_monthly_select("phlegm", 3, 2, 30)
+    ),
+    "December": SimpleNamespace(
+        songs=get_monthly_select("black-bile", 1, 2, 29),
+        sonnets=get_monthly_select("black-bile", 2, 2, 29),
+        proverbs=get_monthly_select("black-bile", 3, 2, 29)
+    ),
+    "Unodecember": SimpleNamespace(
+        songs=get_monthly_select("black-bile", 1, 1, 30),
+        sonnets=get_monthly_select("black-bile", 2, 1, 30),
+        proverbs=get_monthly_select("black-bile", 3, 1, 30)
+    ),
+    "Duodecember": SimpleNamespace(
+        songs=DUO_SONGS,
+        sonnets=DUO_SONNETS,
+        proverbs=DUO_PROVERBS
+    ),
+    "Intercalaris": SimpleNamespace(
+        songs=INT_SONGS,
+        sonnets=INT_SONNETS,
+        proverbs=INT_PROVERBS
+    )
 }
