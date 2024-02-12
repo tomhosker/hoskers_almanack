@@ -1,5 +1,5 @@
 """
-This code defines a class which, for TESTING purposes, encapsulates some LaTeX
+This code defines a class which, for testing purposes, encapsulates some LaTeX
 syntax, itself compiled from some HPML code, into a compilable form.
 """
 
@@ -27,17 +27,12 @@ class Markers(Enum):
 # MAIN CLASS #
 ##############
 
-class TestEncapsulator:
+class CheckEncapsulator:
     """ The class in question. """
     def __init__(self, hpml, is_prose_poem=False):
         self.hpml = hpml
         self.is_prose_poem = is_prose_poem
         self.latex = None
-
-    def build_latex(self):
-        """ Construct the string giving the content of the LaTeX file. """
-        self.initialise_latex()
-        self.inject_poem()
 
     def initialise_latex(self):
         """ Ronseal. """
@@ -54,6 +49,12 @@ class TestEncapsulator:
             )
         compiled_hpml = hpml_compiler.compile()
         self.latex = self.latex.replace(Markers.CONTENT.value, compiled_hpml)
+
+    def digest(self):
+        """ Return the string giving the content of the LaTeX file. """
+        self.initialise_latex()
+        self.inject_poem()
+        return self.latex
 
 ####################
 # HELPER FUNCTIONS #

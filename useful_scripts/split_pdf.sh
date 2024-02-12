@@ -4,7 +4,7 @@
 ### own PDF file.
 
 # Local constants.
-PATH_TO_INPUT="$(dirname $0)/almanack.pdf"
+PATH_TO_INPUT="$(dirname $0)/../almanack.pdf"
 
 # Check arguments.
 if [ $# -ne 2 ]; then
