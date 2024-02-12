@@ -12,7 +12,7 @@ from .configs import COMMENT_SEPARATOR
 from .constants import ColumnNames, Fullnesses
 
 # Local constants.
-NAMED_NON_AUTHORS = ["Anonymous"]
+NAMED_NON_AUTHORS = ("Anonymous",)
 REDACTED_MARKER = "$\\mathbb{R}$"
 
 #########
@@ -84,7 +84,7 @@ class NotesBuilder:
             "LEFT JOIN NonAuthor ON NonAuthor.code = Article.non_author "+
             "WHERE Article.id = ?;"
         )
-        rows = fetch_to_dict(select, (self.idno,))
+        rows = fetch_to_dict(select, (self.article_id,))
         if not rows:
             raise AlmanackError("No article with id: "+str(self.article_id))
         result = rows[0]
@@ -115,7 +115,7 @@ class NotesBuilder:
     def build_non_author(self):
         """ Handles the "non_author" field. """
         non_author = self.extract[ColumnNames.NON_AUTHOR.value]
-        if non_author in NotesBuilder.NAMED_NON_AUTHORS:
+        if non_author in NAMED_NON_AUTHORS:
             return non_author
         return None
 
@@ -135,7 +135,7 @@ class NotesBuilder:
         components = list(filter(None, components))
         result = ", ".join(components)+"."
         if self.redacted:
-            result = NotesBuilder.REDACTED_MARKER+" "+result
+            result = REDACTED_MARKER+" "+result
         if self.remarks and (self.fullness == Fullnesses.FULL):
             result = result+" "+self.remarks
         return result
@@ -148,7 +148,8 @@ class NotesBuilder:
             "WHERE article_id = ? "+
             "ORDER BY line_num ASC;"
         )
-        rows = fetch_to_dict(select, (self.idno,))
+        rows = fetch_to_dict(select, (self.article_id,))
+        result = ""
         if not rows:
             return None
         for row in rows:

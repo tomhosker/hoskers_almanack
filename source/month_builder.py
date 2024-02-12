@@ -2,6 +2,9 @@
 This code defines a class which builds the contents of a given month.
 """
 
+# Standard imports.
+from dataclasses import dataclass
+
 # Local imports.
 from .almanack_utils import fetch_to_dict
 from .article import Article
@@ -13,12 +16,17 @@ from .monthly_selects import SELECTS
 # MAIN CLASS #
 ##############
 
+@dataclass
 class MonthBuilder:
     """ The class in question. """
-    def __init__(self, name, fullness=Fullnesses.FULL, mods=None):
-        self.name = name
-        self.fullness = fullness
-        self.mods = mods
+    name: str
+    fullness: Fullnesses = Fullnesses.FULL
+    mods: list = None
+    songs: list = None
+    sonnets: list = None
+    proverbs: list = None
+
+    def __post_init__(self):
         self.songs = fetch_to_dict(SELECTS[self.name].songs)
         self.sonnets = fetch_to_dict(SELECTS[self.name].sonnets)
         self.proverbs = fetch_to_dict(SELECTS[self.name].proverbs)

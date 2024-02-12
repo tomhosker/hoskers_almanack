@@ -30,6 +30,9 @@ class Article:
     compiled_hpml: str = None
     notes: str = None
 
+    def __post_init__(self):
+        self.fill_attributes()
+
     def fill_attributes(self):
         """ Fetches the required data from the database. """
         row = fetch_article(self.record_id)

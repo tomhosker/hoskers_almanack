@@ -11,7 +11,7 @@ from .almanack_utils import (
     fetch_to_dict,
     get_loadout,
     compile_latex,
-    run_bibtex,
+    run_bibtex
 )
 from .configs import (
     MODS,
@@ -117,7 +117,9 @@ class PDFBuilder:
             (not compile_latex(Filenames.MAIN_TEX.value, quiet=self.quiet))
         ):
             return False
-        Path(Filenames.MAIN_PDF.value).rename(self.path_to_output)
+        path_obj_to_pdf = Path(Filenames.MAIN_PDF.value)
+        if path_obj_to_pdf.exists(): # The if-statement is for testing purposes.
+            path_obj_to_pdf.rename(self.path_to_output)
         return True
 
     def build(self):
@@ -129,6 +131,7 @@ class PDFBuilder:
         self.build_tex()
         print("Building PDF...")
         self.build_pdf()
+        print("Tidying up...")
         purge_main()
         purge_generated(Paths.PATH_TO_BIB.value)
         print("PDF built!")
