@@ -31,6 +31,7 @@ class Paths(Enum):
     PATH_TO_BIB = str(PATH_OBJ_TO_BASE_DIR/"sources.bib")
     PATH_TO_BASE = str(PATH_OBJ_TO_TEX/"base.tex")
     PATH_TO_PACKAGE_LOADOUTS = str(PATH_OBJ_TO_TEX/"package_loadouts")
+    PATH_TO_ARTICLE_BASE = str(PATH_OBJ_TO_TEX/"article_base.tex")
 
 class ShellCommands(Enum):
     """ Ronseal. """

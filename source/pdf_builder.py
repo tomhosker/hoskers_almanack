@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 # Local imports.
-from .almanack_utils import (
+from .utils import (
     fetch_to_dict,
     get_loadout,
     compile_latex,

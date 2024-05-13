@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 # Local imports.
-from .almanack_utils import AlmanackError, fetch_to_dict
+from .utils import AlmanackError, fetch_to_dict
 from .configs import COMMENT_SEPARATOR
 from .constants import ColumnNames, Fullnesses
 

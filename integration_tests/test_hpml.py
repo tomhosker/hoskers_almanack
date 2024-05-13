@@ -19,6 +19,9 @@ TEMP_TEX_FN = "temp.tex"
 TEMP_PDF_FN = "temp.pdf"
 PATH_TO_LOG = str(Path.home()/"test_hpml_failures.json")
 
+# This one's CRAAAAAAAAAZY! (If in doubt, set to None.)
+SPECIFIC_ID = 1396
+
 ####################
 # HELPER FUNCTIONS #
 ####################
@@ -39,8 +42,18 @@ def check_hpml_in_article(data):
 # TESTING #
 ###########
 
+def test_hpml_in_specific_article(article_id):
+    """ Ronseal. """
+    extract = \
+        fetch_to_dict("SELECT * FROM Article WHERE id = ?;", (article_id,))
+    data = extract[0]
+    check_hpml_in_article(data)
+
 def test_hpml():
     """ Run the test in question. """
+    if SPECIFIC_ID:
+        test_hpml_in_specific_article(SPECIFIC_ID)
+        return True
     articles = fetch_to_dict("SELECT * FROM Article WHERE type != 3;")
     failures = []
     print("Attempting to compile each article...")
@@ -52,6 +65,10 @@ def test_hpml():
                 "id": article["id"],
                 "exception": traceback.format_exc()
             })
+            print(
+                "\nException while processing article width ID: "+
+                str(article["id"])
+            )
             traceback.print_exc()
     for path_obj in Path.cwd().glob("temp.*"):
         path_obj.unlink()

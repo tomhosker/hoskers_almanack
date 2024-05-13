@@ -6,7 +6,7 @@ This code defines a class which builds the contents of a given month.
 from dataclasses import dataclass
 
 # Local imports.
-from .almanack_utils import fetch_to_dict
+from .utils import fetch_to_dict
 from .article import Article
 from .configs import SECTION_SEPARATOR
 from .constants import ColumnNames, Fullnesses

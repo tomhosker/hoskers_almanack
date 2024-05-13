@@ -6,7 +6,7 @@ This code builds a BibTeX bibliography from the database.
 from pathlib import Path
 
 # Local imports.
-from .almanack_utils import fetch_to_dict
+from .utils import fetch_to_dict
 from .constants import Paths
 
 # Local constants.

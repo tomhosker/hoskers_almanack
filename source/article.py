@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from hpml import HPMLCompiler
 
 # Local imports.
-from .almanack_utils import AlmanackError, fetch_to_dict
+from .utils import AlmanackError, fetch_to_dict
 from .constants import ColumnNames, Fullnesses
 from .notes_builder import NotesBuilder
 
