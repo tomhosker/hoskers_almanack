@@ -1,15 +1,18 @@
 #!/bin/sh
 
-### This code install the necessary third-party software for this project.
+### This code defines a script which makes the necessary installations for
+### working with and on this project on this device.
 
 # Crash on the first non-zero exit code.
 set -e
 
 # Local constants.
-APT_PACKAGES="pdftk sqlitebrowser texlive-full"
-PATH_TO_THIS_FOLDER="$(dirname "$0")"
-PATH_TO_REQUIREMENTS="$PATH_TO_THIS_FOLDER/pip_requirements.txt"
+PATH_TO_THIS_DIR=$(dirname $(realpath $0))
+PATH_TO_THIRD_PARTY_DIR="$PATH_TO_THIS_DIR/third_party"
+PATH_TO_INSTALL_APT_PACKAGES="$PATH_TO_THIRD_PARTY_DIR/install_apt_packages.sh"
+PATH_TO_BUILD_VENV="$PATH_TO_THIRD_PARTY_DIR/build_venv.sh"
 
 # Let's get cracking...
-sudo apt install --yes $APT_PACKAGES
-pip install -r $PATH_TO_REQUIREMENTS
+sh $PATH_TO_INSTALL_APT_PACKAGES
+sh $PATH_TO_BUILD_VENV
+echo "You can now activate the virtual environment with: . venv/bin/activate"

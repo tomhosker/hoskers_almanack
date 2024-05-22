@@ -8,7 +8,8 @@ from source.bib_builder import (
     fetch_sources,
     none_to_empty,
     get_book_summary,
-    build_bib
+    build_bib,
+    wipe_bib
 )
 
 ###########
@@ -44,3 +45,8 @@ def test_get_book_summary():
     while actual_summary.endswith("\n"):
         actual_summary = actual_summary[:-1]
     assert actual_summary == expected_summary
+
+def test_build_bib():
+    """ Test that this function runs. """
+    build_bib()
+    wipe_bib()
