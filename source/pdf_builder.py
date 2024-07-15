@@ -46,6 +46,7 @@ class PDFBuilder:
     quiet: bool = False
     loadout_id: str = LOADOUT_ID
     loadout: str = None
+    clean: bool = True
     frontmatter: str = None
     mainmatter: str = None
     backmatter: str = None
@@ -54,8 +55,12 @@ class PDFBuilder:
         self.loadout = get_loadout(self.loadout_id)
         if self.fullness == Fullnesses.FULL:
             self.frontmatter = self.build_frontmatter()
+        else:
+            self.frontmatter = ""
         if self.fullness in (Fullnesses.FULL, Fullnesses.SLENDER):
             self.backmatter = self.build_backmatter()
+        else:
+            self.backmatter = ""
         self.mainmatter = self.build_mainmatter() # This should be last.
 
     def build_frontmatter(self):
@@ -122,6 +127,10 @@ class PDFBuilder:
             path_obj_to_pdf.rename(self.path_to_output)
         return True
 
+    def clean(self):
+        purge_main()
+        purge_generated(Paths.PATH_TO_BIB.value)
+
     def build(self):
         """ Build everything. """
         purge_main()
@@ -131,9 +140,9 @@ class PDFBuilder:
         self.build_tex()
         print("Building PDF...")
         self.build_pdf()
-        print("Tidying up...")
-        purge_main()
-        purge_generated(Paths.PATH_TO_BIB.value)
+        if self.clean:
+            print("Tidying up...")
+            self.clean()
         print("PDF built!")
 
 ####################

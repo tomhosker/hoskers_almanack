@@ -1,0 +1,6321 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.3.15)  15 JUL 2024 01:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsbook.cls
+Document Class: amsbook 2020/05/29 v2.20.6
+\linespacing=\dimen138
+\normalparindent=\dimen139
+\normaltopskip=\skip47
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen140
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen141
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count181
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count182
+\leftroot@=\count183
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count184
+\DOTSCASE@=\count185
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count186
+\c@MaxMatrixCols=\count187
+\dotsspace@=\muskip16
+\c@parentequation=\count188
+\dspbrk@lvl=\count189
+\tag@help=\toks17
+\row@=\count190
+\column@=\count191
+\maxfields@=\count192
+\andhelp@=\toks18
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks19
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 376
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\copyins=\insert199
+\abstractbox=\box52
+\listisep=\skip51
+\c@part=\count193
+\c@chapter=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count266
+\c@figure=\count267
+\c@table=\count268
+\abovecaptionskip=\skip52
+\belowcaptionskip=\skip53
+\captionindent=\dimen149
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count269
+\Gm@cntv=\count270
+\c@Gm@tempcnt=\count271
+\Gm@bindingoffset=\dimen150
+\Gm@wd@mp=\dimen151
+\Gm@odd@mp=\dimen152
+\Gm@even@mp=\dimen153
+\Gm@layoutwidth=\dimen154
+\Gm@layoutheight=\dimen155
+\Gm@layouthoffset=\dimen156
+\Gm@layoutvoffset=\dimen157
+\Gm@dimlist=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks29
+\footnotemargin=\dimen158
+\c@pp@next@reset=\count272
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen159
+\captionmargin@=\dimen160
+\captionwidth=\dimen161
+\caption@tempdima=\dimen162
+\caption@indent=\dimen163
+\caption@parindent=\dimen164
+\caption@hangindent=\dimen165
+Package caption Info: AMS or SMF document class detected.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-ams-smf.sto
+File: caption-ams-smf.sto 2020/08/22 v2.0 Adaption of the caption package to th
+e AMS and SMF document classes (AR)
+))
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fourier/fourier-orns.sty
+Package: fourier-orns 2020/03/03 2.2 fourier-ornaments package
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2022-01-12 L3 backend support: XeTeX
+
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count275
+\l__color_backend_stack_int=\count276
+\g__color_backend_stack_int=\count277
+\g__graphics_track_int=\count278
+\l__pdf_internal_box=\box53
+\g__pdf_backend_object_int=\count279
+\g__pdf_backend_annotation_int=\count280
+\g__pdf_backend_link_int=\count281
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count282
+\l__fontspec_language_int=\count283
+\l__fontspec_strnum_int=\count284
+\l__fontspec_tmp_int=\count285
+\l__fontspec_tmpa_int=\count286
+\l__fontspec_tmpb_int=\count287
+\l__fontspec_tmpc_int=\count288
+\l__fontspec_em_int=\count289
+\l__fontspec_emdef_int=\count290
+\l__fontspec_strong_int=\count291
+\l__fontspec_strongdef_int=\count292
+\l__fontspec_tmpa_dim=\dimen166
+\l__fontspec_tmpb_dim=\dimen167
+\l__fontspec_tmpc_dim=\dimen168
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+
+Package fontspec Info: Font family 'FourierOrns-Regular.otf(0)' created for
+(fontspec)             font 'FourierOrns-Regular.otf' with options [BoldFont =
+(fontspec)             FourierOrns-Bold.otf,ItalicFont =
+(fontspec)             FourierOrns-Italic.otf,BoldItalicFont =
+(fontspec)             FourierOrns-BoldItalic.otf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[FourierOrns-Regular.otf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[FourierOrns-Bold.otf]/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[FourierOrns-Italic.otf]/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[FourierOrns-BoldItalic.otf]/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+)
+(/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count293
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2021/12/10 v3.0b Micro-typographical refinements (RS)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count294
+)
+\MT@toks=\toks30
+\MT@count=\count295
+\MT@tempbox=\box54
+LaTeX Info: Redefining \leftprotrusion on input line 1010.
+LaTeX Info: Redefining \rightprotrusion on input line 1018.
+LaTeX Info: Redefining \textls on input line 1173.
+\MT@outer@kern=\dimen169
+LaTeX Info: Redefining \textmicrotypecontext on input line 1759.
+\MT@listname@count=\count296
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2021/12/10 v3.0b Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 234.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2021/12/10 v3.0b microtype main configuration file (RS)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/verse/verse.sty
+Package: verse 2009/09/04 v2.4a verse typesetting
+\c@vslineno=\count297
+\c@poemline=\count298
+\c@fvsline=\count299
+\c@modulo@vs=\count300
+\c@verse@envctr=\count301
+\versewidth=\skip57
+\vgap=\skip58
+\vindent=\skip59
+\stanzaskip=\skip60
+\vleftskip=\skip61
+\vrightskip=\skip62
+\c@chrsinstr=\count302
+\beforepoemtitleskip=\skip63
+\afterpoemtitleskip=\skip64
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2022-01-12 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen172
+\l__xtemplate_tmp_int=\count303
+\l__xtemplate_tmp_muskip=\muskip17
+\l__xtemplate_tmp_skip=\skip65
+)
+Package: xfrac 2022-01-12 L3 Experimental split-level fractions
+\l__xfrac_slash_box=\box55
+\l__xfrac_tmp_box=\box56
+\l__xfrac_denominator_bot_sep_dim=\dimen173
+\l__xfrac_numerator_bot_sep_dim=\dimen174
+\l__xfrac_numerator_top_sep_dim=\dimen175
+\l__xfrac_slash_left_sep_dim=\dimen176
+\l__xfrac_slash_right_sep_dim=\dimen177
+\l__xfrac_slash_left_muskip=\muskip18
+\l__xfrac_slash_right_muskip=\muskip19
+
+Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
+(xtemplate)             line 80.
+
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+
+Package fontspec Info: Could not resolve font "English Towne/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "English Towne/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "English Towne/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'EnglishTowne(0)' created for font 'English
+(fontspec)             Towne' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"English
+(fontspec)             Towne/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'CMUSerif(0)' created for font 'CMU Serif'
+(fontspec)             with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"CMU
+(fontspec)             Serif/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"CMU
+(fontspec)             Serif/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"CMU
+(fontspec)             Serif/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"CMU
+(fontspec)             Serif/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "KacstQurn/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "KacstQurn/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "KacstQurn/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'KacstQurn(0)' created for font 'KacstQurn'
+(fontspec)             with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"KacstQurn/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'cmunrm.otf(0)' created for font
+(fontspec)             'cmunrm.otf' with options
+(fontspec)             [Ligatures=TeX,ItalicFont=cmunti.otf,BoldFont=cmunbx.otf
+,BoldItalicFont=cmunbi.otf,Numbers=OldStyle].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[cmunrm.otf]/OT:script=latn;language=dflt;+onum;mapp
+ing=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[cmunrm.otf]/OT:script=latn;language=dflt;+onum;+smc
+p;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[cmunbx.otf]/OT:script=latn;language=dflt;+onum;mapp
+ing=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[cmunbx.otf]/OT:script=latn;language=dflt;+onum;+smc
+p;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[cmunti.otf]/OT:script=latn;language=dflt;+onum;mapp
+ing=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[cmunbi.otf]/OT:script=latn;language=dflt;+onum;mapp
+ing=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count304
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip20
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count305
+\c@listtotal=\count306
+\c@listcount=\count307
+\c@liststart=\count308
+\c@liststop=\count309
+\c@citecount=\count310
+\c@citetotal=\count311
+\c@multicitecount=\count312
+\c@multicitetotal=\count313
+\c@instcount=\count314
+\c@maxnames=\count315
+\c@minnames=\count316
+\c@maxitems=\count317
+\c@minitems=\count318
+\c@citecounter=\count319
+\c@maxcitecounter=\count320
+\c@savedcitecounter=\count321
+\c@uniquelist=\count322
+\c@uniquename=\count323
+\c@refsection=\count324
+\c@refsegment=\count325
+\c@maxextratitle=\count326
+\c@maxextratitleyear=\count327
+\c@maxextraname=\count328
+\c@maxextradate=\count329
+\c@maxextraalpha=\count330
+\c@abbrvpenalty=\count331
+\c@highnamepenalty=\count332
+\c@lownamepenalty=\count333
+\c@maxparens=\count334
+\c@parenlevel=\count335
+\blx@tempcnta=\count336
+\blx@tempcntb=\count337
+\blx@tempcntc=\count338
+\c@blx@maxsection=\count339
+\c@blx@maxsegment@0=\count340
+\blx@notetype=\count341
+\blx@parenlevel@text=\count342
+\blx@parenlevel@foot=\count343
+\c@blx@sectionciteorder@0=\count344
+\blx@entrysetcounter=\count345
+\blx@biblioinstance=\count346
+\labelnumberwidth=\skip66
+\labelalphawidth=\skip67
+\biblabelsep=\skip68
+\bibitemsep=\skip69
+\bibnamesep=\skip70
+\bibinitsep=\skip71
+\bibparsep=\skip72
+\bibhang=\skip73
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language87
+\c@mincomprange=\count347
+\c@maxcomprange=\count348
+\c@mincompwidth=\count349
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authortitle.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count350
+\c@savedafterword=\count351
+\c@annotator=\count352
+\c@savedannotator=\count353
+\c@author=\count354
+\c@savedauthor=\count355
+\c@bookauthor=\count356
+\c@savedbookauthor=\count357
+\c@commentator=\count358
+\c@savedcommentator=\count359
+\c@editor=\count360
+\c@savededitor=\count361
+\c@editora=\count362
+\c@savededitora=\count363
+\c@editorb=\count364
+\c@savededitorb=\count365
+\c@editorc=\count366
+\c@savededitorc=\count367
+\c@foreword=\count368
+\c@savedforeword=\count369
+\c@holder=\count370
+\c@savedholder=\count371
+\c@introduction=\count372
+\c@savedintroduction=\count373
+\c@namea=\count374
+\c@savednamea=\count375
+\c@nameb=\count376
+\c@savednameb=\count377
+\c@namec=\count378
+\c@savednamec=\count379
+\c@translator=\count380
+\c@savedtranslator=\count381
+\c@shortauthor=\count382
+\c@savedshortauthor=\count383
+\c@shorteditor=\count384
+\c@savedshorteditor=\count385
+\c@labelname=\count386
+\c@savedlabelname=\count387
+\c@institution=\count388
+\c@savedinstitution=\count389
+\c@lista=\count390
+\c@savedlista=\count391
+\c@listb=\count392
+\c@savedlistb=\count393
+\c@listc=\count394
+\c@savedlistc=\count395
+\c@listd=\count396
+\c@savedlistd=\count397
+\c@liste=\count398
+\c@savedliste=\count399
+\c@listf=\count400
+\c@savedlistf=\count401
+\c@location=\count402
+\c@savedlocation=\count403
+\c@organization=\count404
+\c@savedorganization=\count405
+\c@origlocation=\count406
+\c@savedoriglocation=\count407
+\c@origpublisher=\count408
+\c@savedorigpublisher=\count409
+\c@publisher=\count410
+\c@savedpublisher=\count411
+\c@language=\count412
+\c@savedlanguage=\count413
+\c@origlanguage=\count414
+\c@savedoriglanguage=\count415
+\c@pageref=\count416
+\c@savedpageref=\count417
+\shorthandwidth=\skip74
+\shortjournalwidth=\skip75
+\shortserieswidth=\skip76
+\shorttitlewidth=\skip77
+\shortauthorwidth=\skip78
+\shorteditorwidth=\skip79
+\locallabelnumberwidth=\skip80
+\locallabelalphawidth=\skip81
+\localshorthandwidth=\skip82
+\localshortjournalwidth=\skip83
+\localshortserieswidth=\skip84
+\localshorttitlewidth=\skip85
+\localshortauthorwidth=\skip86
+\localshorteditorwidth=\skip87
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count418
+\c@textcitetotal=\count419
+\c@textcitemaxnames=\count420
+\c@biburlbigbreakpenalty=\count421
+\c@biburlbreakpenalty=\count422
+\c@biburlnumpenalty=\count423
+\c@biburlucpenalty=\count424
+\c@biburllcpenalty=\count425
+\biburlbigskip=\muskip21
+\biburlnumskip=\muskip22
+\biburlucskip=\muskip23
+\biburllcskip=\muskip24
+\c@smartand=\count426
+)
+Package biblatex Info: Trying to load bibliography style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authortitle.bbx
+File: authortitle.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count427
+\c@bbx:relatedtotal=\count428
+))
+Package biblatex Info: Trying to load citation style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authortitle.cbx
+File: authortitle.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2022-01-21 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen178
+\Hy@linkcounter=\count429
+\Hy@pagecounter=\count430
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count431
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count432
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen179
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count433
+\Field@Width=\dimen180
+\Fld@charsize=\dimen181
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count434
+\c@Item=\count435
+\c@Hfootnote=\count436
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box57
+\c@Hy@AnnotLevel=\count437
+\HyField@AnnotCount=\count438
+\Fld@listcount=\count439
+\c@bookmark@seq@number=\count440
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip88
+)
+\@quotelevel=\count441
+\@quotereset=\count442
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
+3.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a5paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(42.67912pt, 335.74254pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 512.14963pt, 42.67912pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=335.74254pt
+* \textheight=512.14963pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-51.59087pt
+* \headheight=8.0pt
+* \headsep=14.0pt
+* \topskip=10.0pt
+* \footskip=18.0pt
+* \marginparwidth=42.67912pt
+* \marginparsep=8.53581pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 11.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 73.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 73.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 73.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 73.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 73.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 73.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 73.
+LaTeX Font Info:    Redeclaring math accent \check on input line 73.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 73.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 73.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 73.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 73.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 73.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 73.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/cmunrm.otf(0)/m/n on input line 73.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 73.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/cmunrm.otf(0)/m/n on input line 73.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/cmunrm.otf(0)/m/n --> TU/cmunrm.otf(0)/m/n on input 
+line 73.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/cmunrm.otf(0)/m/it on input line 73
+.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/cmunrm.otf(0)/b/n on input line 73.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 73.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 73.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/cmunrm.otf(0)/m/n --> TU/cmunrm.otf(0)/b/n on input 
+line 73.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/cmunrm.otf(0)/b/it on input line 7
+3.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 73.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 73.
+LaTeX Info: Redefining \microtypecontext on input line 73.
+Package microtype Info: Applying patch `item' on input line 73.
+Package microtype Info: Applying patch `toc' on input line 73.
+Package microtype Info: Applying patch `eqnum' on input line 73.
+Package microtype Info: Applying patch `footnote' on input line 73.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmunrm.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout3 = `main-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 73.
+Package biblatex Info: Reference segment=0 on input line 73.
+Package hyperref Info: Link coloring OFF on input line 73.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count443
+)
+LaTeX Info: Redefining \ref on input line 73.
+LaTeX Info: Redefining \pageref on input line 73.
+LaTeX Info: Redefining \nameref on input line 73.
+
+(./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+ [1
+
+
+
+
+] [2]
+Contents
+(./main.toc)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [3
+
+
+] [4
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 5.0pt
+(hyperref)                replaced by space on input line 92.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\noindent' on input line 92.
+
+[1
+
+
+] [2
+
+
+]
+Chapter 1
+
+Package hyperref Warning: Ignoring empty anchor on input line 100.
+
+[3]
+
+Package hyperref Warning: Ignoring empty anchor on input line 160.
+
+[4]
+
+Package hyperref Warning: Ignoring empty anchor on input line 180.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 186.
+
+
+Overfull \vbox (2.10033pt too high) has occurred while \output is active []
+
+
+[5]
+
+Package hyperref Warning: Ignoring empty anchor on input line 264.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+
+Package hyperref Warning: Ignoring empty anchor on input line 277.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 283.
+
+[7]
+
+Package hyperref Warning: Ignoring empty anchor on input line 312.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 328.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 334.
+
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 34
+4.
+LaTeX Font Info:    No file TUptm.fd. on input line 344.
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 344.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
+ern Roman (RS)
+)
+LaTeX Font Info:    Calculating math sizes for size <5.464> on input line 344.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.464> not available
+(Font)              size <5> substituted on input line 344.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.82478> not available
+(Font)              size <5> substituted on input line 344.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2.732> not available
+(Font)              size <5> substituted on input line 344.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.464> not available
+(Font)              size <5> substituted on input line 344.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.82478> not available
+(Font)              size <5> substituted on input line 344.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.732> not available
+(Font)              size <5> substituted on input line 344.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.464> not available
+(Font)              size <5> substituted on input line 344.
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.82478> not available
+(Font)              size <5> substituted on input line 344.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <2.732> not available
+(Font)              size <5> substituted on input line 344.
+
+[8]
+
+Package hyperref Warning: Ignoring empty anchor on input line 360.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 380.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 386.
+
+
+Overfull \vbox (1.89034pt too high) has occurred while \output is active []
+
+
+[9]
+
+Package hyperref Warning: Ignoring empty anchor on input line 426.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 440.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 446.
+
+
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+ [10]
+[11]
+
+Package hyperref Warning: Ignoring empty anchor on input line 500.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 520.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 526.
+
+[12]
+
+Package hyperref Warning: Ignoring empty anchor on input line 566.
+
+[13]
+
+Package hyperref Warning: Ignoring empty anchor on input line 591.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 597.
+
+[14]
+
+Package hyperref Warning: Ignoring empty anchor on input line 659.
+
+
+Overfull \vbox (3.01035pt too high) has occurred while \output is active []
+
+
+[15]
+
+Package hyperref Warning: Ignoring empty anchor on input line 688.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 694.
+
+[16]
+
+Package hyperref Warning: Ignoring empty anchor on input line 729.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 754.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 760.
+
+[17]
+
+Package hyperref Warning: Ignoring empty anchor on input line 786.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 807.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 813.
+
+[18] [19]
+
+Package hyperref Warning: Ignoring empty anchor on input line 853.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 876.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 882.
+
+[20]
+
+Package hyperref Warning: Ignoring empty anchor on input line 912.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 928.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 934.
+
+[21] (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `ptm' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+
+Package hyperref Warning: Ignoring empty anchor on input line 996.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1016.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1022.
+
+[23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1090.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1104.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1110.
+
+[25]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1167.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `EnglishTowne' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/EnglishTowne(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/EnglishTowne(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1187.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1193.
+
+[27]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1222.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1242.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1248.
+
+[28]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1274.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1293.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1299.
+
+[29]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1322.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1342.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1348.
+
+
+Overfull \vbox (1.88034pt too high) has occurred while \output is active []
+
+
+[30]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1374.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1394.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1400.
+
+[31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1531.
+
+[34]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1553.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1559.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1589.
+
+[35]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1609.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1615.
+
+[36]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1683.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1703.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1709.
+
+[38]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1746.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1765.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1771.
+
+
+Overfull \vbox (1.89034pt too high) has occurred while \output is active []
+
+
+[39]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1806.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1826.
+
+[40]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1832.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1869.
+
+[41]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1889.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1895.
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `KacstQurn' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `A' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `F' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `J' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `K' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `L' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `T' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `V' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `W' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `X' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `Y' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `k' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `r' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `v' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `w' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `x' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `y' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `1' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `4' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `7' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `.' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `,' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `:' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `;' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `!' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `?' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `@' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\%' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `*' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `+' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `(' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `)' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `-' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `_' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textbackslash ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textexclamdown ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquestiondown ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textbraceleft ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textbraceright ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textless ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textgreater ' is missing
+(microtype)             in font `\TU/KacstQurn(0)/m/n/8'.
+(microtype)             Ignoring protrusion settings for this character.
+[42]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1935.
+
+[43]
+
+Package hyperref Warning: Ignoring empty anchor on input line 1955.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1961.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 1999.
+
+[44]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2021.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2027.
+
+[45]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2068.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2088.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2094.
+
+[46]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2115.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2138.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2144.
+
+[47] [48]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2191.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2203.
+
+[49] [50
+
+
+]
+Chapter 2
+
+Package hyperref Warning: Ignoring empty anchor on input line 2211.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2241.
+
+[51]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2261.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2267.
+
+[52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2387.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2405.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2411.
+
+
+Overfull \vbox (2.89034pt too high) has occurred while \output is active []
+
+
+[55]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2438.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2448.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2454.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2477.
+
+[56]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2502.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2512.
+
+
+Overfull \vbox (2.98033pt too high) has occurred while \output is active []
+
+
+[57]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2557.
+
+[58]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2580.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2586.
+
+[59]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2618.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2633.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2639.
+
+[60]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2684.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2696.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2702.
+
+[61]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2740.
+
+[62]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2762.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2768.
+
+[63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2872.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2886.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2892.
+
+
+Overfull \vbox (2.89034pt too high) has occurred while \output is active []
+
+
+[66]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2960.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67]
+
+Package hyperref Warning: Ignoring empty anchor on input line 2983.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 2989.
+
+[68]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3018.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3032.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3038.
+
+
+Overfull \vbox (2.88034pt too high) has occurred while \output is active []
+
+
+[69]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3079.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3100.
+
+[70]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3106.
+
+[71]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3147.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3164.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3170.
+
+[72]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3199.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3224.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3230.
+
+[73]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3265.
+
+
+Overfull \hbox (3.09207pt too wide) in paragraph at lines 3267--3267
+[]\TU/cmunrm.otf(0)/m/n/10 Earnest, earthless, equal, attuneable, $\OML/cmm/m/i
+t/10 }$ \TU/cmunrm.otf(0)/m/n/10 vaulty, voluminous...
+ []
+
+[74]
+Overfull \hbox (17.20009pt too wide) in paragraph at lines 3280--3281
+[]\TU/cmunrm.otf(0)/m/n/10 Where, selfwrung, selfstrung, sheathe- & shelterless
+, $\OML/cmm/m/it/10 }$ \TU/cmunrm.otf(0)/m/n/10 thóughts
+ []
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3285.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3291.
+
+[75]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3336.
+
+[76]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3361.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3367.
+
+[77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3462.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3482.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3488.
+
+[79] [80]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3535.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3549.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3555.
+
+
+Overfull \vbox (1.89034pt too high) has occurred while \output is active []
+
+
+[81]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3588.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3608.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3614.
+
+[82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3682.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3698.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3704.
+
+[84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3794.
+
+[86]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3815.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3821.
+
+
+Overfull \vbox (3.09033pt too high) has occurred while \output is active []
+
+
+[87]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3887.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3900.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3906.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3933.
+
+[89]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3946.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 3956.
+
+[90]
+
+Package hyperref Warning: Ignoring empty anchor on input line 3982.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4002.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4008.
+
+[91]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4037.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4060.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4070.
+
+[92] [93]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4120.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4143.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4149.
+
+
+Overfull \vbox (2.88034pt too high) has occurred while \output is active []
+
+
+[94]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4187.
+
+[95]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4210.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4216.
+
+[96]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4257.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4271.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4281.
+
+[97]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4331.
+
+[98]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4351.
+
+[99] [100
+
+
+]
+Chapter 3
+
+Package hyperref Warning: Ignoring empty anchor on input line 4359.
+
+[101]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4395.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4415.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4421.
+
+[102]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4484.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4497.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4503.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4534.
+
+[104]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4557.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4567.
+
+[105]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4597.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4613.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4623.
+
+[106]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4664.
+
+[107]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4683.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4689.
+
+[108]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4759.
+
+[109]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4779.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4785.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4815.
+
+[110]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4838.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4844.
+
+[111]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4872.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4884.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4890.
+
+[112]
+
+Package hyperref Warning: Ignoring empty anchor on input line 4933.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4953.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 4959.
+
+
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+ [113]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5004.
+
+[114]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5030.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5036.
+
+[115]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5071.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5093.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5099.
+
+[116]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5131.
+
+[117]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5154.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5160.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5189.
+
+[118]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5214.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5220.
+
+[119]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5247.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5266.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5272.
+
+[120]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5307.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5322.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5328.
+
+
+Underfull \vbox (badness 1859) has occurred while \output is active []
+
+ [121]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5363.
+
+[122]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5383.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5389.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5416.
+
+
+Underfull \vbox (badness 1515) has occurred while \output is active []
+
+ [123]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5436.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5442.
+
+[124]
+Overfull \hbox (1.47946pt too wide) in paragraph at lines 5464--5465
+[]\TU/cmunrm.otf(0)/m/n/10 And flickered his two-forked tongue from his lips, a
+nd mused
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [126]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5538.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5563.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5569.
+
+[127]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5604.
+
+[128]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5634.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5640.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5665.
+
+[129]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5688.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5694.
+
+[130]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5739.
+
+[131]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5763.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5769.
+
+[132]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5815.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5830.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5836.
+
+
+Overfull \vbox (2.76033pt too high) has occurred while \output is active []
+
+
+[133]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5885.
+
+
+Overfull \vbox (3.00035pt too high) has occurred while \output is active []
+
+
+[134]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5905.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5911.
+
+[135]
+
+Package hyperref Warning: Ignoring empty anchor on input line 5947.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5959.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 5965.
+
+[136]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [137]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [138]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [139]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6146.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6166.
+
+[140]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6172.
+
+
+Overfull \vbox (1.10033pt too high) has occurred while \output is active []
+
+
+[141]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6237.
+
+[142]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6261.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6267.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6291.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6306.
+
+[143]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6312.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6339.
+
+[144]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6355.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6361.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6393.
+
+
+Overfull \vbox (1.89034pt too high) has occurred while \output is active []
+
+
+[145]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6407.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6413.
+
+[146]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6463.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6481.
+
+[147] [148
+
+
+]
+Chapter 4
+
+Package hyperref Warning: Ignoring empty anchor on input line 6489.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6513.
+
+[149]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6538.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6544.
+
+[150]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6588.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6598.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6604.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 6618.
+
+[151]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 6659.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6665.
+
+[152]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6685.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6691.
+
+
+Overfull \vbox (2.19032pt too high) has occurred while \output is active []
+
+
+[153]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6738.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6748.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6754.
+
+[154]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6803.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6818.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6828.
+
+[155]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6864.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6884.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6890.
+
+[156]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6931.
+
+[157]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6951.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 6957.
+
+[158]
+
+Package hyperref Warning: Ignoring empty anchor on input line 6997.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7016.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7022.
+
+[159]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [160]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7101.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7109.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7115.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7139.
+
+[161]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7159.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7165.
+
+[162]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7220.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7232.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7238.
+
+
+Overfull \vbox (1.73036pt too high) has occurred while \output is active []
+
+
+[163] [164]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7301.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7314.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7320.
+
+
+Overfull \vbox (2.99033pt too high) has occurred while \output is active []
+
+
+[165]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7364.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7378.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7384.
+
+[166]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 7399.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 7399.
+
+[167]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 7430.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 7430.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7435.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7464.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7470.
+
+[168]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7506.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7521.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7527.
+
+[169]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7572.
+
+[170]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7587.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7593.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7622.
+
+[171]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7642.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7648.
+
+[172]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7701.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7719.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7725.
+
+[173]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7770.
+
+[174]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7791.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7797.
+
+[175]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7851.
+
+[176]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7872.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7878.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7903.
+
+[177]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7920.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 7926.
+
+[178]
+
+Package hyperref Warning: Ignoring empty anchor on input line 7980.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8003.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8009.
+
+[179]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8054.
+
+[180]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8079.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8085.
+
+
+Overfull \vbox (3.08032pt too high) has occurred while \output is active []
+
+
+[181]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8129.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8144.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8150.
+
+
+Overfull \vbox (1.99033pt too high) has occurred while \output is active []
+
+
+[182]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8179.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8204.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8210.
+
+[183]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8244.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8264.
+
+[184]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8270.
+
+[185]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8320.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8340.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8346.
+
+[186]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8398.
+
+[187]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8412.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8418.
+
+[188]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8462.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8482.
+
+[189] [190
+
+
+]
+Chapter 5
+
+Package hyperref Warning: Ignoring empty anchor on input line 8490.
+
+[191]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8556.
+
+
+Overfull \vbox (1.10034pt too high) has occurred while \output is active []
+
+
+[192]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8617.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8623.
+
+[193]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 8640.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 8640.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 8671.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 8671.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8676.
+
+[194]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8699.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8705.
+
+[195]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8758.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8782.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8788.
+
+[196]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 8802.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 8828.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8834.
+
+[197]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8865.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8871.
+
+[198]
+
+Package hyperref Warning: Ignoring empty anchor on input line 8904.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8935.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 8941.
+
+[199]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [200]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [201]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9076.
+
+[202]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9104.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9110.
+
+[203]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9137.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9178.
+
+[204]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9184.
+
+[205]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9235.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9266.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9272.
+
+[206]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9311.
+
+[207]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9342.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9348.
+
+[208]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9414.
+
+[209]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9451.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9457.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 9473.
+
+[210]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 9497.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9505.
+
+[211]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9537.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9543.
+
+[212]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9597.
+
+[213]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9640.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9646.
+
+[214]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9685.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9718.
+
+[215]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9724.
+
+
+Overfull \vbox (1.07031pt too high) has occurred while \output is active []
+
+
+[216]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9765.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9791.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9797.
+
+[217]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9824.
+
+[218]
+
+Package hyperref Warning: Ignoring empty anchor on input line 9867.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9873.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 9888.
+
+[219]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 9914.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9919.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9944.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 9950.
+
+[220]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 9969.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 9996.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10001.
+
+[221]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10037.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10043.
+
+[222]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10079.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 10090.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 10115.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10120.
+
+[223]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10126.
+
+
+Overfull \vbox (2.19032pt too high) has occurred while \output is active []
+
+
+[224]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10179.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10216.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10222.
+
+[225]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10258.
+
+[226]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10295.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10301.
+
+[227]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10342.
+
+[228]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10376.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10382.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10401.
+
+[229]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10432.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10438.
+
+[230]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10502.
+
+[231]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10545.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10551.
+
+[232]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10605.
+
+[233]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10648.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10654.
+
+[234]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10690.
+
+
+Overfull \vbox (2.99034pt too high) has occurred while \output is active []
+
+
+[235]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10730.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10736.
+
+[236]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10792.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10814.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10820.
+
+[237]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10853.
+
+
+Overfull \vbox (2.10034pt too high) has occurred while \output is active []
+
+
+[238]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10887.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10893.
+
+[239]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10939.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 10976.
+
+[240]
+
+Package hyperref Warning: Ignoring empty anchor on input line 10982.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11022.
+
+[241]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11059.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11065.
+
+[242]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11110.
+
+
+Overfull \vbox (2.99034pt too high) has occurred while \output is active []
+
+
+[243]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11140.
+
+[244]
+Chapter 6
+
+Package hyperref Warning: Ignoring empty anchor on input line 11148.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11179.
+
+[245
+
+
+]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11191.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11197.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11227.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11241.
+
+[246]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11247.
+
+[247]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11291.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11303.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11309.
+
+[248]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11336.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11348.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11354.
+
+[249]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11390.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11400.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11410.
+
+[250]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11434.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11449.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11455.
+
+[251]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11477.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11497.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11507.
+
+[252]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11547.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11565.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11575.
+
+[253]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11606.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11625.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11631.
+
+[254]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11667.
+
+[255]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11690.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11696.
+
+[256]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11733.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11753.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11759.
+
+[257]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11807.
+
+[258]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11825.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11835.
+
+[259]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11874.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11894.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11904.
+
+[260]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11970.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [261]
+
+Package hyperref Warning: Ignoring empty anchor on input line 11990.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 11996.
+
+
+Overfull \vbox (2.98033pt too high) has occurred while \output is active []
+
+
+[262]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12049.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12059.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12065.
+
+[263]
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 12080.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 12096.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12101.
+
+[264]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12127.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12133.
+
+[265]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12185.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12210.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12216.
+
+[266]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12258.
+
+
+Underfull \vbox (badness 2753) has occurred while \output is active []
+
+ [267]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12281.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12287.
+
+[268]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12343.
+
+[269]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12366.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12372.
+
+[270]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12423.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12446.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12452.
+
+[271]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12476.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12489.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12495.
+
+[272]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12538.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12553.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12559.
+
+[273]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12605.
+
+[274]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12622.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12628.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 12641.
+
+
+LaTeX Font Warning: Font shape `TU/cmunrm.otf(0)/m/scit' undefined
+(Font)              using `TU/cmunrm.otf(0)/m/sc' instead on input line 12659.
+
+
+Overfull \vbox (1.36032pt too high) has occurred while \output is active []
+
+
+[275]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12668.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12688.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12694.
+
+[276]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [277]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12764.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12784.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12790.
+
+
+Overfull \vbox (1.98033pt too high) has occurred while \output is active []
+
+
+[278]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12831.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12851.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12857.
+
+[279] [280]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12910.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12930.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12936.
+
+[281]
+
+Package hyperref Warning: Ignoring empty anchor on input line 12972.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12992.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 12998.
+
+[282]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [283]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13079.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13094.
+
+[284]
+Chapter 7
+
+Package hyperref Warning: Ignoring empty anchor on input line 13102.
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `FourierOrns-Regular.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `k' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `r' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `v' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `w' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `x' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `y' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `.' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `,' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `:' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `;' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `!' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `?' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `@' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `*' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `+' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `(' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `)' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `-' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `_' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textbackslash ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textexclamdown ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquestiondown ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textbraceleft ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textbraceright ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textless ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textgreater ' is missing
+(microtype)             in font `\TU/FourierOrns-Regular.otf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+[285
+
+
+]
+Overfull \hbox (8.21947pt too wide) in paragraph at lines 13139--13140
+[]\TU/cmunrm.otf(0)/m/n/10 Passing the yellow-speared wheat, every grain from i
+ts shroud
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [286]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [287]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [288]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [289]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [290]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [291]
+Overfull \hbox (7.55145pt too wide) in paragraph at lines 13330--13331
+[]\TU/cmunrm.otf(0)/m/n/10 Victorious song, death’s outlet song, yet varying ev
+er-altering
+ []
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13355.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [292]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13380.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13386.
+
+[293]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13419.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13439.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13445.
+
+
+Overfull \vbox (2.89034pt too high) has occurred while \output is active []
+
+
+[294]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [295]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [296]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [297]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13610.
+
+
+Overfull \vbox (1.00035pt too high) has occurred while \output is active []
+
+
+[298]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13635.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13641.
+
+
+Overfull \vbox (2.10033pt too high) has occurred while \output is active []
+
+
+[299]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [300]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [301]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [302]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13807.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13827.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13833.
+
+
+Overfull \vbox (2.88034pt too high) has occurred while \output is active []
+
+
+[303]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13874.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 13895.
+
+[304]
+
+Package hyperref Warning: Ignoring empty anchor on input line 13905.
+
+[305]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [306]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14018.
+
+[307]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14036.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14042.
+
+[308]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [309]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14137.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14158.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14164.
+
+[310]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14199.
+
+[311]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14214.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14220.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14255.
+
+[312]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14276.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14282.
+
+[313]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14322.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14342.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14348.
+
+[314]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14383.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14395.
+
+[315]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14401.
+
+[316]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14470.
+
+
+Overfull \vbox (3.01035pt too high) has occurred while \output is active []
+
+
+[317]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14490.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14496.
+
+[318]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14544.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14556.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14562.
+
+[319]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14591.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14615.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14621.
+
+[320]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14662.
+
+[321]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14682.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14688.
+
+[322]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [323]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14764.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14793.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14799.
+
+[324]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14827.
+
+[325]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14845.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14851.
+
+[326]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14890.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14910.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14916.
+
+[327]
+
+Package hyperref Warning: Ignoring empty anchor on input line 14947.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14962.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 14968.
+
+[328]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [329]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [330]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [331]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15123.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15143.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15149.
+
+
+Underfull \vbox (badness 1038) has occurred while \output is active []
+
+ [332]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15181.
+
+[333]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15197.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15203.
+
+[334]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [335]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15288.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15308.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15314.
+
+[336]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15339.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15353.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15359.
+
+[337]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15384.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15408.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15414.
+
+[338]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [339]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15502.
+
+[340]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15527.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15533.
+
+[341]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15578.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15598.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15604.
+
+[342] [343]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15679.
+
+[344]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15714.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 15724.
+
+[345]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [346]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [347]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [348]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [349]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [350]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [351]
+
+Package hyperref Warning: Ignoring empty anchor on input line 15999.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16010.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16016.
+
+[352]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16061.
+
+[353]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16086.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16097.
+
+
+Overfull \vbox (3.20032pt too high) has occurred while \output is active []
+
+
+[354]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16139.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16159.
+
+[355] [356
+
+
+]
+Chapter 8
+
+Package hyperref Warning: Ignoring empty anchor on input line 16167.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16189.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16197.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16203.
+
+[357]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16221.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16225.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16231.
+
+[358]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16253.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16257.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16263.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16293.
+
+[359]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16311.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16317.
+
+
+Overfull \hbox (8.48747pt too wide) in paragraph at lines 16339--16340
+[]\TU/cmunrm.otf(0)/m/n/10 Hast thou commanded the morning since thy days; and 
+caused the dayspring
+ []
+
+[360]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [361]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [362]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [363]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [364]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [365]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16593.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16597.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16603.
+
+
+Overfull \hbox (4.5641pt too wide) in paragraph at lines 16603--16604
+ \TU/cmunrm.otf(0)/b/n/10 VI.1.[] \TU/cmunrm.otf(0)/m/n/10 The heavens declare 
+the glory of God, $\OML/cmm/m/it/10 }$ \TU/cmunrm.otf(0)/m/n/10 and the firmame
+nt sheweth
+ []
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16625.
+
+[366]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16639.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16645.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16667.
+
+[367]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16683.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16689.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16715.
+
+[368]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16723.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16729.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16761.
+
+[369]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16777.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16783.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16807.
+
+[370]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16821.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16827.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16863.
+
+[371]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16871.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16877.
+
+[372]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16951.
+
+[373]
+
+Package hyperref Warning: Ignoring empty anchor on input line 16963.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 16969.
+
+[374]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17017.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17037.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17043.
+
+[375]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17067.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17083.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17089.
+
+[376]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17115.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17129.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17135.
+
+[377]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17155.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17165.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17171.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17197.
+
+[378]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17201.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17207.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17225.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17237.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17243.
+
+[379]
+Overfull \hbox (4.0445pt too wide) in paragraph at lines 17257--17258
+[]\TU/cmunrm.otf(0)/m/n/10 Love never faileth: but whether there be prophecies,
+ they shall fail; whether
+ []
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17271.
+
+[380]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17291.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17297.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17321.
+
+[381]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17335.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17341.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17359.
+
+[382]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17373.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17379.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17397.
+
+[383]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17407.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17413.
+
+[384]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17477.
+
+[385]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17487.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17493.
+
+[386]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17519.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17535.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17541.
+
+[387]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17559.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17569.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17575.
+
+[388]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17595.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17607.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17613.
+
+[389]
+Overfull \hbox (1.9195pt too wide) in paragraph at lines 17652--17653
+[]\TU/cmunrm.otf(0)/m/n/10 And it shall be in that day, that living waters shal
+l go out from \TU/cmunrm.otf(0)/m/sc/10 Jerusalem\TU/cmunrm.otf(0)/m/n/10 ;
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [390]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17664.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17674.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17680.
+
+[391]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [392]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17730.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17736.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17742.
+
+[393]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [394]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17808.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17828.
+
+[395] [396]
+Chapter 9
+
+Package hyperref Warning: Ignoring empty anchor on input line 17836.
+
+[397
+
+
+]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17904.
+
+[398]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17916.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17922.
+
+[399]
+
+Package hyperref Warning: Ignoring empty anchor on input line 17957.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17975.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 17981.
+
+[400]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18014.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18034.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18040.
+
+[401]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [402]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18112.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18130.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18136.
+
+[403] [404]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18209.
+
+[405]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18224.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18230.
+
+
+Overfull \vbox (2.10033pt too high) has occurred while \output is active []
+
+
+[406]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18270.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18300.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18306.
+
+[407]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18356.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [408]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18370.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18376.
+
+[409]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18426.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18446.
+
+
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
+ [410]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18456.
+
+[411]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [412]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [413]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18624.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18634.
+
+[414]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18640.
+
+[415]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18700.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18716.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18722.
+
+
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+ [416]
+[417]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18794.
+
+[418]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18813.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18819.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18854.
+
+[419]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18874.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18880.
+
+[420]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18910.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18930.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 18936.
+
+[421]
+
+Package hyperref Warning: Ignoring empty anchor on input line 18976.
+
+[422]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19011.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19017.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19042.
+
+[423]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19062.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19068.
+
+[424]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19096.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19116.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19122.
+
+[425]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19154.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19169.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19175.
+
+[426]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [427]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [428]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [429]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [430]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19384.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19403.
+
+[431]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19413.
+
+
+Overfull \vbox (1.20032pt too high) has occurred while \output is active []
+
+
+[432]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19463.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19489.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19495.
+
+
+Underfull \vbox (badness 2158) has occurred while \output is active []
+
+ [433]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19521.
+
+[434]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19543.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19549.
+
+[435]
+
+Package hyperref Warning: Ignoring empty anchor on input line 19605.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19625.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 19631.
+
+[436] [437]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [438]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [439]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [440]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [441]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [442]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [443]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [444]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [445]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20027.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20037.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20043.
+
+[446]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [447]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20132.
+
+[448]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20152.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20158.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20192.
+
+[449]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20210.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20216.
+
+[450]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20248.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20271.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20277.
+
+[451]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20306.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20326.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20332.
+
+[452]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20373.
+
+
+Underfull \vbox (badness 2253) has occurred while \output is active []
+
+ [453]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20396.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20402.
+
+[454]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20451.
+
+[455]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20466.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20472.
+
+[456]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20494.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20519.
+
+[457] [458
+
+
+]
+Chapter 10
+
+Package hyperref Warning: Ignoring empty anchor on input line 20527.
+
+[459]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20577.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20592.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20598.
+
+[460]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [461]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20668.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20683.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20689.
+
+[462]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20732.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20747.
+
+[463]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20753.
+
+
+Overfull \vbox (1.10033pt too high) has occurred while \output is active []
+
+
+[464]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [465]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20842.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20854.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20860.
+
+[466]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20886.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20906.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20912.
+
+[467]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20960.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 20976.
+
+[468]
+
+Package hyperref Warning: Ignoring empty anchor on input line 20982.
+
+[469]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21054.
+
+[470]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21074.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21080.
+
+
+Overfull \vbox (2.10033pt too high) has occurred while \output is active []
+
+
+[471]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21126.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21151.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21157.
+
+[472]
+Overfull \vbox (2.01035pt too high) has occurred while \output is active []
+
+
+[473]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [474]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [475]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21323.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [476]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21343.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21349.
+
+[477]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21389.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21402.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21408.
+
+[478]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21449.
+
+[479]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21469.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21475.
+
+[480]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21516.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21541.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21547.
+
+[481]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [482]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [483]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [484]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [485]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [486]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [487]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [488]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [489]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [490]
+
+Package hyperref Warning: Ignoring empty anchor on input line 21972.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21985.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 21995.
+
+[491] [492]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22064.
+
+[493]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22089.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22099.
+
+[494]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22129.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22149.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22155.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22177.
+
+[495]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22221.
+
+[496]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22227.
+
+[497]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22288.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22312.
+
+[498]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22318.
+
+[499]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22390.
+
+[500]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22403.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22409.
+
+[501]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22466.
+
+[502]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22489.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22495.
+
+
+Overfull \vbox (1.97032pt too high) has occurred while \output is active []
+
+
+[503]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22549.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22574.
+
+[504]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22580.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22610.
+
+[505]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22630.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22636.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22668.
+
+[506]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22682.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22688.
+
+[507]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22721.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22746.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22752.
+
+[508]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22802.
+
+
+Overfull \vbox (3.01035pt too high) has occurred while \output is active []
+
+
+[509]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22827.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22833.
+
+[510]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22868.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22888.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22894.
+
+[511]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22924.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22944.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 22950.
+
+[512]
+
+Package hyperref Warning: Ignoring empty anchor on input line 22979.
+
+[513]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23008.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23014.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23039.
+
+[514]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23054.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23060.
+
+[515]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23098.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23118.
+
+[516]
+Chapter 11
+
+Package hyperref Warning: Ignoring empty anchor on input line 23126.
+
+
+Overfull \vbox (1.00035pt too high) has occurred while \output is active []
+
+
+[517
+
+
+]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23167.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23177.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23183.
+
+[518]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23223.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23242.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23248.
+
+[519]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23282.
+
+[520]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23314.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23320.
+
+
+Overfull \vbox (3.09033pt too high) has occurred while \output is active []
+
+
+[521]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23361.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23381.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23387.
+
+[522]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23418.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23438.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23444.
+
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+ [523]
+[524]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [525]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [526]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23605.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [527]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23625.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23631.
+
+[528]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23662.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23682.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23688.
+
+[529]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23728.
+
+[530]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23747.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23753.
+
+[531]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23818.
+
+
+Overfull \vbox (1.88034pt too high) has occurred while \output is active []
+
+
+[532]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23838.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23844.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23867.
+
+[533]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23884.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23890.
+
+[534]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23939.
+
+[535]
+
+Package hyperref Warning: Ignoring empty anchor on input line 23959.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23965.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 23997.
+
+[536]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24017.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24023.
+
+[537]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24070.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24088.
+
+[538]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24094.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24129.
+
+[539]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24145.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24151.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24176.
+
+
+Overfull \vbox (2.88034pt too high) has occurred while \output is active []
+
+
+[540]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24196.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24202.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24232.
+
+[541]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24247.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24253.
+
+[542]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24290.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24300.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24306.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24328.
+
+[543]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24353.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24359.
+
+[544]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24381.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24402.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24408.
+
+[545]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24430.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24450.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24456.
+
+[546]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [547]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24558.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [548]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24578.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24584.
+
+[549]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24615.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24638.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24644.
+
+[550]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24676.
+
+[551]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24702.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24708.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24736.
+
+[552]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24759.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24765.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24788.
+
+
+Overfull \vbox (1.88034pt too high) has occurred while \output is active []
+
+
+[553]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24806.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24812.
+
+[554]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24853.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24868.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24874.
+
+[555]
+
+Package hyperref Warning: Ignoring empty anchor on input line 24899.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24919.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 24925.
+
+[556]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [557]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [558]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [559]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25105.
+
+[560]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25121.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25127.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25151.
+
+[561]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25171.
+
+[562]
+Chapter 12
+
+Package hyperref Warning: Ignoring empty anchor on input line 25179.
+
+[563
+
+
+]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25234.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25252.
+
+[564]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25258.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25293.
+
+[565]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25311.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25317.
+
+[566]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25358.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25370.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25376.
+
+[567]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25421.
+
+[568]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25450.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25456.
+
+[569]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25489.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25514.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25520.
+
+
+Overfull \vbox (1.89034pt too high) has occurred while \output is active []
+
+
+[570]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25557.
+
+[571]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25577.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25583.
+
+
+Overfull \vbox (1.10033pt too high) has occurred while \output is active []
+
+
+[572]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25640.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25650.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25656.
+
+
+Overfull \vbox (2.88034pt too high) has occurred while \output is active []
+
+
+[573]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25685.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25700.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25706.
+
+[574]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25752.
+
+[575]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25771.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25777.
+
+[576]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25843.
+
+
+Overfull \vbox (2.00035pt too high) has occurred while \output is active []
+
+
+[577]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25857.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25863.
+
+[578]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25913.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25933.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25939.
+
+[579]
+
+Package hyperref Warning: Ignoring empty anchor on input line 25972.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 25995.
+
+[580]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26001.
+
+[581]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26054.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26074.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26080.
+
+[582]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [583]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26168.
+
+[584]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26190.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26196.
+
+[585]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26230.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26250.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26256.
+
+[586]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26284.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26299.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26305.
+
+[587]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26327.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26350.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26356.
+
+[588]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26388.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26408.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26414.
+
+
+Underfull \vbox (badness 1137) has occurred while \output is active []
+
+ [589]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26440.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26452.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26458.
+
+[590]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26500.
+
+[591]
+
+Package hyperref Warning: Ignoring empty anchor on input line 26510.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 26516.
+
+[592]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [593]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [594]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [595]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [596]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [597]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [598]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [599]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [600]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [601]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [602]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [603]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [604]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [605]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [606]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [607]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [608]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27289.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27303.
+
+[609]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27309.
+
+[610]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [611]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27393.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27413.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27419.
+
+[612]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [613]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27512.
+
+[614]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27523.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27529.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27567.
+
+[615]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27587.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27593.
+
+
+Overfull \vbox (1.89034pt too high) has occurred while \output is active []
+
+
+[616]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27611.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27623.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27629.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27652.
+
+[617]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27672.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27678.
+
+[618]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27715.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27736.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27742.
+
+[619]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27772.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27793.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27799.
+
+[620]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27840.
+
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+ [621]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27853.
+
+[622]
+Chapter 13
+
+Package hyperref Warning: Ignoring empty anchor on input line 27861.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27889.
+
+[623
+
+
+]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27912.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27918.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27943.
+
+[624]
+
+Package hyperref Warning: Ignoring empty anchor on input line 27965.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 27971.
+
+[625]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [626]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28068.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28081.
+
+[627]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28091.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28126.
+
+[628]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28151.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28157.
+
+
+Overfull \vbox (2.89034pt too high) has occurred while \output is active []
+
+
+[629]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [630]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28258.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [631]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28270.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28276.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28305.
+
+[632]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28319.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28325.
+
+[633]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28385.
+
+[634]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28417.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28423.
+
+[635]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28473.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28483.
+
+
+Underfull \vbox (badness 2401) has occurred while \output is active []
+
+ [636]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28493.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28518.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28528.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28534.
+
+[637]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28559.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28569.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28575.
+
+[638]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28608.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28623.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28633.
+
+[639]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28673.
+
+[640]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28693.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28699.
+
+[641]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28744.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28756.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28762.
+
+[642]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28799.
+
+[643]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28819.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28825.
+
+
+Overfull \vbox (1.98033pt too high) has occurred while \output is active []
+
+
+[644]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28883.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28893.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28899.
+
+[645]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28940.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28950.
+
+
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [646]
+
+Package hyperref Warning: Ignoring empty anchor on input line 28961.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 28981.
+
+[647]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29007.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29013.
+
+[648]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29076.
+
+[649]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29101.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29107.
+
+[650]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29168.
+
+[651]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29189.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29195.
+
+[652]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29246.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29255.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29261.
+
+[653]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29314.
+
+[654]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29325.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29331.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29363.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29372.
+
+[655]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29378.
+
+[656]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29458.
+
+[657]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29472.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29478.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29510.
+
+[658]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29521.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29531.
+
+[659]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29568.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29578.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29584.
+
+[660]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29616.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29639.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29649.
+
+[661]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29684.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29694.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29700.
+
+[662]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29735.
+
+
+Overfull \vbox (2.01035pt too high) has occurred while \output is active []
+
+
+[663]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29761.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29771.
+
+
+Package hyperref Warning: Ignoring empty anchor on input line 29804.
+
+[664]
+
+Package hyperref Warning: Ignoring empty anchor on input line 29818.
+
+[665] [666
+
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 29825.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 5.0pt
+(hyperref)                replaced by space on input line 29825.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\noindent' on input line 29825.
+
+[667] [668
+
+
+]
+Chapter 14
+[669] [670] [671] [672] [673] [674] [675] [676] [677]
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+ [678]
+[679] [680] [681] [682]
+Chapter 15
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [683
+
+
+]
+[684] [685] [686] [687] [688] [689] [690
+
+
+]
+Sources
+[691] [692] [693] [694] (./main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 2.268pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 98469F7A1652E02D6B3A1432B8F2CA1E;2842
+(rerunfilecheck)             After:  3E2A8F1BB81660CF6C9862DB38788CBF;2929.
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 23946 strings out of 476191
+ 487548 string characters out of 5812072
+ 1076858 words of memory out of 5000000
+ 44149 multiletter control sequences out of 15000+600000
+ 480465 words of font info for 115 fonts, out of 8000000 for 9000
+ 1509 hyphenation exceptions out of 8191
+ 88i,7n,98p,2017b,4844s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.pdf (698 pages).

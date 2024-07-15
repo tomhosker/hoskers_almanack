@@ -1,0 +1,2272 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{carolina2nd_hard}{book}{}
+    \name{author}{1}{}{%
+      {{hash=n}{%
+         family={{2nd South Carolina String Band}},
+         familyi={n\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{n1}
+    \strng{fullhash}{n1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{title}{Hard Road}
+    \field{year}{2001}
+  \endentry
+
+  \entry{carolina2nd_cotton}{book}{}
+    \name{author}{1}{}{%
+      {{hash=n}{%
+         family={{2nd South Carolina String Band}},
+         familyi={n\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{n1}
+    \strng{fullhash}{n1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{title}{In High Cotton}
+    \field{year}{2002}
+  \endentry
+
+  \entry{carolina2nd_lightning}{book}{}
+    \name{author}{1}{}{%
+      {{hash=n}{%
+         family={{2nd South Carolina String Band}},
+         familyi={n\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{n1}
+    \strng{fullhash}{n1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{title}{Lightning in a Jar}
+    \field{year}{2008}
+  \endentry
+
+  \entry{carolina2nd_southern}{book}{}
+    \name{author}{1}{}{%
+      {{hash=n}{%
+         family={{2nd South Carolina String Band}},
+         familyi={n\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{n1}
+    \strng{fullhash}{n1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{2}
+    \field{sortinithash}{2}
+    \field{title}{Southern Soldier}
+    \field{year}{1997}
+  \endentry
+
+  \entry{agamemnon}{book}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Aeschylus},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=GPW}{%
+         family={Goodwin},
+         familyi={G\bibinitperiod},
+         given={Prof\bibnamedelima William},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Agamemnon}
+    \field{year}{1906}
+  \endentry
+
+  \entry{albionband}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AT}{%
+         family={{Albion Band}},
+         familyi={A\bibinitperiod},
+         given={The},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{AT1}
+    \strng{fullhash}{AT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{The Albion Band: Live at the Cambridge Folk Festival}
+    \field{year}{1988}
+  \endentry
+
+  \entry{animals}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AT}{%
+         family={{Animals}},
+         familyi={A\bibinitperiod},
+         given={The},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{AT2}
+    \strng{fullhash}{AT2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{The Animals}
+    \field{year}{1964}
+  \endentry
+
+  \entry{nicomachean}{book}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Aristotle},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \name{translator}{1}{}{%
+      {{hash=CTRDD}{%
+         family={Chase},
+         familyi={C\bibinitperiod},
+         given={The Rev Dr\bibnamedelima Drummond},
+         giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim
+  D\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{A2}
+    \strng{fullhash}{A2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Nicomachean Ethics}
+    \field{year}{1910}
+  \endentry
+
+  \entry{politics}{book}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={Aristotle},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \name{translator}{1}{}{%
+      {{hash=JPB}{%
+         family={Jowett},
+         familyi={J\bibinitperiod},
+         given={Prof\bibnamedelima Benjamin},
+         giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{A2}
+    \strng{fullhash}{A2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{The Politics of Aristotle}
+    \field{year}{1885}
+  \endentry
+
+  \entry{anothertime}{book}{}
+    \name{author}{1}{}{%
+      {{hash=APW}{%
+         family={Auden},
+         familyi={A\bibinitperiod},
+         given={Prof\bibnamedelima Wystan},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{APW1}
+    \strng{fullhash}{APW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Another Time}
+    \field{year}{1940}
+  \endentry
+
+  \entry{audenb}{book}{}
+    \name{author}{1}{}{%
+      {{hash=APW}{%
+         family={Auden},
+         familyi={A\bibinitperiod},
+         given={Prof\bibnamedelima Wystan},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=MPE}{%
+         family={Mendelson},
+         familyi={M\bibinitperiod},
+         given={Prof\bibnamedelima Edward},
+         giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{APW1}
+    \strng{fullhash}{APW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Collected Poems}
+    \field{year}{1991}
+  \endentry
+
+  \entry{audena}{book}{}
+    \name{author}{1}{}{%
+      {{hash=APW}{%
+         family={Auden},
+         familyi={A\bibinitperiod},
+         given={Prof\bibnamedelima Wystan},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=FJ}{%
+         family={Fuller},
+         familyi={F\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{APW1}
+    \strng{fullhash}{APW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{W H Auden: Poems Selected by John Fuller}
+    \field{year}{2000}
+  \endentry
+
+  \entry{homilies}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AS}{%
+         family={{Augustine of Hippo}},
+         familyi={A\bibinitperiod},
+         given={St},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{AS1}
+    \strng{fullhash}{AS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Homilies on the Gospel According to St John, and His First
+  Epistle}
+    \field{year}{1849}
+  \endentry
+
+  \entry{confessions}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AS}{%
+         family={{Augustine of Hippo}},
+         familyi={A\bibinitperiod},
+         given={St},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \name{translator}{1}{}{%
+      {{hash=STRPW}{%
+         family={Shedd},
+         familyi={S\bibinitperiod},
+         given={The Rev Prof\bibnamedelima William},
+         giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim
+  P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{AS1}
+    \strng{fullhash}{AS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{The Confessions of St Augustine}
+    \field{year}{1860}
+  \endentry
+
+  \entry{dumbangel}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BT}{%
+         family={{Beach Boys}},
+         familyi={B\bibinitperiod},
+         given={The},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BT1}
+    \strng{fullhash}{BT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Dumb Angel Rarities, Vol 3}
+    \field{year}{2001}
+  \endentry
+
+  \entry{miltonpoem}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BW}{%
+         family={Blake},
+         familyi={B\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BW1}
+    \strng{fullhash}{BW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Milton: A Poem in Two Books}
+    \field{year}{1811}
+  \endentry
+
+  \entry{blakea}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BW}{%
+         family={Blake},
+         familyi={B\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=FPJ}{%
+         family={Fenton},
+         familyi={F\bibinitperiod},
+         given={Prof\bibnamedelima James},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BW1}
+    \strng{fullhash}{BW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{William Blake: Poems selected by James Fenton}
+    \field{year}{2010}
+  \endentry
+
+  \entry{bod17687}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Bodleian 17687}
+    \field{year}{1840}
+  \endentry
+
+  \entry{bod8227}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Bodleian 8227}
+    \field{year}{1780}
+  \endentry
+
+  \entry{elizabethan}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BPW}{%
+         family={Braithwaite},
+         familyi={B\bibinitperiod},
+         given={Prof\bibnamedelima William},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BPW1}
+    \strng{fullhash}{BPW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{The Book of Elizabethan Verse}
+    \field{year}{1907}
+  \endentry
+
+  \entry{wuthering}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BME}{%
+         family={Bront{\"e}{}},
+         familyi={B\bibinitperiod},
+         given={Miss\bibnamedelima Emily},
+         giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BME1}
+    \strng{fullhash}{BME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Wuthering Heights}
+    \field{year}{1847}
+  \endentry
+
+  \entry{bunyan}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BJ}{%
+         family={Bunyan},
+         familyi={B\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BJ1}
+    \strng{fullhash}{BJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Pilgrim's Progress}
+    \field{year}{1904}
+  \endentry
+
+  \entry{burns}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BR}{%
+         family={Burns},
+         familyi={B\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=CA}{%
+         family={Cunningham},
+         familyi={C\bibinitperiod},
+         given={Allan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BR1}
+    \strng{fullhash}{BR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Complete Poems}
+    \field{year}{1858}
+  \endentry
+
+  \entry{truegrit}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=BC}{%
+         family={Burwell},
+         familyi={B\bibinitperiod},
+         given={Carter},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BC1}
+    \strng{fullhash}{BC1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{True Grit: Original Motion Picture Soundtrack}
+    \field{year}{2010}
+  \endentry
+
+  \entry{twoaf}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BS}{%
+         family={Butler},
+         familyi={B\bibinitperiod},
+         given={Samuel},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BS1}
+    \strng{fullhash}{BS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{The Way of All Flesh}
+    \field{year}{1904}
+  \endentry
+
+  \entry{byron}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BGN}{%
+         family={Byron},
+         familyi={B\bibinitperiod},
+         given={George\bibnamedelima {Noel, 6th Baron}},
+         giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{BGN1}
+    \strng{fullhash}{BGN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{The Poems and Dramas of Lord Byron}
+    \field{year}{1879}
+  \endentry
+
+  \entry{cabinfever}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Cabin Fever}
+    \field{year}{2002}
+  \endentry
+
+  \entry{aurelius}{book}{}
+    \name{author}{1}{}{%
+      {{hash=C}{%
+         family={{Caesar Marcus Aurelius Antoninus Augustus}},
+         familyi={C\bibinitperiod},
+      }}%
+    }
+    \name{translator}{1}{}{%
+      {{hash=LPG}{%
+         family={Long},
+         familyi={L\bibinitperiod},
+         given={Prof\bibnamedelima George},
+         giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{C1}
+    \strng{fullhash}{C1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{The Meditations of the Emperor Marcus Aurelius Antoninus}
+    \field{year}{1896}
+  \endentry
+
+  \entry{brittain}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CVC}{%
+         family={Caitlin},
+         familyi={C\bibinitperiod},
+         given={Vera\bibnamedelima {Caitlin, Lady}},
+         giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CVC1}
+    \strng{fullhash}{CVC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Testament of Youth}
+    \field{year}{1933}
+  \endentry
+
+  \entry{justices}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CJC}{%
+         family={Campbell},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima {Campbell, 1st Baron}},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CJC1}
+    \strng{fullhash}{CJC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{The Lives of the Chief Justices of England, Vol II}
+    \field{year}{1849}
+  \endentry
+
+  \entry{carthy_rigs}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CM}{%
+         family={Carthy},
+         familyi={C\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CM1}
+    \strng{fullhash}{CM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Rigs of the Time: The Best of Martin Carthy}
+    \field{year}{1994}
+  \endentry
+
+  \entry{child}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=CPF}{%
+         family={Child},
+         familyi={C\bibinitperiod},
+         given={Prof\bibnamedelima Francis},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CPF1}
+    \strng{fullhash}{CPF1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{The English and Scottish Popular Ballads}
+    \field{year}{1898}
+  \endentry
+
+  \entry{johnnycollins}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CJ}{%
+         family={Collins},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CJ1}
+    \strng{fullhash}{CJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Sea Shanties and Songs of the Sea}
+    \field{year}{1999}
+  \endentry
+
+  \entry{fiddlers}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CJ}{%
+         family={Connolly},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CJ2}
+    \strng{fullhash}{CJ2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{The Man from Fiddlers' Green}
+    \field{year}{2010}
+  \endentry
+
+  \entry{oas1}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CA}{%
+         family={Copland},
+         familyi={C\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CA1}
+    \strng{fullhash}{CA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Old American Songs, Set 1}
+    \field{year}{2009}
+  \endentry
+
+  \entry{bcp}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=CT}{%
+         family={{Cranmer, Archbishop of Canterbury}},
+         familyi={C\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{CT1}
+    \strng{fullhash}{CT1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{The Book of Common Prayer}
+    \field{year}{1662}
+  \endentry
+
+  \entry{travelin}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DE}{%
+         family={Davidson},
+         familyi={D\bibinitperiod},
+         given={Emily},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Santelli},
+         familyi={S\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{DESR1}
+    \strng{fullhash}{DESR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Hard Travelin': The Life and Legacy of Woody Guthrie}
+    \field{year}{1999}
+  \endentry
+
+  \entry{donegan}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DL}{%
+         family={Donegan},
+         familyi={D\bibinitperiod},
+         given={Lonnie},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{DL1}
+    \strng{fullhash}{DL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Puttin' on the Style}
+    \field{year}{1978}
+  \endentry
+
+  \entry{farcrynd}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Far Cry: New Dawn}
+    \field{year}{2019}
+  \endentry
+
+  \entry{theblackalbum}{book}{}
+    \name{author}{2}{}{%
+      {{hash=FS}{%
+         family={Father},
+         familyi={F\bibinitperiod},
+         given={Son},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=F}{%
+         family={Friends},
+         familyi={F\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{FSF1}
+    \strng{fullhash}{FSF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{The Black Album}
+    \field{year}{2015}
+  \endentry
+
+  \entry{fenton}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=FPJ}{%
+         family={Fenton},
+         familyi={F\bibinitperiod},
+         given={Prof\bibnamedelima James},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{FPJ1}
+    \strng{fullhash}{FPJ1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{The New Faber Book of Love Poems}
+    \field{year}{2006}
+  \endentry
+
+  \entry{goldsmith}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GO}{%
+         family={Goldsmith},
+         familyi={G\bibinitperiod},
+         given={Oliver},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{GO1}
+    \strng{fullhash}{GO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{The Poems and Plays of Oliver Goldsmith}
+    \field{year}{1818}
+  \endentry
+
+  \entry{oldengland1}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HT}{%
+         family={Hart},
+         familyi={H\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HT1}
+    \strng{fullhash}{HT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Folk Songs of Old England, Vol 1}
+    \field{year}{1968}
+  \endentry
+
+  \entry{oldengland2}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HT}{%
+         family={Hart},
+         familyi={H\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HT1}
+    \strng{fullhash}{HT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Folk Songs of Old England, Vol 2}
+    \field{year}{1969}
+  \endentry
+
+  \entry{haskins}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HMM}{%
+         family={Haskins},
+         familyi={H\bibinitperiod},
+         given={Miss\bibnamedelima Minnie},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HMM1}
+    \strng{fullhash}{HMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{The Desert}
+    \field{year}{1912}
+  \endentry
+
+  \entry{pbev}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=HJ}{%
+         family={Hayward},
+         familyi={H\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HJ1}
+    \strng{fullhash}{HJ1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{The Penguin Book of English Verse}
+    \field{year}{1986}
+  \endentry
+
+  \entry{faber20th}{book}{}
+    \name{editor}{2}{}{%
+      {{hash=HSPJ}{%
+         family={Heath-Stubbs},
+         familyi={H\bibinithyphendelim S\bibinitperiod},
+         given={Prof\bibnamedelima John},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wright},
+         familyi={W\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HSPJWD1}
+    \strng{fullhash}{HSPJWD1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{The Faber Book of Twentieth Century Verse}
+    \field{year}{1953}
+  \endentry
+
+  \entry{ptmgmc}{book}{}
+    \name{editor}{2}{}{%
+      {{hash=HA}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HB}{%
+         family={Holden},
+         familyi={H\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HAHB1}
+    \strng{fullhash}{HAHB1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Poems that Make Grown Men Cry}
+    \field{year}{2014}
+  \endentry
+
+  \entry{oxfordlocal}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=HPJ}{%
+         family={Holloway},
+         familyi={H\bibinitperiod},
+         given={Prof\bibnamedelima John},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{HPJ1}
+    \strng{fullhash}{HPJ1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{The Oxford Book of Local Verses}
+    \field{year}{1987}
+  \endentry
+
+  \entry{hydestreet}{book}{}
+    \name{author}{1}{}{%
+      {{hash=H}{%
+         family={{Hyde Street Chantey Singers}},
+         familyi={H\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{H1}
+    \strng{fullhash}{H1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Sea Songs and Chanteys}
+    \field{year}{2002}
+  \endentry
+
+  \entry{llewyn}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{Inside Llewyn Davis Soundtrack}
+    \field{year}{2013}
+  \endentry
+
+  \entry{ivscots}{book}{}
+    \name{editor}{2}{}{%
+      {{hash=JJ}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={James},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Burns},
+         familyi={B\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{JJBR1}
+    \strng{fullhash}{JJBR1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{Scots Musical Museum, Vol IV}
+    \field{year}{1792}
+  \endentry
+
+  \entry{anglican}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=K}{%
+         family={{Kevin Mayhew Ltd}},
+         familyi={K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{K1}
+    \strng{fullhash}{K1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Anglican Hymns Old and New}
+    \field{year}{2008}
+  \endentry
+
+  \entry{ac4}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KL}{%
+         family={Killen},
+         familyi={K\bibinitperiod},
+         given={Louis},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{KL1}
+    \strng{fullhash}{KL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Assassin's Creed IV: Black Flag}
+    \field{year}{2013}
+  \endentry
+
+  \entry{kipling}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KR}{%
+         family={Kipling},
+         familyi={K\bibinitperiod},
+         given={Rudyard},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{KR1}
+    \strng{fullhash}{KR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Collected Poems of Rudyard Kipling}
+    \field{year}{1994}
+  \endentry
+
+  \entry{odq}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=KE}{%
+         family={Knowles},
+         familyi={K\bibinitperiod},
+         given={Elizabeth},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{KE1}
+    \strng{fullhash}{KE1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{The Oxford Dictionary of Quotations}
+    \field{year}{2014}
+  \endentry
+
+  \entry{oxfordlarkin}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=LPP}{%
+         family={Larkin},
+         familyi={L\bibinitperiod},
+         given={Prof\bibnamedelima Philip},
+         giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{LPP1}
+    \strng{fullhash}{LPP1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{The Oxford Book of Twentieth Century English Verse}
+    \field{year}{1973}
+  \endentry
+
+  \entry{lloyd}{book}{}
+    \name{author}{2}{}{%
+      {{hash=LA}{%
+         family={Lloyd},
+         familyi={L\bibinitperiod},
+         given={Albert},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ME}{%
+         family={MacColl},
+         familyi={M\bibinitperiod},
+         given={Ewan},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{LAME1}
+    \strng{fullhash}{LAME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Blow Boys Blow}
+    \field{year}{1957}
+  \endentry
+
+  \entry{jacobite}{book}{}
+    \name{author}{1}{}{%
+      {{hash=ME}{%
+         family={MacColl},
+         familyi={M\bibinitperiod},
+         given={Ewan},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{ME1}
+    \strng{fullhash}{ME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{The Jacobite Rebellions}
+    \field{year}{1962}
+  \endentry
+
+  \entry{masefield}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MDJ}{%
+         family={Masefield},
+         familyi={M\bibinitperiod},
+         given={Dr\bibnamedelima John},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MDJ1}
+    \strng{fullhash}{MDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{The Poems and Plays of John Masefield: Poems}
+    \field{year}{1919}
+  \endentry
+
+  \entry{rusby_awkward}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MMK}{%
+         family={McCusker},
+         familyi={M\bibinitperiod},
+         given={Mrs\bibnamedelima Kate},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MMK1}
+    \strng{fullhash}{MMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Awkward Annie}
+    \field{year}{2007}
+  \endentry
+
+  \entry{rusby_couldnt}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MMK}{%
+         family={McCusker},
+         familyi={M\bibinitperiod},
+         given={Mrs\bibnamedelima Kate},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MMK1}
+    \strng{fullhash}{MMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{The Girl Who Couldn't Fly}
+    \field{year}{2005}
+  \endentry
+
+  \entry{rusby_mortals}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MMK}{%
+         family={McCusker},
+         familyi={M\bibinitperiod},
+         given={Mrs\bibnamedelima Kate},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MMK1}
+    \strng{fullhash}{MMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{While Mortals Sleep}
+    \field{year}{2011}
+  \endentry
+
+  \entry{mcgonagall}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MSW}{%
+         family={{McGonagall, Knight of the White Elephant, Burmah}},
+         familyi={M\bibinitperiod},
+         given={Sir\bibnamedelima William},
+         giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=WC}{%
+         family={Walker},
+         familyi={W\bibinitperiod},
+         given={Colin},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MSW1}
+    \strng{fullhash}{MSW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{McGonagall: A Selection}
+    \field{year}{1998}
+  \endentry
+
+  \entry{rusby_hourglass}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MMK}{%
+         family={McKusker},
+         familyi={M\bibinitperiod},
+         given={Mrs\bibnamedelima Kate},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MMK2}
+    \strng{fullhash}{MMK2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Hourglass}
+    \field{year}{1997}
+  \endentry
+
+  \entry{rusby_littlelights}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MMK}{%
+         family={McKusker},
+         familyi={M\bibinitperiod},
+         given={Mrs\bibnamedelima Kate},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MMK2}
+    \strng{fullhash}{MMK2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Little Lights}
+    \field{year}{2001}
+  \endentry
+
+  \entry{rusby_underneath}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MMK}{%
+         family={McKusker},
+         familyi={M\bibinitperiod},
+         given={Mrs\bibnamedelima Kate},
+         giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MMK2}
+    \strng{fullhash}{MMK2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Underneath the Stars}
+    \field{year}{2003}
+  \endentry
+
+  \entry{planxty}{book}{}
+    \name{author}{2}{}{%
+      {{hash=MC}{%
+         family={Moore},
+         familyi={M\bibinitperiod},
+         given={Christy},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=P}{%
+         family={Planxty},
+         familyi={P\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MCP1}
+    \strng{fullhash}{MCP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Christy Moore and Friends}
+    \field{year}{1980}
+  \endentry
+
+  \entry{moorman}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=MPF}{%
+         family={Moorman},
+         familyi={M\bibinitperiod},
+         given={Prof\bibnamedelima Frederic},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{MPF1}
+    \strng{fullhash}{MPF1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Songs of the Ridings}
+    \field{year}{1918}
+  \endentry
+
+  \entry{lyra}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=NSJ}{%
+         family={{Newman, Cardinal-Deacon of San Giorgio in Velabro}},
+         familyi={N\bibinitperiod},
+         given={Saint\bibnamedelima John},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{NSJ1}
+    \strng{fullhash}{NSJ1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Lyra Apostolica}
+    \field{year}{1836}
+  \endentry
+
+  \entry{olney}{book}{}
+    \name{author}{2}{}{%
+      {{hash=NRDJ}{%
+         family={Newton},
+         familyi={N\bibinitperiod},
+         given={Rev Dr\bibnamedelima John},
+         giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  J\bibinitperiod},
+      }}%
+      {{hash=CW}{%
+         family={Cowper},
+         familyi={C\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{NRDJCW1}
+    \strng{fullhash}{NRDJCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Olney Hymns}
+    \field{year}{1779}
+  \endentry
+
+  \entry{obrother}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{O Brother, Where Art Thou? Soundtrack}
+    \field{year}{2000}
+  \endentry
+
+  \entry{herringbone}{book}{}
+    \name{author}{1}{}{%
+      {{hash=OJ}{%
+         family={Oates},
+         familyi={O\bibinitperiod},
+         given={Jackie},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{OJ1}
+    \strng{fullhash}{OJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{The Spyglass and the Herringbone}
+    \field{year}{2015}
+  \endentry
+
+  \entry{treasury}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=PPF}{%
+         family={Palgrave},
+         familyi={P\bibinitperiod},
+         given={Prof\bibnamedelima Francis},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{PPF1}
+    \strng{fullhash}{PPF1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{The Golden Treasury}
+    \field{year}{1861}
+  \endentry
+
+  \entry{londonbook}{book}{}
+    \name{editor}{2}{}{%
+      {{hash=RPSH}{%
+         family={Read},
+         familyi={R\bibinitperiod},
+         given={Prof Sir\bibnamedelima Herbert},
+         giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+      }}%
+      {{hash=DPB}{%
+         family={Dobrée},
+         familyi={D\bibinitperiod},
+         given={Prof\bibnamedelima Bonamy},
+         giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{RPSHDPB1}
+    \strng{fullhash}{RPSHDPB1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{The London Book of English Verse}
+    \field{year}{1949}
+  \endentry
+
+  \entry{obev}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=RPC}{%
+         family={Ricks},
+         familyi={R\bibinitperiod},
+         given={Prof\bibnamedelima Christopher},
+         giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{RPC1}
+    \strng{fullhash}{RPC1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{The Oxford Book of English Verse}
+    \field{year}{1999}
+  \endentry
+
+  \entry{sailors}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Sailors' Songs and Sea Shanties}
+    \field{year}{2004}
+  \endentry
+
+  \entry{isla}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SCI}{%
+         family={Saint-Clair},
+         familyi={S\bibinithyphendelim C\bibinitperiod},
+         given={Isla},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SCI1}
+    \strng{fullhash}{SCI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Highland Songs}
+    \field{year}{2004}
+  \endentry
+
+  \entry{idlerwilde}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SE}{%
+         family={Saltus},
+         familyi={S\bibinitperiod},
+         given={Edgar},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SE1}
+    \strng{fullhash}{SE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Oscar Wilde: An Idler's Impression}
+    \field{year}{1917}
+  \endentry
+
+  \entry{gmp}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=SPM}{%
+         family={Schmidt},
+         familyi={S\bibinitperiod},
+         given={Prof\bibnamedelima Michael},
+         giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SPM1}
+    \strng{fullhash}{SPM1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The Great Modern Poets}
+    \field{year}{2010}
+  \endentry
+
+  \entry{shakespeare}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SW}{%
+         family={Shakespeare},
+         familyi={S\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \name{translator}{1}{}{%
+      {{hash=CPW}{%
+         family={Craig},
+         familyi={C\bibinitperiod},
+         given={Prof\bibnamedelima William},
+         giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SW1}
+    \strng{fullhash}{SW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The Complete Works of William Shakespeare}
+    \field{year}{1963}
+  \endentry
+
+  \entry{springsteen}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SB}{%
+         family={Springsteen},
+         familyi={S\bibinitperiod},
+         given={Bruce},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SB1}
+    \strng{fullhash}{SB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{We Shall Overcome: The Seeger Sessions}
+    \field{year}{2006}
+  \endentry
+
+  \entry{newlove}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=SPJ}{%
+         family={Stallworthy},
+         familyi={S\bibinitperiod},
+         given={Prof\bibnamedelima Jonathan},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SPJ1}
+    \strng{fullhash}{SPJ1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The New Penguin Book of Love Poetry}
+    \field{year}{2003}
+  \endentry
+
+  \entry{norton}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=SPJ}{%
+         family={Stallworthy},
+         familyi={S\bibinitperiod},
+         given={Prof\bibnamedelima Jonathan},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SPJ1}
+    \strng{fullhash}{SPJ1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The Norton Anthology of Poetry}
+    \field{year}{2005}
+  \endentry
+
+  \entry{myallandall}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SR}{%
+         family={Stanley},
+         familyi={S\bibinitperiod},
+         given={Ralph},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{SR1}
+    \strng{fullhash}{SR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{My All and All}
+    \field{year}{1997}
+  \endentry
+
+  \entry{aamhat}{book}{}
+    \name{author}{1}{}{%
+      {{hash=S}{%
+         family={{Steeleye Span}},
+         familyi={S\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{S1}
+    \strng{fullhash}{S1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{All Around My Hat}
+    \field{year}{1975}
+  \endentry
+
+  \entry{ccrown}{book}{}
+    \name{author}{1}{}{%
+      {{hash=S}{%
+         family={{Steeleye Span}},
+         familyi={S\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{S1}
+    \strng{fullhash}{S1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Commoners Crown}
+    \field{year}{1975}
+  \endentry
+
+  \entry{spanning}{book}{}
+    \name{author}{1}{}{%
+      {{hash=S}{%
+         family={{Steeleye Span}},
+         familyi={S\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{S1}
+    \strng{fullhash}{S1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Spanning the Years}
+    \field{year}{1995}
+  \endentry
+
+  \entry{tannahill}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TR}{%
+         family={Tannahill},
+         familyi={T\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=SR}{%
+         family={Semple},
+         familyi={S\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{TR1}
+    \strng{fullhash}{TR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Poems and Songs of Robert Tannahill}
+    \field{year}{1874}
+  \endentry
+
+  \entry{terfel_simple}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TB}{%
+         family={Terfel},
+         familyi={T\bibinitperiod},
+         given={Bryn},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{TB1}
+    \strng{fullhash}{TB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Simple Gifts}
+    \field{year}{2005}
+  \endentry
+
+  \entry{corriesa}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Corries}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Compact Collection}
+    \field{year}{2002}
+  \endentry
+
+  \entry{corriesb}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Corries}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Corries: In Concert}
+    \field{year}{1995}
+  \endentry
+
+  \entry{dublinersb}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Dubliners}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T2}
+    \strng{fullhash}{T2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{At Their Best}
+    \field{year}{2008}
+  \endentry
+
+  \entry{dublinersc}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Dubliners}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T2}
+    \strng{fullhash}{T2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Finnegan Wakes}
+    \field{year}{1966}
+  \endentry
+
+  \entry{dublinersa}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Dubliners}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T2}
+    \strng{fullhash}{T2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Wild Rover}
+    \field{year}{1998}
+  \endentry
+
+  \entry{kjv}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Holy Bible, King James Version}
+    \field{year}{1611}
+  \endentry
+
+  \entry{tmwwbk}{book}{}
+    \keyw{source}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Man Who Would Be King}
+    \field{year}{1975}
+  \endentry
+
+  \entry{oldtime}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Oldtime Stringband}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T3}
+    \strng{fullhash}{T3}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Gotta Stop Kickin' My Dog Around}
+    \field{year}{2012}
+  \endentry
+
+  \entry{spinners}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Spinners}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T4}
+    \strng{fullhash}{T4}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Spinners}
+    \field{year}{1994}
+  \endentry
+
+  \entry{youngtradition}{book}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The Young Tradition}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{T5}
+    \strng{fullhash}{T5}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Young Tradition Sampler}
+    \field{year}{1970}
+  \endentry
+
+  \entry{vitruvius}{book}{}
+    \name{author}{1}{}{%
+      {{hash=V}{%
+         family={{Vitruvius Pollo}},
+         familyi={V\bibinitperiod},
+      }}%
+    }
+    \name{translator}{1}{}{%
+      {{hash=MPM}{%
+         family={Morgan},
+         familyi={M\bibinitperiod},
+         given={Prof\bibnamedelima Morris},
+         giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{V1}
+    \strng{fullhash}{V1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{title}{The Ten Books on Architecture}
+    \field{year}{1914}
+  \endentry
+
+  \entry{sss}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WCW}{%
+         family={Whall},
+         familyi={W\bibinitperiod},
+         given={Captain\bibnamedelima William},
+         giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WCW1}
+    \strng{fullhash}{WCW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Ships, Sea Songs and Shanties}
+    \field{year}{1913}
+  \endentry
+
+  \entry{pomegranates}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{A House of Pomegranates}
+    \field{year}{1891}
+  \endentry
+
+  \entry{idealhusband}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{An Ideal Husband}
+    \field{year}{1895}
+  \endentry
+
+  \entry{aaat}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=JJ}{%
+         family={Jackson},
+         familyi={J\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Aristotle at Afternoon Tea: The Rare Oscar Wilde}
+    \field{year}{1991}
+  \endentry
+
+  \entry{phrasesandphilosophies}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Phrases and Philosophies for the Use of the Young}
+    \field{year}{1894}
+  \endentry
+
+  \entry{criticasartist}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{The Critic as Artist}
+    \field{year}{1891}
+  \endentry
+
+  \entry{decayoflying}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{The Decay of Lying}
+    \field{year}{1889}
+  \endentry
+
+  \entry{epigramswilde}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=RA}{%
+         family={Redman},
+         familyi={R\bibinitperiod},
+         given={Alvin},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{The Epigrams of Oscar Wilde}
+    \field{year}{1952}
+  \endentry
+
+  \entry{happyprince}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{The Happy Prince and Other Tales}
+    \field{year}{1888}
+  \endentry
+
+  \entry{vera}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WO}{%
+         family={Wilde},
+         familyi={W\bibinitperiod},
+         given={Oscar},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \keyw{source}
+    \strng{namehash}{WO1}
+    \strng{fullhash}{WO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Vera}
+    \field{year}{1880}
+  \endentry
+\enddatalist
+\endinput
