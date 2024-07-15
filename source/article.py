@@ -74,7 +74,7 @@ class Article:
                 "\n"+
                 result
             )
-        result = "\\footnote{"+self.notes+"}"+result
+        result = "\\footnotetext{"+self.notes+"}"+result
         return result
 
 ####################

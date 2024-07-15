@@ -127,7 +127,7 @@ class PDFBuilder:
             path_obj_to_pdf.rename(self.path_to_output)
         return True
 
-    def clean(self):
+    def clean_up(self):
         purge_main()
         purge_generated(Paths.PATH_TO_BIB.value)
 
@@ -142,7 +142,7 @@ class PDFBuilder:
         self.build_pdf()
         if self.clean:
             print("Tidying up...")
-            self.clean()
+            self.clean_up()
         print("PDF built!")
 
 ####################
