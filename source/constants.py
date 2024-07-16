@@ -87,3 +87,21 @@ MONTH_NAMES_LATIN = (
     "Duodecember",
     "Intercalaris"
 )
+
+INTERNAL_MONTH_NAMES = MONTH_NAMES_LATIN
+
+MONTH_NAMES_ENGLISH = (
+    "Sore Eyes",  # alias Worm, Crow, Sap, Sugar. 25 Mar 2024.
+    "Egg",  # alias Pink, Fish. 24 Apr 2024.
+    "Milk",  # alias Flower. 23 May 2024.
+    "Flower",  # alias Strawberry. 22 Jun 2024.
+    "Hay",  # alias Buck, Thunder, Ripe Corn. 21 Jul 2024.
+    "Grain",  # alias Sturgeon. 19 Aug 2024.
+    "Harvest",  # 18 Sep 2024.
+    "Hunters",  # 17 Oct 2024
+    "Frost",  # alias Blood, Beaver. 15 Nov 2024.
+    "Long Night",  # alias Cold. 15 Dec 2024.
+    "Wolf",  # 25 Jan 2024.
+    "Snow",  # alias Hunger. 24 Feb 2024.
+    "Blue"
+)

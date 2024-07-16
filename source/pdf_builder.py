@@ -19,7 +19,7 @@ from .configs import (
     LOADOUT_ID,
     FULLNESS,
     CHAPTER_SEPARATOR,
-    MONTH_NAMES
+    PUBLIC_MONTH_NAMES
 )
 from .constants import (
     Filenames,
@@ -27,7 +27,8 @@ from .constants import (
     ColumnNames,
     Paths,
     Markers,
-    MAIN_STEM
+    MAIN_STEM,
+    INTERNAL_MONTH_NAMES
 )
 from .month_builder import MonthBuilder
 from .bib_builder import build_bib
@@ -81,9 +82,14 @@ class PDFBuilder:
         chapters = []
         if self.frontmatter or self.backmatter:
             chapters.append("\\part{The \\textit{Almanack} Proper}")
-        for month_name in MONTH_NAMES:
+        for index, month_name in enumerate(INTERNAL_MONTH_NAMES):
             month_builder = \
-                MonthBuilder(month_name, fullness=self.fullness, mods=self.mods)
+                MonthBuilder(
+                    month_name,
+                    public_name=PUBLIC_MONTH_NAMES[index],
+                    fullness=self.fullness,
+                    mods=self.mods
+                )
             chapters.append(month_builder.digest())
         result = CHAPTER_SEPARATOR.join(chapters)
         return result
@@ -94,7 +100,7 @@ class PDFBuilder:
         select = "SELECT * FROM BackmatterChapter ORDER BY num;"
         rows = fetch_to_dict(select)
         for row in rows:
-            title = "\\chapter{"+row["name"]+"}"
+            title = "\\chapter*{"+row["name"]+"}"
             content = row[ColumnNames.CONTENT.value]
             chapter = title+"\n\n"+content
             chapters.append(chapter)

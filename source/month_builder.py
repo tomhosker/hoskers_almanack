@@ -20,6 +20,7 @@ from .monthly_selects import SELECTS
 class MonthBuilder:
     """ The class in question. """
     name: str
+    public_name: str = None
     fullness: Fullnesses = Fullnesses.FULL
     mods: list = None
     songs: list = None
@@ -27,6 +28,8 @@ class MonthBuilder:
     proverbs: list = None
 
     def __post_init__(self):
+        if not self.public_name:
+            self.public_name = self.name
         self.songs = fetch_to_dict(SELECTS[self.name].songs)
         self.sonnets = fetch_to_dict(SELECTS[self.name].sonnets)
         self.proverbs = fetch_to_dict(SELECTS[self.name].proverbs)
@@ -35,7 +38,7 @@ class MonthBuilder:
         """ Condense the month into a single string. """
         min_count = \
             min([len(self.songs), len(self.sonnets), len(self.proverbs)])
-        components = ["\\chapter{"+self.name+"}"]
+        components = ["\\chapter{"+self.public_name+"}"]
         for index in range(min_count):
             song_obj = \
                 Article(
