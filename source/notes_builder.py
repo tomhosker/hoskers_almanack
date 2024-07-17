@@ -86,7 +86,7 @@ class NotesBuilder:
         )
         rows = fetch_to_dict(select, (self.article_id,))
         if not rows:
-            raise AlmanackError("No article with id: "+str(self.article_id))
+            raise AlmanackError(f"No article with id: {self.article_id}")
         result = rows[0]
         return result
 
@@ -99,17 +99,9 @@ class NotesBuilder:
 
     def build_dates(self):
         """ Builds an author's dates. """
-        raw_dob = self.extract[AuthorColumnNames.DOB.value]
-        raw_dod = self.extract[AuthorColumnNames.DOD.value]
-        if raw_dob is None:
-            dob = "?"
-        else:
-            dob = str(raw_dob)
-        if raw_dod is None:
-            dod = "?"
-        else:
-            dod = str(raw_dod)
-        result = "("+dob+" -- "+dod+")"
+        dob = self.extract[AuthorColumnNames.DOB.value] or "?"
+        dod = self.extract[AuthorColumnNames.DOD.value] or "?"
+        result = f"({dob} -- {dod})"
         return result
 
     def build_non_author(self):
@@ -124,7 +116,7 @@ class NotesBuilder:
         author_dates = None
         if self.author:
             author_dates = self.author+" "+self.dates
-        cited_source = "\\cite{"+self.source+"}"
+        cited_source = "\\citetitle{"+self.source+"}"
         components = [
             self.title,
             self.non_title,
@@ -133,7 +125,7 @@ class NotesBuilder:
             cited_source
         ]
         components = list(filter(None, components))
-        result = ", ".join(components)+"."
+        result = " $\\cdot$ ".join(components)+"."
         if self.redacted:
             result = REDACTED_MARKER+" "+result
         if self.remarks and (self.fullness == Fullnesses.FULL):
