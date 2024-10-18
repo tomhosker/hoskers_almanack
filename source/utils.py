@@ -11,6 +11,9 @@ from pathlib import Path
 # Local imports.
 from .constants import Paths, ShellCommands
 
+# Local constants.
+PATH_OBJ_TO_BACKMATTER = Path(__file__).parent.parent/"backmatter"
+
 ###########
 # CLASSES #
 ###########
@@ -75,3 +78,11 @@ def run_bibtex(path_to_aux, quiet=False):
         except subprocess.CalledProcessError:
             return False
     return True
+
+def fetch_backmatter_chapter(code: str) -> str:
+    """ Return the contents of the file as a string. """
+    filename = f"{code}.tex"
+    path_to_file = str(PATH_OBJ_TO_BACKMATTER/filename)
+    with open(path_to_file, "r") as chapter_file:
+        result = chapter_file.read()
+    return result

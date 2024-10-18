@@ -36,26 +36,29 @@
 
 \mainmatter
 
-\renewcommand\thesection{{\Roman{section}}}
-\renewcommand\thefootnote{{\thesubsection.}}
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\alph{subsection}}
+\renewcommand\thefootnote{{\thesubsection}.}
 \makeatletter
     \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
     \renewcommand{\@makefnmark}{\hbox{{{{\@thefnmark}}}}\hbox{{{{ }}}}}
+    \renewcommand\@makefntext[1]{\hspace*{1em}{\@thefnmark} #1}
 \makeatother
 
 #MAINMATTER
 
 %\backmatter
 
-\renewcommand\thesection{{\arabic{section}}}
-\renewcommand\thefootnote{{\arabic{section}}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thefootnote{\arabic{footnote}}
+\makeatletter
+    \renewcommand{\@makefnmark}{\textsuperscript{\@thefnmark}}
+    \renewcommand\@makefntext[1]{\hspace*{1em}\textsuperscript{\@thefnmark}#1}
+\makeatother
 
 #BACKMATTER
 
 \printbibliography[title={Sources}]
-
-\bigskip
-
-{\footnotesize \textsc{Note:} I only give here the details of those texts which provided material for the \textit{Almanack} proper. Details of other texts, such as those quoted in the Introduction, are to be found in the relevant footnotes.}
 
 \end{document}

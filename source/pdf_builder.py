@@ -8,6 +8,7 @@ from pathlib import Path
 
 # Local imports.
 from .utils import (
+    fetch_backmatter_chapter,
     fetch_to_dict,
     get_loadout,
     compile_latex,
@@ -27,8 +28,8 @@ from .constants import (
     ColumnNames,
     Paths,
     Markers,
-    MAIN_STEM,
-    INTERNAL_MONTH_NAMES
+    INTERNAL_MONTH_NAMES,
+    MAIN_STEM
 )
 from .month_builder import MonthBuilder
 from .bib_builder import build_bib
@@ -66,27 +67,18 @@ class PDFBuilder:
 
     def build_frontmatter(self):
         """ Build the frontmatter from the database. """
-        chapters = ["\\part{Introductory Material}"]
-        select = "SELECT * FROM FrontmatterChapter ORDER BY num;"
-        rows = fetch_to_dict(select, tuple())
-        for row in rows:
-            title = "\\chapter{"+row["name"]+"}"
-            content = row[ColumnNames.CONTENT.value]
-            chapter = title+"\n\n"+content
-            chapters.append(chapter)
-        result = CHAPTER_SEPARATOR.join(chapters)
-        return result
+        return ""
 
     def build_mainmatter(self):
         """ Build the mainmatter from the "MonthBuilder" class. """
         chapters = []
         if self.frontmatter or self.backmatter:
             chapters.append("\\part{The \\textit{Almanack} Proper}")
-        for index, month_name in enumerate(INTERNAL_MONTH_NAMES):
+        for index, month_name in enumerate(PUBLIC_MONTH_NAMES):
             month_builder = \
                 MonthBuilder(
+                    index+1,
                     month_name,
-                    public_name=PUBLIC_MONTH_NAMES[index],
                     fullness=self.fullness,
                     mods=self.mods
                 )
@@ -96,14 +88,12 @@ class PDFBuilder:
 
     def build_backmatter(self):
         """ Build the backmatter from the database. """
-        chapters = ["\\part{Supplementary Material}"]
-        select = "SELECT * FROM BackmatterChapter ORDER BY num;"
-        rows = fetch_to_dict(select)
-        for row in rows:
-            title = "\\chapter*{"+row["name"]+"}"
-            content = row[ColumnNames.CONTENT.value]
-            chapter = title+"\n\n"+content
-            chapters.append(chapter)
+        chapters = [
+            "\\part{Supplementary Material}",
+            fetch_backmatter_chapter("ecclesiastes"),
+            fetch_backmatter_chapter("song_of_solomon"),
+            fetch_backmatter_chapter("principles")
+        ]
         result = CHAPTER_SEPARATOR.join(chapters)
         return result
 

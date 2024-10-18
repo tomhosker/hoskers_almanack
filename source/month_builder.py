@@ -10,7 +10,6 @@ from .utils import fetch_to_dict
 from .article import Article
 from .configs import SECTION_SEPARATOR
 from .constants import ColumnNames, Fullnesses
-from .monthly_selects import SELECTS
 
 ##############
 # MAIN CLASS #
@@ -19,8 +18,8 @@ from .monthly_selects import SELECTS
 @dataclass
 class MonthBuilder:
     """ The class in question. """
-    name: str
-    public_name: str = None
+    num: str
+    public_name: str
     fullness: Fullnesses = Fullnesses.FULL
     mods: list = None
     songs: list = None
@@ -28,11 +27,19 @@ class MonthBuilder:
     proverbs: list = None
 
     def __post_init__(self):
-        if not self.public_name:
-            self.public_name = self.name
-        self.songs = fetch_to_dict(SELECTS[self.name].songs)
-        self.sonnets = fetch_to_dict(SELECTS[self.name].sonnets)
-        self.proverbs = fetch_to_dict(SELECTS[self.name].proverbs)
+        self.songs = self.fetch_articles(1)
+        self.sonnets = self.fetch_articles(2)
+        self.proverbs = self.fetch_articles(3)
+
+    def fetch_articles(self, article_type: int) -> str:
+        select = (
+            "SELECT * "+
+            "FROM Article "+
+            f"WHERE type = {article_type} AND month = {self.num} "+
+            "ORDER BY day ASC;"
+        )
+        result = fetch_to_dict(select)
+        return result
 
     def digest(self):
         """ Condense the month into a single string. """

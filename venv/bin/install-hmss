@@ -1,4 +1,4 @@
-#!/home/tom/hoskers_almanack/venv/bin/python3
+#!/home/tom/hoskers_almanack/venv/bin/python3.12
 
 """
 This code defines a script which installs His Majesty's Software Suite.
