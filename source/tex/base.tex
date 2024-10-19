@@ -30,27 +30,48 @@
 
 \tableofcontents
 
-%FRONTMATTER  % Replace % with # to insert introductory prose, and vice versa.
+#FRONTMATTER
 
 \renewcommand\chaptername{Month}
 
 \mainmatter
 
-\renewcommand\thechapter{\Roman{chapter}}
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\alph{subsection}}
-\renewcommand\thefootnote{{\thesubsection}.}
+% Define symbols.
+\makeatletter
+    \newcommand*{\articlesymbolsingle}[1]{\ensuremath{%
+        \ifcase#1%
+            \or \ddagger%
+            \or \dagger%
+            \or *%
+            \or \mathsection%
+            \or \mathparagraph%
+            \else \@ctrerr%
+        \fi%
+    }}
+    \newcommand*{\articlesymbol}[1]{\articlesymbolsingle{\value{#1}}}
+\makeatother
+
+% Set up footnotes in the month pages.
+\renewcommand\thefootnote{\textbf{\thesubsection} $\cdot$}
 \makeatletter
     \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
-    \renewcommand{\@makefnmark}{\hbox{{{{\@thefnmark}}}}\hbox{{{{ }}}}}
+    \renewcommand{\@makefnmark}{\hbox{\@thefnmark}\hbox{}}
     \renewcommand\@makefntext[1]{\hspace*{1em}{\@thefnmark} #1}
 \makeatother
+
+% Set up headers.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyhead[LE, RO]{\thepage}
+\fancyhead[CE]{\footnotesize{\textsc{Hosker's Almanack}}}
+\fancyhead[CO]{\footnotesize{\textsc{{\chaptername} {\thechapter}}}}
 
 #MAINMATTER
 
 %\backmatter
 
-\renewcommand\thesection{\arabic{section}}
+% Reset the footnote format.
 \renewcommand\thefootnote{\arabic{footnote}}
 \makeatletter
     \renewcommand{\@makefnmark}{\textsuperscript{\@thefnmark}}

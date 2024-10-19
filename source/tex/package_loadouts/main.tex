@@ -11,6 +11,7 @@
     footmisc,
     caption,
     color,
+    fancyhdr,
     fourier-orns,
     marginnote,
     microtype,
@@ -49,6 +50,35 @@
     slash-right-kern=-.25em,
     slash-left-kern=-.3em
 }
+
+% Set up division headings.
+\usepackage[compact]{titlesec}
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection{\articlesymbol{subsection}}}
+\titleformat{\chapter} % command
+    [display] % shape
+    {\centering} % format
+    {\textsc{Month \thechapter}} % label
+    {0.5ex} % sep
+    {
+        \vspace{1ex}
+        \centering
+        \huge
+        \bfseries
+    } % before code
+\titleformat{\section}
+    [hang] % shape
+    {\centering\normalfont\bfseries\LARGE} % format
+    {\thesection} % label
+    {0em} % sep
+    {} % before code
+\titleformat{\subsection}
+    [runin] % shape
+    {\normalfont\bfseries} % format
+    {\thesubsection} % label
+    {0.5em} % sep
+    {} % before code
 
 % Page break stuff.
 \makeatletter
