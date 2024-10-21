@@ -11,6 +11,7 @@ from .constants import MONTH_NAMES_ENGLISH, Fullnesses
 
 CHAPTER_SEPARATOR = "\n\n"
 COMMENT_SEPARATOR = "\\P"
+COMPONENT_SEPARATOR = "~\\textperiodcentered~"
 FULLNESS = Fullnesses.FULL
 LOADOUT_ID = "main"
 MODS = None # For HPML.

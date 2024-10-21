@@ -9,7 +9,6 @@ from pathlib import Path
 # Local imports.
 from .utils import (
     fetch_backmatter_chapter,
-    fetch_to_dict,
     get_loadout,
     compile_latex,
     run_bibtex
@@ -25,10 +24,8 @@ from .configs import (
 from .constants import (
     Filenames,
     Fullnesses,
-    ColumnNames,
     Paths,
     Markers,
-    INTERNAL_MONTH_NAMES,
     MAIN_STEM
 )
 from .month_builder import MonthBuilder
@@ -124,6 +121,7 @@ class PDFBuilder:
         return True
 
     def clean_up(self):
+        """ Ronseal. """
         purge_main()
         purge_generated(Paths.PATH_TO_BIB.value)
 

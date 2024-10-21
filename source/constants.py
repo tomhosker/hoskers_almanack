@@ -16,6 +16,12 @@ PATH_OBJ_TO_TEX = Path(__file__).parent/"tex"
 # ENUMS #
 #########
 
+class ArticleType(Enum):
+    """ Ronseal. """
+    SONG = 1
+    SONNET = 2
+    PROVERB = 3
+
 class Filenames(Enum):
     """ Ronseal. """
     MAIN_TEX = MAIN_STEM+".tex"
@@ -48,6 +54,7 @@ class ColumnNames(Enum):
     """ Column names of the Article table. """
     ID = "id"
     TITLE = "title"
+    TYPE = "type"
     CHRIST_FLAG = "christ_flag"
     CONTENT = "content"
     IS_PROSE_POEM = "is_prose_poem"
@@ -105,3 +112,9 @@ MONTH_NAMES_ENGLISH = (
     "Snow",  # alias Hunger. 24 Feb 2024.
     "Blue"
 )
+
+########
+# MISC #
+########
+
+POETIC_PROVERB_GIVEAWAYS = ("#", "\n")

@@ -12,7 +12,7 @@ from progressbar import progressbar
 
 # Local imports.
 from .check_encapsulator import CheckEncapsulator
-from .check_utils import check_compile_latex, TEMP_TEX_FN, TEMP_PDF_FN
+from .check_utils import check_compile_latex, TEMP_TEX_FN
 from .constants import ColumnNames
 from .utils import fetch_to_dict
 
@@ -36,7 +36,7 @@ def check_hpml_in_article(data, quiet=False):
         temp_tex_file.write(latex)
     check_compile_latex(TEMP_TEX_FN, quiet=quiet)
 
-def clean():
+def clean_files():
     """ Remove any temporary and generated files. """
     for path_obj in Path.cwd().glob("temp.*"):
         path_obj.unlink()
@@ -57,7 +57,7 @@ def validate_hpml_in_article(article_id, clean=False):
         result = False
         traceback.print_exc()
     if clean:
-        clean()
+        clean_files()
     if result:
         print("SUCCESS: Validated HPML in article with ID "+str(article_id))
     else:
@@ -86,7 +86,7 @@ def validate_all_hpml(clean=True):
             )
             traceback.print_exc()
     if clean:
-        clean()
+        clean_files()
     if failures:
         with open(PATH_TO_LOG, "w") as log_file:
             log_file.write(json.dumps(failures))

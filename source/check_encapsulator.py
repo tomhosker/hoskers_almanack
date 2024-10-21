@@ -5,7 +5,6 @@ syntax, itself compiled from some HPML code, into a compilable form.
 
 # Standard imports.
 from enum import Enum
-from pathlib import Path
 
 # Bespoke imports.
 from hpml import HPMLCompiler, PACKAGE_CODE

@@ -32,6 +32,7 @@ class MonthBuilder:
         self.proverbs = self.fetch_articles(3)
 
     def fetch_articles(self, article_type: int) -> str:
+        """ Fetch a given set of articles from the database. """
         select = (
             "SELECT * "+
             "FROM Article "+

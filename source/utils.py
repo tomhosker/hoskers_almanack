@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 
 # Local imports.
-from .constants import Paths, ShellCommands
+from .constants import ArticleType, Paths, ShellCommands
 
 # Local constants.
 PATH_OBJ_TO_BACKMATTER = Path(__file__).parent.parent/"backmatter"
@@ -86,3 +86,10 @@ def fetch_backmatter_chapter(code: str) -> str:
     with open(path_to_file, "r") as chapter_file:
         result = chapter_file.read()
     return result
+
+def decode_article_type(type_int: int) -> ArticleType:
+    """ Match a type-indicating integer to a type. """
+    for type_obj in ArticleType:
+        if type_obj.value == type_int:
+            return type_obj
+    raise AlmanackError("Unable to decode article type int: {type_int}")

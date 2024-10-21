@@ -3,6 +3,7 @@ This code tests the NotesBuilder class.
 """
 
 # Source imports.
+from source.configs import COMPONENT_SEPARATOR
 from source.notes_builder import NotesBuilder
 
 ###########
@@ -15,5 +16,9 @@ def test_notes_builder():
     notes_builder = NotesBuilder(article_id=1)
     actual_notes = notes_builder.digest()
     expected_notes = \
-        "`Ode on a Grecian Urn', John Keats (1795 -- 1821), \\cite{norton}."
+        COMPONENT_SEPARATOR.join([
+            "\\refpoem{Ode on a Grecian Urn}",
+            "John Keats (1795 -- 1821)",
+            "\\citetitle{norton}."
+        ])
     assert actual_notes == expected_notes

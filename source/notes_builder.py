@@ -8,7 +8,7 @@ from enum import Enum
 
 # Local imports.
 from .utils import AlmanackError, fetch_to_dict
-from .configs import COMMENT_SEPARATOR
+from .configs import COMMENT_SEPARATOR, COMPONENT_SEPARATOR
 from .constants import ColumnNames, Fullnesses
 
 # Local constants.
@@ -68,7 +68,7 @@ class NotesBuilder:
             result = result+" "+self.comments_on_lines
         return result
 
-    def fetch_extract(self):
+    def fetch_extract(self) -> list[dict]:
         """ Fetches an article's metadata from the database. """
         select = (
             "SELECT Article.source AS source, "+
@@ -90,28 +90,28 @@ class NotesBuilder:
         result = rows[0]
         return result
 
-    def build_title(self):
+    def build_title(self) -> str|None:
         """ Builds an article's title. """
         if self.extract[ColumnNames.TITLE.value]:
-            result = "`"+self.extract[ColumnNames.TITLE.value]+"'"
+            result = "\\refpoem{"+self.extract[ColumnNames.TITLE.value]+"}"
             return result
         return None
 
-    def build_dates(self):
+    def build_dates(self) -> str:
         """ Builds an author's dates. """
         dob = self.extract[AuthorColumnNames.DOB.value] or "?"
         dod = self.extract[AuthorColumnNames.DOD.value] or "?"
         result = f"({dob} -- {dod})"
         return result
 
-    def build_non_author(self):
+    def build_non_author(self) -> str|None:
         """ Handles the "non_author" field. """
         non_author = self.extract[ColumnNames.NON_AUTHOR.value]
         if non_author in NAMED_NON_AUTHORS:
             return non_author
         return None
 
-    def build_notes(self):
+    def build_notes(self) -> str:
         """ Builds an article's notes from its record on the database. """
         author_dates = None
         if self.author:
@@ -125,14 +125,14 @@ class NotesBuilder:
             cited_source
         ]
         components = list(filter(None, components))
-        result = " $\\cdot$ ".join(components)+"."
+        result = COMPONENT_SEPARATOR.join(components)+"."
         if self.redacted:
             result = REDACTED_MARKER+" "+result
         if self.remarks and (self.fullness == Fullnesses.FULL):
             result = result+" "+self.remarks
         return result
 
-    def build_comments(self):
+    def build_comments(self) -> str|None:
         """ Builds an articles line comments. """
         select = (
             "SELECT line_num, comment "+
@@ -141,13 +141,13 @@ class NotesBuilder:
             "ORDER BY line_num ASC;"
         )
         rows = fetch_to_dict(select, (self.article_id,))
-        result = ""
+        comments = []
         if not rows:
             return None
         for row in rows:
             line_num = row[CommentColumnNames.LINE_NUM.value]
-            comment = row[CommentColumnNames.COMMENT.value]
-            result = result+COMMENT_SEPARATOR+" "+str(line_num)+". "+comment
-            if rows.index(row) != len(rows)-1:
-                result = result+" "
+            comment_text = row[CommentColumnNames.COMMENT.value]
+            comment = f"{COMMENT_SEPARATOR} {line_num}. {comment_text}"
+            comments.append(comment)
+        result = " ".join(comments)
         return result
