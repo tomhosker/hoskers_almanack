@@ -71,6 +71,7 @@ class Markers(Enum):
     is to be injected. """
     VERSION = "#VERSION_STRING"
     LOADOUT = "#PACKAGE_LOADOUT"
+    TITLE_PAGE = "#TITLE_PAGE"
     FRONTMATTER = "#FRONTMATTER"
     MAINMATTER = "#MAINMATTER"
     BACKMATTER = "#BACKMATTER"
