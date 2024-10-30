@@ -7,11 +7,11 @@
 ]{geometry}
 
 \usepackage{
-    enumitem,
-    footmisc,
     caption,
     color,
+    enumitem,
     fancyhdr,
+    footmisc,
     fourier-orns,
     marginnote,
     microtype,
@@ -88,6 +88,13 @@
 % Standardise the manner in which books, poems, etc are referenced.
 \newcommand{\refbook}[1]{\textit{#1}}
 \newcommand{\refpoem}[1]{``#1''}
+% Set the symbols used for songs, sonnets and proverbs.
+\newcommand{\songsymbol}{\ddagger}
+\newcommand{\sonnetsymbol}{\dagger}
+\newcommand{\proverbsymbol}{*}
+\newcommand{\textsongsymbol}{\ddag}
+\newcommand{\textsonnetsymbol}{\dag}
+\newcommand{\textproverbsymbol}{*}
 
 % Always call the hyperref package last.
 \usepackage[hidelinks]{hyperref}

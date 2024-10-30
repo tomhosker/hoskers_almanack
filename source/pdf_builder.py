@@ -77,7 +77,11 @@ class PDFBuilder:
 
     def build_frontmatter(self) -> str:
         """ Build the frontmatter from the files. """
-        return ""
+        chapters = [
+            fetch_frontmatter_chapter("notes_for_the_perplexed")
+        ]
+        result = CHAPTER_SEPARATOR.join(chapters)
+        return result
 
     def build_mainmatter(self) -> str:
         """ Build the mainmatter from the "MonthBuilder" class. """
