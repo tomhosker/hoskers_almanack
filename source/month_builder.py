@@ -8,7 +8,11 @@ from dataclasses import dataclass
 # Local imports.
 from .utils import fetch_to_dict
 from .article import Article
-from .configs import SECTION_SEPARATOR
+from .configs import (
+    PRE_ARTICLE_NEEDSPACE,
+    SECTION_SEPARATOR,
+    SUBSECTION_SEPARATOR
+)
 from .constants import ColumnNames, Fullnesses
 
 ##############
@@ -66,12 +70,55 @@ class MonthBuilder:
                     fullness=self.fullness,
                     mods=self.mods
                 )
-            components.append("\\section{}")
-            components.append("\\subsection{}")
-            components.append(song_obj.digest())
-            components.append("\\subsection{}")
-            components.append(sonnet_obj.digest())
-            components.append("\\subsection{}")
-            components.append(proverb_obj.digest())
+            section_digest = \
+                make_section_digest(
+                    song_obj.digest(),
+                    sonnet_obj.digest(),
+                    proverb_obj.digest()
+                )
+            components.append(section_digest)
         result = SECTION_SEPARATOR.join(components)
         return result
+
+####################
+# HELPER FUNCTIONS #
+####################
+
+def song_with_header(content: str) -> str:
+    """ Get the latex for a given song, including the header, etc. """
+    components = [
+        PRE_ARTICLE_NEEDSPACE,
+        "\\section{}",
+        "\\subsection{}",
+        content
+    ]
+    result = SUBSECTION_SEPARATOR.join(components)
+    return result
+
+def sonnet_with_header(content: str) -> str:
+    """ Get the latex for a given sonnet, including the header, etc. """
+    components = [
+        PRE_ARTICLE_NEEDSPACE,
+        "\\subsection{}",
+        content
+    ]
+    result = SUBSECTION_SEPARATOR.join(components)
+    return result
+
+def proverb_with_header(content: str) -> str:
+    """ Get the latex for a given proverb, including the header, etc. """
+    return sonnet_with_header(content)
+
+def make_section_digest(
+    song_digest: str,
+    sonnet_digest: str,
+    proverb_digest: str
+) -> str:
+    """ Construct a string giving the full code for a given section. """
+    components = [
+        song_with_header(song_digest),
+        sonnet_with_header(sonnet_digest),
+        proverb_with_header(proverb_digest)
+    ]
+    result = SECTION_SEPARATOR.join(components)
+    return result

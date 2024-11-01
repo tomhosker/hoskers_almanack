@@ -18,6 +18,10 @@ from .constants import (
 )
 from .notes_builder import NotesBuilder
 
+# Local constants.
+NOTES_MARKER = "#NOTES_MARKER"
+BEGIN_VERSE_COMMAND = "\\begin{verse}[\\versewidth]\n"
+
 ##############
 # MAIN CLASS #
 ##############
@@ -33,6 +37,7 @@ class Article:
     tune: str = field(init=False, default=None)
     is_prose_poem: bool = field(init=False, default=False)
     christ_flag: bool = field(init=False, default=False)
+    formatted_as_prose: bool = field(init=False, default=False)
     formatted_content: str = field(init=False, default=None)
     notes: str = field(init=False, default=None)
 
@@ -49,17 +54,28 @@ class Article:
         self.tune = row[ColumnNames.TUNE.value]
         self.is_prose_poem = bool(row[ColumnNames.IS_PROSE_POEM.value])
         self.christ_flag = bool(row[ColumnNames.CHRIST_FLAG.value])
+        self.formatted_as_prose = self.determine_formatted_as_prose()
         self.formatted_content = self.get_formatted_content()
         self.notes = self.build_notes()
 
+    def determine_formatted_as_prose(self) -> bool:
+        """ Determine if this article is to be formatted as prose. """
+        if (
+            self.article_type == ArticleType.PROVERB and
+            is_prose_proverb(self.content)
+        ):
+            return True
+        return False
+
     def get_formatted_content(self) -> str:
         """ Compile content as necessary. """
-        if (
-            is_prose_proverb(self.content) and
-            self.article_type == ArticleType.PROVERB
-        ):
-            return self.content
-        return self.compile_hpml()
+        if self.formatted_as_prose:
+            result = f"{NOTES_MARKER}{self.content}"
+        else:
+            result = self.compile_hpml()
+            replacement = f"{BEGIN_VERSE_COMMAND}{NOTES_MARKER}"
+            result = result.replace(BEGIN_VERSE_COMMAND, replacement)
+        return result
 
     def compile_hpml(self) -> str:
         """ Convert a snippet of HPML into (encapsulated) LaTeX code. """
@@ -83,14 +99,9 @@ class Article:
         if self.christ_flag:
             result = "{\\color{red} "+result+"}"
         if self.tune:
-            result = (
-                "\\begin{center}\n"+
-                "\\textit{Tune: "+self.tune+"}\n"+
-                "\\end{center}\n"+
-                "\n"+
-                result
-            )
-        result = "\\footnotetext{"+self.notes+"}"+result
+            result = "\\tune{"+self.tune+"}\n\n"+result
+        replacement = "\\footnotetext{"+self.notes+"}"
+        result = result.replace(NOTES_MARKER, replacement)
         return result
 
 ####################

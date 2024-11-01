@@ -4,12 +4,45 @@
 
 #PACKAGE_LOADOUT
 
+% Configure table of contents.
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{0}
 
+% Page break stuff.
+\makeatletter
+    \@beginparpenalty=10000
+    \@clubpenalty=10000
+\makeatother
+
+% Reset the chapter count for each part.
+\makeatletter
+    \@addtoreset{chapter}{part}
+\makeatother
+
+% Set up headers.
+\setlength\headheight{12pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyhead[LE, RO]{\thepage}
+\fancyhead[CE]{\footnotesize{\textsc{Hosker's Almanack}}}
+\fancyhead[CO]{\footnotesize{\textsc{{\chaptername} {\thechapter}}}}
+
 \begin{document}
 
+% Set up division headings for FRONTMATTER.
 \frontmatter
+\titleformat{\chapter} % command
+    [display] % shape
+    {\centering} % format
+    {} % label
+    {0.5ex} % sep
+    {
+        \vspace{1ex}
+        \centering
+        \huge
+        \bfseries
+    } % before code
 
 #TITLE_PAGE
 
@@ -19,9 +52,35 @@
 
 #FRONTMATTER
 
-\renewcommand\chaptername{Month}
-
+% Set up division headings for MAINMATTER.
 \mainmatter
+\renewcommand\chaptername{Month}
+\renewcommand\thechapter{\Roman{chapter}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection{\articlesymbol{subsection}}}
+\titleformat{\chapter} % command
+    [display] % shape
+    {\centering} % format
+    {\textsc{Month \thechapter}} % label
+    {0.5ex} % sep
+    {
+        \vspace{1ex}
+        \centering
+        \huge
+        \bfseries
+    } % before code
+\titleformat{\section}
+    [hang] % shape
+    {\centering\normalfont\bfseries\LARGE} % format
+    {\thesection} % label
+    {0em} % sep
+    {} % before code
+\titleformat{\subsection}
+    [runin] % shape
+    {\normalfont\bfseries} % format
+    {\thesubsection} % label
+    {0.5em} % sep
+    {} % before code
 
 % Define symbols.
 \makeatletter
@@ -41,23 +100,27 @@
 % Set up footnotes in the month pages.
 \renewcommand\thefootnote{\textbf{\thesubsection} $\cdot$}
 \makeatletter
-    \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
     \renewcommand{\@makefnmark}{\hbox{\@thefnmark}\hbox{}}
     \renewcommand\@makefntext[1]{\hspace*{1em}{\@thefnmark} #1}
 \makeatother
 
-% Set up headers.
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead{}
-\fancyhead[LE, RO]{\thepage}
-\fancyhead[CE]{\footnotesize{\textsc{Hosker's Almanack}}}
-\fancyhead[CO]{\footnotesize{\textsc{{\chaptername} {\thechapter}}}}
-
 #MAINMATTER
 
+% Set up division headings for BACKMATTER.
+\renewcommand\chaptername{Annexe}
 %\backmatter
-
+\renewcommand\thechapter{\Alph{chapter}}
+\titleformat{\chapter} % command
+    [display] % shape
+    {\centering} % format
+    {\textsc{Annexe \thechapter}} % label
+    {0.5ex} % sep
+    {
+        \vspace{1ex}
+        \centering
+        \huge
+        \bfseries
+    } % before code
 % Reset the footnote format.
 \renewcommand\thefootnote{\arabic{footnote}}
 \makeatletter
