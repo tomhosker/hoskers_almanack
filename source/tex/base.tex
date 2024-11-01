@@ -1,4 +1,4 @@
-\documentclass{amsbook}
+\documentclass[bibliography=totoc]{amsbook}
 
 \title{Hosker's Almanack (#VERSION_STRING)}
 
@@ -8,11 +8,13 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{0}
 
-% Page break stuff.
-\makeatletter
-    \@beginparpenalty=10000
-    \@clubpenalty=10000
-\makeatother
+% Define commands indicating where verses have been altered in backmatter.
+\newcommand{\verseamendedmark}{\ding{43}}
+\newcommand{\verseamended}{\verseamendedmark~}
+\newcommand{\explainverseamended}{\footnote{
+    This text is based on the King James Version. Where a verse diverges from
+    that translation, a mark (\verseamendedmark) is printed.
+}}
 
 % Reset the chapter count for each part.
 \makeatletter
@@ -44,9 +46,9 @@
         \bfseries
     } % before code
 
-#TITLE_PAGE
-
 \maketitle
+
+#TITLE_PAGE
 
 \tableofcontents
 
@@ -107,8 +109,8 @@
 #MAINMATTER
 
 % Set up division headings for BACKMATTER.
-\renewcommand\chaptername{Annexe}
 %\backmatter
+\renewcommand\chaptername{Annexe}
 \renewcommand\thechapter{\Alph{chapter}}
 \titleformat{\chapter} % command
     [display] % shape
@@ -121,15 +123,30 @@
         \huge
         \bfseries
     } % before code
+\titleformat{\section}
+    [hang] % shape
+    {\centering\normalfont\bfseries\large} % format
+    {} % label
+    {0em} % sep
+    {} % before code
 % Reset the footnote format.
 \renewcommand\thefootnote{\arabic{footnote}}
 \makeatletter
-    \renewcommand{\@makefnmark}{\textsuperscript{\@thefnmark}}
-    \renewcommand\@makefntext[1]{\hspace*{1em}\textsuperscript{\@thefnmark}#1}
+    \renewcommand{\@makefnmark}{}
+    \renewcommand\@makefntext[1]{\hspace*{2em} #1}
 \makeatother
 
 #BACKMATTER
 
-\printbibliography[title={Sources}]
+\renewcommand\thefootnote{\arabic{footnote}}
+\makeatletter
+    \renewcommand{\@makefnmark}{\textsuperscript{\@thefnmark}}
+    \renewcommand\@makefntext[1]{\hspace*{2em}\@thefnmark. #1}
+\makeatother
+
+#PRINCIPLES
+
+\chapter{Sources}
+\printbibliography[heading=none]
 
 \end{document}

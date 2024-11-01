@@ -51,6 +51,7 @@ class PDFBuilder:
     frontmatter: str = field(init=False, default=None)
     mainmatter: str = field(init=False, default=None)
     backmatter: str = field(init=False, default=None)
+    principles: str = field(init=False, default=None)
 
     def __post_init__(self):
         self.loadout = get_loadout(self.loadout_id)
@@ -62,8 +63,10 @@ class PDFBuilder:
             self.frontmatter = ""
         if self.fullness in (Fullnesses.FULL, Fullnesses.SLENDER):
             self.backmatter = self.build_backmatter()
+            self.principles = fetch_backmatter_chapter("principles")
         else:
             self.backmatter = ""
+            self.principles = ""
         self.mainmatter = self.build_mainmatter() # This should be last.
 
     def get_title_page(self) -> str:
@@ -105,8 +108,7 @@ class PDFBuilder:
         chapters = [
             "\\part{Supplementary Material}",
             fetch_backmatter_chapter("ecclesiastes"),
-            fetch_backmatter_chapter("song_of_solomon"),
-            fetch_backmatter_chapter("principles")
+            fetch_backmatter_chapter("song_of_solomon")
         ]
         result = CHAPTER_SEPARATOR.join(chapters)
         return result
@@ -121,6 +123,7 @@ class PDFBuilder:
             (Markers.FRONTMATTER.value, self.frontmatter),
             (Markers.MAINMATTER.value, self.mainmatter),
             (Markers.BACKMATTER.value, self.backmatter),
+            (Markers.PRINCIPLES.value, self.principles),
             (Markers.VERSION.value, self.version)
         )
         for pair in pairs:

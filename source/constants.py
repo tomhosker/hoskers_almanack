@@ -75,6 +75,7 @@ class Markers(Enum):
     FRONTMATTER = "#FRONTMATTER"
     MAINMATTER = "#MAINMATTER"
     BACKMATTER = "#BACKMATTER"
+    PRINCIPLES = "#PRINCIPLES"
 
 ###############
 # MONTH NAMES #
