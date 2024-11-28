@@ -42,14 +42,6 @@ def fetch_to_dict(select, parameters=None, path_to_db=Paths.PATH_TO_DB.value):
         rows.append(row)
     return rows
 
-def get_loadout(loadout_name):
-    """ Gets the list of packages (and related) from the database. """
-    filename = loadout_name+".tex"
-    path_to_loadout = str(Path(Paths.PATH_TO_PACKAGE_LOADOUTS.value)/filename)
-    with open(path_to_loadout, "r") as loadout_file:
-        result = loadout_file.read()
-    return result
-
 def compile_latex(path_to_tex, quiet=False):
     """ Compile a given file of LaTeX code into a PDF. """
     commands = [ShellCommands.LATEX_COMMAND.value, path_to_tex]

@@ -16,7 +16,9 @@ from source.pdf_builder import PDFBuilder
 @patch("source.pdf_builder.run_bibtex", Mock())
 @patch("source.pdf_builder.build_bib", Mock())
 def test_pdf_builder():
-    """ Test that we can create a PDFBuilder object, and that its methods behave
-    as expected. """
+    """
+    Test that we can create a PDFBuilder object, and that its methods behave as
+    expected.
+    """
     pdf_builder = PDFBuilder()
     pdf_builder.build()

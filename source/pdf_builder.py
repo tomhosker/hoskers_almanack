@@ -8,7 +8,6 @@ from pathlib import Path
 
 # Local imports.
 from .utils import (
-    get_loadout,
     compile_latex,
     run_bibtex,
     PATH_OBJ_TO_BACKMATTER,
@@ -20,7 +19,9 @@ from .configs import (
     LOADOUT_ID,
     FULLNESS,
     CHAPTER_SEPARATOR,
-    PUBLIC_MONTH_NAMES
+    PUBLIC_MONTH_NAMES,
+    DEFAULT_FONT,
+    PRINT_FONT
 )
 from .constants import (
     Filenames,
@@ -47,6 +48,7 @@ class PDFBuilder:
     loadout_id: str = LOADOUT_ID
     loadout: str = None
     clean: bool = True
+    print_run: bool = False
     title_page: str = field(init=False, default=None)
     frontmatter: str = field(init=False, default=None)
     mainmatter: str = field(init=False, default=None)
@@ -54,7 +56,7 @@ class PDFBuilder:
     principles: str = field(init=False, default=None)
 
     def __post_init__(self):
-        self.loadout = get_loadout(self.loadout_id)
+        self.loadout = self.get_loadout()
         if self.fullness == Fullnesses.FULL:
             self.title_page = self.get_title_page()
             self.frontmatter = self.build_frontmatter()
@@ -68,6 +70,19 @@ class PDFBuilder:
             self.backmatter = ""
             self.principles = ""
         self.mainmatter = self.build_mainmatter() # This should be last.
+
+    def get_loadout(self):
+        """ Get the LaTeX for loading its various packages. """
+        filename = f"{self.loadout_id}.tex"
+        path_to_loadout = \
+            str(Path(Paths.PATH_TO_PACKAGE_LOADOUTS.value)/filename)
+        with open(path_to_loadout, "r") as loadout_file:
+            result = loadout_file.read()
+        main_font = DEFAULT_FONT
+        if self.print_run:
+            main_font = PRINT_FONT
+        result = result.replace(Markers.MAIN_FONT.value, main_font)
+        return result
 
     def get_title_page(self) -> str:
         """ Ronseal. """

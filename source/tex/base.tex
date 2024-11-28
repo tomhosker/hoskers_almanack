@@ -30,6 +30,20 @@
 \fancyhead[CE]{\footnotesize{\textsc{Hosker's Almanack}}}
 \fancyhead[CO]{\footnotesize{\textsc{{\chaptername} {\thechapter}}}}
 
+% Set the symbols used for songs, sonnets and proverbs.
+\newcommand{\songsymbol}{\ddagger}
+\newcommand{\sonnetsymbol}{\dagger}
+\newcommand{\proverbsymbol}{*}
+\newcommand{\textsongsymbol}{\ddag}
+\newcommand{\textsonnetsymbol}{\dag}
+\newcommand{\textproverbsymbol}{*}
+% Set how tunes are displayed.
+\newcommand{\tune}[1]{
+    \begin{center}
+        \textit{Tune: #1}\nopagebreak
+    \end{center}
+}
+
 \begin{document}
 
 % Set up division headings for FRONTMATTER.

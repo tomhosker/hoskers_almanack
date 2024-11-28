@@ -26,7 +26,7 @@
 \usepackage[T1]{fontenc}
 \newfontfamily\hoskeroe{English Towne}
 \newfontfamily\arabicish{KacstQurn}
-\setmainfont[Numbers=OldStyle]{CMU Serif}
+\setmainfont[Numbers=OldStyle]{#MAIN_FONT}
 
 % Sort out BibTex.
 \usepackage[backend=bibtex, style=authortitle, citestyle=authortitle]{biblatex}
@@ -49,19 +49,6 @@
 % Standardise the manner in which books, poems, etc are referenced.
 \newcommand{\refbook}[1]{\textit{#1}}
 \newcommand{\refpoem}[1]{``#1''}
-% Set the symbols used for songs, sonnets and proverbs.
-\newcommand{\songsymbol}{\ddagger}
-\newcommand{\sonnetsymbol}{\dagger}
-\newcommand{\proverbsymbol}{*}
-\newcommand{\textsongsymbol}{\ddag}
-\newcommand{\textsonnetsymbol}{\dag}
-\newcommand{\textproverbsymbol}{*}
-% Set how tunes are displayed.
-\newcommand{\tune}[1]{
-    \begin{center}
-        \textit{Tune: #1}\nopagebreak
-    \end{center}
-}
 
 % Always call the hyperref package last.
 \usepackage[hidelinks]{hyperref}

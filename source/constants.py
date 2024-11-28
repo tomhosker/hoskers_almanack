@@ -35,9 +35,10 @@ class Paths(Enum):
     PATH_TO_DB = str(PATH_OBJ_TO_BASE_DIR/"almanack.db")
     PATH_TO_OUTPUT = str(PATH_OBJ_TO_BASE_DIR/"almanack.pdf")
     PATH_TO_BIB = str(PATH_OBJ_TO_BASE_DIR/"sources.bib")
-    PATH_TO_BASE = str(PATH_OBJ_TO_TEX/"base.tex")
     PATH_TO_PACKAGE_LOADOUTS = str(PATH_OBJ_TO_TEX/"package_loadouts")
-    PATH_TO_ARTICLE_BASE = str(PATH_OBJ_TO_TEX/"article_base.tex")
+    PATH_TO_BASE = str(PATH_OBJ_TO_TEX/"base.tex")
+    PATH_TO_BASE_ARTICLE = str(PATH_OBJ_TO_TEX/"article_base.tex")
+    PATH_TO_BASE_FONT_CHECK = str(PATH_OBJ_TO_TEX/"font_check_base.tex")
 
 class ShellCommands(Enum):
     """ Ronseal. """
@@ -71,6 +72,9 @@ class Markers(Enum):
     is to be injected. """
     VERSION = "#VERSION_STRING"
     LOADOUT = "#PACKAGE_LOADOUT"
+    MAIN_FONT = "#MAIN_FONT"
+    TITLE = "#TITLE"
+    CONTENT = "#CONTENT"
     TITLE_PAGE = "#TITLE_PAGE"
     FRONTMATTER = "#FRONTMATTER"
     MAINMATTER = "#MAINMATTER"
