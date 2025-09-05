@@ -1,4 +1,4 @@
-\documentclass[bibliography=totoc]{amsbook}
+\documentclass{amsbook}
 
 \title{Hosker's Almanack (#VERSION_STRING)}
 
@@ -43,6 +43,10 @@
         \textit{Tune: #1}\nopagebreak
     \end{center}
 }
+
+\newcommand\thmbegin{\par\addvspace{2em}%
+\addpenalty{-1000}}
+\AtBeginEnvironment{verse}{\thmbegin}
 
 \begin{document}
 
@@ -95,7 +99,7 @@
     [runin] % shape
     {\normalfont\bfseries} % format
     {\thesubsection} % label
-    {0.5em} % sep
+    {0em} % sep
     {} % before code
 
 % Define symbols.

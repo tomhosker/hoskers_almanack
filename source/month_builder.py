@@ -87,7 +87,6 @@ class MonthBuilder:
 def song_with_header(content: str) -> str:
     """ Get the latex for a given song, including the header, etc. """
     components = [
-        PRE_ARTICLE_NEEDSPACE,
         "\\section{}",
         "\\subsection{}",
         content
@@ -98,7 +97,6 @@ def song_with_header(content: str) -> str:
 def sonnet_with_header(content: str) -> str:
     """ Get the latex for a given sonnet, including the header, etc. """
     components = [
-        PRE_ARTICLE_NEEDSPACE,
         "\\subsection{}",
         content
     ]

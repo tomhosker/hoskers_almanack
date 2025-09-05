@@ -7,6 +7,7 @@
 ]{geometry}
 
 \usepackage{
+    amssymb,
     caption,
     color,
     enumitem,
@@ -14,6 +15,7 @@
     footmisc,
     fourier-orns,
     marginnote,
+    mathtools,
     microtype,
     needspace,
     pifont,
@@ -28,20 +30,12 @@
 \newfontfamily\arabicish{KacstQurn}
 \setmainfont[Numbers=OldStyle]{#MAIN_FONT}
 
+% Access musical notation.
+\usepackage{lilyglyphs}
+
 % Sort out BibTex.
 \usepackage[backend=bibtex, style=authortitle, citestyle=authortitle]{biblatex}
 \addbibresource{sources.bib}
-
-% Fix fractions.
-\usepackage{xfrac}
-\DeclareInstance{xfrac}{cmunrm.otf(0)}{text}{
-    slash-symbol-font = ptm,
-    scale-factor=0.8,
-    numerator-top-sep = 0pt,
-    denominator-bot-sep = 0pt,
-    slash-right-kern=-.25em,
-    slash-left-kern=-.3em
-}
 
 % Set up division headings.
 \usepackage[compact]{titlesec}
