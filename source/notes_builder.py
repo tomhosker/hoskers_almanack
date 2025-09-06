@@ -8,12 +8,7 @@ from enum import Enum
 
 # Local imports.
 from .utils import AlmanackError, fetch_to_dict
-from .configs import (
-    COMMENT_SEPARATOR,
-    COMPONENT_SEPARATOR,
-    REDACTED_MARKER,
-    REMARKS_SYMBOL
-)
+from .configs import COMPONENT_SEPARATOR, REDACTED_MARKER, REMARKS_SYMBOL
 from .constants import ColumnNames, Fullnesses
 
 # Local constants.
@@ -151,7 +146,7 @@ class NotesBuilder:
         for row in rows:
             line_num = row[CommentColumnNames.LINE_NUM.value]
             comment_text = row[CommentColumnNames.COMMENT.value]
-            comment = f"${{\\ell}}{line_num}$: {comment_text}"
+            comment = f"$\\boldsymbol{{\\ell}}{line_num}$: {comment_text}"
             comments.append(comment)
         result = " ".join(comments)
         return result
