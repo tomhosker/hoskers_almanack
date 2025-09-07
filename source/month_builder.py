@@ -9,9 +9,8 @@ from dataclasses import dataclass
 from .utils import fetch_to_dict
 from .article import Article
 from .configs import (
-    PRE_ARTICLE_NEEDSPACE,
-    SECTION_SEPARATOR,
-    SUBSECTION_SEPARATOR
+    DEFAULT_SEPARATOR,
+    INTER_DAY_SEPARATOR
 )
 from .constants import ColumnNames, Fullnesses
 
@@ -50,7 +49,7 @@ class MonthBuilder:
         """ Condense the month into a single string. """
         min_count = \
             min([len(self.songs), len(self.sonnets), len(self.proverbs)])
-        components = ["\\chapter{"+self.public_name+"}"]
+        components = []
         for index in range(min_count):
             song_obj = \
                 Article(
@@ -77,35 +76,26 @@ class MonthBuilder:
                     proverb_obj.digest()
                 )
             components.append(section_digest)
-        result = SECTION_SEPARATOR.join(components)
+        result = INTER_DAY_SEPARATOR.join(components)
+        result = f"\\chapter{{{self.public_name}}}\n\n{result}"
         return result
 
 ####################
 # HELPER FUNCTIONS #
 ####################
 
-def song_with_header(content: str) -> str:
-    """ Get the latex for a given song, including the header, etc. """
-    components = [
-        "\\section{}",
-        "\\subsection{}",
-        content
-    ]
-    result = SUBSECTION_SEPARATOR.join(components)
-    return result
-
-def sonnet_with_header(content: str) -> str:
-    """ Get the latex for a given sonnet, including the header, etc. """
+def dress_article(content: str) -> str:
+    """
+    Get the latex for a given song, sonnet or proverb, including the heading
+    code, etc.
+    """
     components = [
         "\\subsection{}",
+        "\\nopagebreak",
         content
     ]
-    result = SUBSECTION_SEPARATOR.join(components)
+    result = DEFAULT_SEPARATOR.join(components)
     return result
-
-def proverb_with_header(content: str) -> str:
-    """ Get the latex for a given proverb, including the header, etc. """
-    return sonnet_with_header(content)
 
 def make_section_digest(
     song_digest: str,
@@ -114,9 +104,11 @@ def make_section_digest(
 ) -> str:
     """ Construct a string giving the full code for a given section. """
     components = [
-        song_with_header(song_digest),
-        sonnet_with_header(sonnet_digest),
-        proverb_with_header(proverb_digest)
+        "\\section{}",
+        dress_article(song_digest),
+        "\\Needspace{5\\baselineskip}",
+        dress_article(sonnet_digest),
+        dress_article(proverb_digest),
     ]
-    result = SECTION_SEPARATOR.join(components)
+    result = DEFAULT_SEPARATOR.join(components)
     return result

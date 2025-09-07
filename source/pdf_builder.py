@@ -152,6 +152,7 @@ class PDFBuilder:
         if (
             (not compile_latex(Filenames.MAIN_TEX.value, quiet=self.quiet)) or
             (not run_bibtex(Filenames.MAIN_AUX.value, quiet=self.quiet)) or
+            (not compile_latex(Filenames.MAIN_TEX.value, quiet=self.quiet)) or
             (not compile_latex(Filenames.MAIN_TEX.value, quiet=self.quiet))
         ):
             return False
