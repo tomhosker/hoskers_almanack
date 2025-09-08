@@ -91,7 +91,6 @@ def dress_article(content: str) -> str:
     """
     components = [
         "\\subsection{}",
-        "\\nopagebreak",
         content
     ]
     result = DEFAULT_SEPARATOR.join(components)
@@ -106,8 +105,9 @@ def make_section_digest(
     components = [
         "\\section{}",
         dress_article(song_digest),
-        "\\Needspace{5\\baselineskip}",
+        "\\begin{samepage}",
         dress_article(sonnet_digest),
+        "\\end{samepage}",
         dress_article(proverb_digest),
     ]
     result = DEFAULT_SEPARATOR.join(components)

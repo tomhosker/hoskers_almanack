@@ -10,6 +10,7 @@ from hpml import HPMLCompiler
 
 # Local imports.
 from .utils import AlmanackError, decode_article_type, fetch_to_dict
+from .configs import LINE_NUMBERS
 from .constants import (
     ArticleType,
     ColumnNames,
@@ -21,6 +22,7 @@ from .notes_builder import NotesBuilder
 # Local constants.
 NOTES_MARKER = "#NOTES_MARKER"
 BEGIN_VERSE_COMMAND = "\\begin{verse}[\\versewidth]\n"
+END_OF_FIRST_LINE = "\\\\*"
 
 ##############
 # MAIN CLASS #
@@ -70,11 +72,10 @@ class Article:
     def get_formatted_content(self) -> str:
         """ Compile content as necessary. """
         if self.formatted_as_prose:
-            result = f"{NOTES_MARKER}{self.content}"
+            result = self.content
         else:
             result = self.compile_hpml()
-            replacement = f"{BEGIN_VERSE_COMMAND}{NOTES_MARKER}"
-            result = result.replace(BEGIN_VERSE_COMMAND, replacement)
+        result = inject_notes_marker(result)
         return result
 
     def compile_hpml(self) -> str:
@@ -82,7 +83,8 @@ class Article:
         compiler = \
             HPMLCompiler(
                 input_string=self.content,
-                is_prose_poem=self.is_prose_poem
+                is_prose_poem=self.is_prose_poem,
+                line_numbers=LINE_NUMBERS
             )
         result = compiler.compile()
         return result
@@ -123,3 +125,19 @@ def is_prose_proverb(syntax: str) -> bool:
         if giveaway in syntax:
             return False
     return True
+
+def inject_notes_marker(latex: str) -> str:
+    """
+    Inject the notes marker into the correct place in the LaTeX code for a given
+    article.
+    """
+    if END_OF_FIRST_LINE in latex:
+        result = \
+            latex.replace(
+                END_OF_FIRST_LINE,
+                f"{NOTES_MARKER}{END_OF_FIRST_LINE}",
+                1
+            )
+    else:
+        result = f"{latex}{NOTES_MARKER}"
+    return result

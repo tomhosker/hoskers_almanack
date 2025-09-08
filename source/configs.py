@@ -28,3 +28,6 @@ COMPONENT_SEPARATOR = "~\\textperiodcentered~"
 # Symbols.
 REDACTED_MARKER = "$\\mathbb{R}$"
 REMARKS_SYMBOL = "\\P~"
+
+# Misc.
+LINE_NUMBERS = 5  # Set to None to switch them off.

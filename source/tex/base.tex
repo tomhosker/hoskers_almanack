@@ -120,6 +120,15 @@
     \renewcommand\@makefntext[1]{\hspace*{1em}{\@thefnmark} #1}
 \makeatother
 
+% Handle line numbers.
+\makeatletter
+\newcommand*{\verselinenumbersalternating}{\def\@vstypelinenum{\ifodd\thepage\@vstypelinenumright\else\@vstypelinenumleft\fi}}
+\makeatother
+\poemlines{5}
+\verselinenumbersalternating
+
+% \raggedbottom
+
 #MAINMATTER
 
 % Set up division headings for BACKMATTER.
